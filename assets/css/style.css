@@ -732,51 +732,7 @@ select {
   background: white;
 }
 
-.accordion-header .categorylink {
-  width: calc(100% - 2.5rem);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 0.5rem;
-}
-
-.accordion-header .categorylink .icon {
-  height: 2.25rem;
-  width: 2.25rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  overflow: hidden;
-}
-
-.accordion-header .categorylink .titlebox {
-  width: calc(100% - 2.25rem);
-}
-
-.accordion-header .categorylink .titlebox .categorytitle {
-  font-family: "Inter";
-  font-style: normal;
-  font-size: 0.875rem;
-  font-weight: normal;
-  line-height: 1.4;
-  max-width: 99%;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
 .accordion-header .accordion-button {
-  height: 2.5rem;
-  width: 2.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -936,9 +892,76 @@ select {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  align-items: center;
+}
+
+@media screen and (min-width: 62rem) {
+  .header-nav {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+}
+
+.header-nav .hamburger-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+}
+
+@media screen and (min-width: 62rem) {
+  .header-nav .hamburger-logo {
+    display: none;
+  }
+}
+
+.header-nav .hamburger-logo .hamburger {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+.header-nav .hamburger-logo .hamburger .btn-hamburger {
+  background: transparent;
+  border: none;
+  height: 1.5rem;
+  width: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+.header-nav .hamburger-logo .hamburger .btn-hamburger svg {
+  width: 100%;
+  height: 100%;
+}
+
+.header-nav .hamburger-logo .hamburger .btn-hamburger svg path {
+  fill: #4a65ed;
 }
 
 .header-nav .headerlist {
@@ -1323,14 +1346,9 @@ select {
 
 .offcanvas-header {
   position: relative;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
 }
 
 .offcanvas-header .logo {
-  width: 6rem;
-  height: 3rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1351,8 +1369,8 @@ select {
 }
 
 .offcanvas-header .btn-close {
-  height: 2.25rem;
-  width: 2.25rem;
+  height: 1.5rem;
+  width: 1.5rem;
   background: transparent;
   margin: 0;
   padding: 0;
@@ -1373,26 +1391,16 @@ select {
 .offcanvas-header .btn-close svg {
   width: 100%;
   height: 100%;
-  -webkit-transition: transform 250ms ease-in-out;
-  -webkit-transition: -webkit-transform 250ms ease-in-out;
-  transition: -webkit-transform 250ms ease-in-out;
-  transition: transform 250ms ease-in-out;
-  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
 }
 
 .offcanvas-header .btn-close svg path {
-  -webkit-transition: all 250ms ease-in-out;
-  transition: all 250ms ease-in-out;
+  fill: #4a65ed;
 }
 
 .offcanvas-header .btn-close:focus {
   -webkit-box-shadow: none;
           box-shadow: none;
   outline: none;
-}
-
-.offcanvas-header .btn-close:not([disabled]):hover svg path {
-  stroke: #4a65ed;
 }
 
 .offcanvas-body {
@@ -1416,6 +1424,99 @@ select {
 .offcanvas-body::-webkit-scrollbar-thumb {
   border-radius: 0.5rem;
   border-radius: 0.5rem;
+}
+
+.offcanvas-body .mobilemenu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.offcanvas-body .mobilemenu .menulink {
+  padding: 0.625rem 0.75rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5rem;
+  position: relative;
+}
+
+.offcanvas-body .mobilemenu .menulink::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0.25rem;
+  height: 0rem;
+  background: #4a65ed;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+}
+
+.offcanvas-body .mobilemenu .menulink .icon {
+  height: 1.5rem;
+  width: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+.offcanvas-body .mobilemenu .menulink .icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.offcanvas-body .mobilemenu .menulink .icon svg path {
+  fill: #8b93a7;
+}
+
+.offcanvas-body .mobilemenu .menulink .text {
+  color: #8b93a7;
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.75;
+}
+
+.offcanvas-body .mobilemenu .menulink.active::before {
+  height: 100%;
+}
+
+.offcanvas-body .mobilemenu .menulink.active .icon svg path {
+  fill: #4a65ed;
+}
+
+.offcanvas-body .mobilemenu .menulink.active .text {
+  color: #4a65ed;
+}
+
+.offcanvas-body .mobilemenu .menulink:hover:not(.active)::before {
+  height: 100%;
+}
+
+.offcanvas-body .mobilemenu .menulink:hover:not(.active) .icon svg path {
+  fill: #4a65ed;
+}
+
+.offcanvas-body .mobilemenu .menulink:hover:not(.active) .text {
+  color: #4a65ed;
 }
 
 /**=====================================================

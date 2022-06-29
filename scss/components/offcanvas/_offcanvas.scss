@@ -29,11 +29,8 @@
 
 	&-header {
 		position: relative;
-		justify-content: flex-start;
 
 		.logo {
-			width: length(96);
-			height: length(48);
 			@include flex-center;
 			overflow: hidden;
 
@@ -44,7 +41,7 @@
 		}
 
 		.btn-close {
-			@include square(length(36));
+			@include square(length(24));
 			background: transparent;
 			margin: 0;
 			padding: 0;
@@ -55,24 +52,15 @@
 
 			svg {
 				@include wh100;
-				@include transitiontransform;
 
 				path {
-					@include transitionsall;
+					fill: $primary;
 				}
 			}
 
 			&:focus {
 				box-shadow: none;
 				outline: none;
-			}
-
-			@include hover {
-				svg {
-					path {
-						stroke: $primary;
-					}
-				}
 			}
 		}
 	}
@@ -90,6 +78,84 @@
 
 		&::-webkit-scrollbar-thumb {
 			@include radius(8);
+		}
+
+		.mobilemenu {
+			@include flex-column;
+
+			.menulink {
+				padding: length(10) length(12);
+				@include flex-center-vert;
+				gap: length(8);
+				position: relative;
+
+				&::before {
+					content: '';
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: length(4);
+					height: length(0);
+					background: $primary;
+					transition: all $time ease-in-out;
+					@include double-radius(top, right, 4, bottom, right, 4);
+				}
+
+				.icon {
+					@include square(length(24));
+					@include flex-center;
+					overflow: hidden;
+
+					svg {
+						@include wh100;
+
+						path {
+							fill: $secondarytext;
+						}
+					}
+				}
+
+				.text {
+					color: $secondarytext;
+					@include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(28, 16));
+				}
+
+				&.active {
+					&::before {
+						@include h100;
+					}
+
+					.icon {
+						svg {
+							path {
+								fill: $primary;
+							}
+						}
+					}
+
+					.text {
+						color: $primary;
+					}
+				}
+
+				&:hover:not(.active) {
+					&::before {
+						@include h100;
+					}
+					
+					.icon {
+						svg {
+							path {
+								fill: $primary;
+							}
+						}
+					}
+
+					.text {
+						color: $primary;
+					}
+				}
+			}
 		}
 	}
 

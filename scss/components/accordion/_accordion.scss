@@ -22,29 +22,7 @@
 		@include flex-center-between;
 		background: $white;
 
-		.categorylink {
-			width: calc(100% - 2.5rem);
-			@include flex-center-vert;
-			gap: length(8);
-
-			.icon {
-				@include square(length(36));
-				@include flex-center;
-				overflow: hidden;
-			}
-
-			.titlebox {
-				width: calc(100% - 2.25rem);
-
-				.categorytitle {
-					@include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(19.6, 14));
-					@include text-overflow;
-				}
-			}
-		}
-
 		.accordion-button {
-			@include square(length(40));
 			@include flex-center;
 			border-radius: 0;
 	

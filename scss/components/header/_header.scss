@@ -16,7 +16,40 @@
 	}
 
 	&-nav {
-		@include flex-end;
+		@include flex-center-between;
+
+		@include breakpoint(tab992) {
+			justify-content: flex-end;
+		}
+
+		.hamburger-logo {
+			@include flex-center-vert;
+			gap: length(16);
+
+			@include breakpoint(tab992) {
+				display: none;
+			}
+
+			.hamburger {
+				@include flex-center;
+				overflow: hidden;
+
+				.btn-hamburger {
+					@include transparent-button;
+					@include square(length(24));
+					@include flex-center;
+					overflow: hidden;
+
+					svg {
+						@include wh100;
+
+						path {
+							fill: $primary;
+						}
+					}
+				}
+			}
+		}
 
 		.headerlist {
 			@include list-horizontal;

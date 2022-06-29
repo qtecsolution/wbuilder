@@ -12,7 +12,7 @@
   <!-- WBUILDER CSS -->
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body>
+<body class="m-0 p-0">
   <!--========== PRELOADER-START ==========-->
   <div class="preloader" id="preloader">
     <div class="preload">
@@ -29,9 +29,25 @@
 
   <!--========== HEADER-START ============-->
   <header class="header">
-    <div class="container-fluid px-4">
+    <div class="container-fluid px-lg-4 px-3">
       <nav class="header-nav">
+        <div class="hamburger-logo">
+          <!-- HAMBURGER MENU -->
+          <div class="hamburger">
+            <button class="btn-hamburger" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+                <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
+              </svg>
+            </button>
+          </div>
 
+          <!-- LOGO (MOBILE) -->
+          <a href="index.html" class="logo">
+            <img src="assets/images/logo/logo.svg" alt="logo">
+          </a>
+        </div>
+
+        <!-- DESKTOP MENU -->
         <ul class="headerlist">
           <li class="headerlist-item">
             <a href="#" class="notify-link">
@@ -219,6 +235,76 @@
             </div>
           </li>
         </ul>
+
+        <!-- MOBILE MENU START -->
+        <div class="offcanvas offcanvas-start" data-bs-backdrop="false" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenu">
+          <div class="offcanvas-header">
+            <a href="index.html" class="logo">
+              <img src="assets/images/logo/logo.svg" alt="logo">
+            </a>
+
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left-circle-fill" viewBox="0 0 16 16">
+                <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"/>
+              </svg>
+            </button>
+          </div>
+
+          <div class="offcanvas-body p-0">
+            <div class="mobilemenu">
+              <a href="#" class="menulink">
+                <span class="icon">
+                  <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path opacity="0.4" d="M16.9408 2H20.3126C21.709 2 22.8404 3.14585 22.8404 4.55996V7.97452C22.8404 9.38864 21.709 10.5345 20.3126 10.5345H16.9408C15.5445 10.5345 14.413 9.38864 14.413 7.97452V4.55996C14.413 3.14585 15.5445 2 16.9408 2Z" fill="#A4B4F2"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M5.45184 2H8.82358C10.22 2 11.3514 3.14585 11.3514 4.55996V7.97452C11.3514 9.38864 10.22 10.5345 8.82358 10.5345H5.45184C4.05547 10.5345 2.92398 9.38864 2.92398 7.97452V4.55996C2.92398 3.14585 4.05547 2 5.45184 2ZM5.45184 13.4655H8.82358C10.22 13.4655 11.3514 14.6114 11.3514 16.0255V19.44C11.3514 20.8532 10.22 22 8.82358 22H5.45184C4.05547 22 2.92398 20.8532 2.92398 19.44V16.0255C2.92398 14.6114 4.05547 13.4655 5.45184 13.4655ZM20.3121 13.4655H16.9403C15.5439 13.4655 14.4125 14.6114 14.4125 16.0255V19.44C14.4125 20.8532 15.5439 22 16.9403 22H20.3121C21.7084 22 22.84 20.8532 22.84 19.44V16.0255C22.84 14.6114 21.7084 13.4655 20.3121 13.4655Z" fill="#4A66ED"/>
+                  </svg>
+                </span>
+                <span class="text">Dashboard</span>
+              </a>
+  
+              <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      Accordion Item #1
+                    </button>
+                  </h2>
+                  <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                    </div>
+                  </div>
+                </div>
+  
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      Accordion Item #2
+                    </button>
+                  </h2>
+                  <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                    </div>
+                  </div>
+                </div>
+  
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                      Accordion Item #3
+                    </button>
+                  </h2>
+                  <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </nav>
     </div>
   </header>
