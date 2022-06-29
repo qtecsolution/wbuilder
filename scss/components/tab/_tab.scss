@@ -1,0 +1,46 @@
+/**=======================================================**
+                        TAB START
+**=======================================================**/
+.nav-tabs {
+	border: none;
+	// padding: length(4);
+	@include radius(0);
+	border: 0;
+
+	.nav-item {
+		width: calc((100% / 3) - 0.25rem);
+
+		// &:last-of-type {
+		// 	.nav-link {
+		// 	}
+		// }
+
+		// @include hover {
+		// 	.nav-link {
+		// 		border: 0;
+		// 	}
+		// }
+	}
+
+	.nav-link {
+		@include w100;
+		padding: length(12) length(10);
+		@include border(solid, 2, transparent);
+		border-bottom: 0;
+		margin: 0;
+		@include double-radius(top, left, 8, top, right, 8);
+
+		&:hover:not(.active) {
+			border-color: transparent;
+			outline: none;
+		}
+
+		&.active {
+			
+		}
+	}
+}
+
+/**=======================================================**
+                        TAB END
+**=======================================================**/

@@ -1,0 +1,100 @@
+/**=====================================================
+                OFFCANVAS START
+=====================================================**/
+
+.offcanvas-top {
+	border-bottom: none;
+}
+
+.offcanvas-bottom {
+	border-top: none;
+}
+
+.offcanvas-start {
+	border-right: none;
+}
+
+.offcanvas-end {
+	border-left: 0;
+}
+
+.offcanvas {
+	@include w100;
+	min-height: 110vh;
+	z-index: 999999;
+
+	@include breakpoint(mobile500) {
+		width: length(300);
+	}
+
+	&-header {
+		position: relative;
+		justify-content: flex-start;
+
+		.logo {
+			width: length(96);
+			height: length(48);
+			@include flex-center;
+			overflow: hidden;
+
+			img {
+				@include wh100;
+				object-fit: contain;
+			}
+		}
+
+		.btn-close {
+			@include square(length(36));
+			background: transparent;
+			margin: 0;
+			padding: 0;
+			padding: length(8);
+			@include flex-center;
+			@include circle;
+			opacity: 1;
+
+			svg {
+				@include wh100;
+				@include transitiontransform;
+
+				path {
+					@include transitionsall;
+				}
+			}
+
+			&:focus {
+				box-shadow: none;
+				outline: none;
+			}
+
+			@include hover {
+				svg {
+					path {
+						stroke: $primary;
+					}
+				}
+			}
+		}
+	}
+
+	&-body {
+		overflow-x: hidden;
+		padding-top: length(0);
+		@include flex-column;
+		padding: length(24);
+
+		&::-webkit-scrollbar {
+			background: transparent;
+			width: length(8);
+		}
+
+		&::-webkit-scrollbar-thumb {
+			@include radius(8);
+		}
+	}
+
+}
+
+/**=====================================================
+                OFFCANVAS END
+=====================================================**/

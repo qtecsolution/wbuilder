@@ -1,0 +1,68 @@
+/**=======================================================**
+                      PRELOADER START
+**=======================================================**/
+
+.preloader {
+	@include flex-center;
+	position: fixed;
+	@include w100;
+	min-height: 100%;
+	overflow: hidden;
+	z-index: 10000;
+	background: $white;
+
+	.preload {
+		@include square(length(200));
+		@include flex-center;
+		@include circle;
+		position: relative;
+
+		.circle-1 {
+			@include square(length(160));
+			@include circle;
+			@include border(solid, 2, $primary);
+			position: relative;
+			animation: animationOne 3.3s .3s linear infinite;
+
+			&::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 50%;
+
+				@include square(length(12));
+				@include circle;
+				background: $primary;
+				box-shadow: 0 0 1.25rem $primary;
+				@include transform(translate(-50%, -50%));
+			}
+		}
+
+		.circle-2 {
+			position: absolute;
+			@include square(length(80));
+			@include flex-center;
+			overflow: hidden;
+
+			svg {
+				@include wh100;
+			}
+		}
+	}
+}
+
+
+@keyframes animationOne {
+	0%{
+		@include transform(rotate(0deg));
+	}
+
+	100%{
+		@include transform(rotate(360deg));
+	}
+}
+
+
+/**=======================================================**
+                      PRELOADER END
+**=======================================================**/

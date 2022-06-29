@@ -1,0 +1,106 @@
+/**=======================================================**
+                        ACCORDION START
+**=======================================================**/
+
+.accordion {
+	@include flex-column;
+	gap: length(8);
+
+	&-item {
+		border: none;
+
+		&:last-of-type {
+			.accordion-button {
+				&.collapsed {
+					border-radius: 0;
+				}
+			}
+		}
+	}
+
+	&-header {
+		@include flex-center-between;
+		background: $white;
+
+		.categorylink {
+			width: calc(100% - 2.5rem);
+			@include flex-center-vert;
+			gap: length(8);
+
+			.icon {
+				@include square(length(36));
+				@include flex-center;
+				overflow: hidden;
+			}
+
+			.titlebox {
+				width: calc(100% - 2.25rem);
+
+				.categorytitle {
+					@include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(19.6, 14));
+					@include text-overflow;
+				}
+			}
+		}
+
+		.accordion-button {
+			@include square(length(40));
+			@include flex-center;
+			border-radius: 0;
+	
+			&:not(.collapsed) {
+				border-radius: 0;
+				box-shadow: none;
+				background: transparent;
+	
+				&::after {
+					background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+				}
+			}
+	
+	
+			&:focus {
+				box-shadow: none;
+				outline: none;
+			}
+		}
+	}
+
+
+	&-body {
+		background: $white;
+		@include flex-column;
+		gap: length(16);
+
+    .category {
+			@include flex-column;
+			gap: length(15);
+
+			&-header {
+				.category-title {
+					@include font-face($primaryFont, style('normal'), size(16), weight('bold'), line-height(22.4, 16));
+				}
+			}
+
+			&-body {
+				.categorylist {
+					@include list-vertical;
+					gap: length(10);
+
+					&-link {
+						@include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(19.6, 14));					
+						@include transitionscolor;
+
+						@include hover {
+							color: $primary;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+/**=======================================================**
+                        ACCORDION END
+**=======================================================**/

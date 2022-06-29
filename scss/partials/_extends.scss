@@ -1,0 +1,137 @@
+
+/**=====================================================**
+                ANIMATION-STYLES
+=======================================================**/
+
+%animation {
+	animation-duration: $time;
+	animation-fill-mode: both;
+}
+
+@keyframes slideDownIn {
+	0% {
+		@include transform(translateY(-100%));
+	}
+
+	100% {
+		@include transform(translateY(0));
+	}
+
+	0% {
+		@include transform(translateY(-100%));
+	}
+}
+
+%slideDownIn {
+	animation-name: slideDownIn;
+}
+
+@keyframes slideDownInMobile {
+	0% {
+		@include transform(translateY(length(-20)));
+	}
+
+	100% {
+		@include transform(translateY(length(10)));
+	}
+
+	0% {
+		@include transform(translateY(length(-20)));
+	}
+}
+
+%slideDownInMobile {
+	animation-name: slideDownInMobile;
+}
+
+@keyframes slideUpIn {
+	0% {
+		@include transform(translateY(length(-20)));
+	}
+
+	100% {
+		@include transform(translateY(0));
+	}
+
+	0% {
+		@include transform(translateY(length(20)));
+	}
+}
+
+%slideUpIn {
+	animation-name: slideUpIn;
+}
+
+@keyframes slideUpInMobile {
+	0% {
+		@include transform(translateY(length(40)));
+	}
+
+	100% {
+		@include transform(translateY(length(25)));
+	}
+
+	0% {
+		@include transform(translateY(length(40)));
+	}
+}
+
+%slideUpInMobile {
+	animation-name: slideUpInMobile;
+}
+
+@keyframes slideLeftIn {
+	0% {
+		@include transform(translateX(length(100)));
+	}
+
+	100% {
+		@include transform(translateX(0));
+	}
+
+	0% {
+		@include transform(translateX(length(-100)));
+	}
+}
+
+%slideLeftIn {
+	animation-name: slideLeftIn;
+}
+
+@keyframes slideRightIn {
+	0% {
+		@include transform(translateX(length(100)));
+	}
+
+	100% {
+		@include transform(translateX(0));
+	}
+
+	0% {
+		@include transform(translateX(length(100)));
+	}
+}
+
+%slideRightIn {
+	animation-name: slideRightIn;
+}
+
+%floating {
+	animation-name: floating;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes floating {
+	0% {
+		@include transform(translateY(0%));
+	}
+
+	50% {
+		@include transform(translateY(1%));
+	}
+
+	100% {
+		@include transform(translateY(0%));
+	}
+}
