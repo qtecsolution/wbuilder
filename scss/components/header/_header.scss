@@ -7,7 +7,6 @@
 	@include w100;
 	@include flex-center-vert;
 	transition: top $time;
-	background: brown;
 
 	&.sticky-header {
 		position: fixed;
@@ -20,122 +19,209 @@
 		@include flex-end;
 
 		.headerlist {
-			// position: relative;
-			margin-left: auto;
 			@include list-horizontal;
+			gap: length(16);
+			padding: length(16);
 
 			&-item {
 				position: relative;
 				
 				@include hover {
-					.notification {
+					.notificationdropdown {
+						display: block;
+					}
+
+					.userdropdown {
 						display: block;
 					}
 				}
 			}
 
 			.notify-link {
-				@include square(length(24));
+				@include square(length(44));
+				@include circle;
 				@include flex-center;
 				overflow: hidden;
 
-				svg {
-					@include wh100;
+				.icon {
+					@include square(length(24));
+					@include flex-center;
+					overflow: hidden;
+	
+					svg {
+						@include wh100;
+					}
 				}
 			}
 
-			.notification {
+			.notificationdropdown {
 				position: absolute;
-				top: 0;
 				top: 100%;
 				right: 0;
-				z-index: 100;
-				background: $white;
-				filter: $dropdown-shadow;
 				width: length(300);
 				display: none;
 				@extend %animation;
 				@extend %slideUpIn;
+				padding-top: length(15.5);
+				z-index: 100;
 
-				.notificationlist {
-					@include list-vertical;
-					max-height: length(325);
-					overflow-x: hidden;
-					overflow-y: scroll;
-
-					&::-webkit-scrollbar {
-						width: length(8);
-					}
-			
-					&::-webkit-scrollbar-thumb {
-						@include radius(20);
-						background: $textlight;
-					}
-
-					// &-item {
-					// 	&:last-child {
-					// 		.notificationlist-link {
-					// 			border-bottom: 0;
-					// 		}
-					// 	}
-					// }
-
-					&-link {
-						@include flex-center-vert;
-						gap: length(12);
-						padding: length(14) length(16);
-						@include border-single(bottom, solid, 1, $notificationborder);
-						background: $white;
-
-						.notification-thumbnail {
-							background: $iconbg;
-							@include square(length(32));
-							@include circle;
-							@include flex-center;
-							padding: length(8);
+				.notification {
+					background: $white;
+					filter: $dropdown-shadow;
+					@include w100;
+	
+					.notificationlist {
+						@include list-vertical;
+						max-height: length(325);
+						overflow-x: hidden;
+						overflow-y: scroll;
+	
+						&::-webkit-scrollbar {
+							width: length(8);
 						}
-
-						.details {
-							@include flex-column;
-							gap: length(4);
-							width: calc(100% - 2rem);
-
-							.title {
-								color: $secondarytext;
-								@include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(16.94, 14));
-								@include text-overflow;
-							}
-
-							.date {
-								color: $textlight;
-								@include font-face($primaryFont, style('normal'), size(12), weight('normal'), line-height(15, 12));
-							}
+				
+						&::-webkit-scrollbar-thumb {
+							@include radius(20);
+							background: $textlight;
 						}
-
-						@include hover {
-							background: lighten($notificationborder, 5%);
-
+	
+						&-link {
+							@include flex-center-vert;
+							gap: length(12);
+							padding: length(14) length(16);
+							@include border-single(bottom, solid, 1, $notificationborder);
+							background: $white;
+	
+							.notification-thumbnail {
+								background: $iconbg;
+								@include square(length(32));
+								@include circle;
+								@include flex-center;
+								overflow: hidden;
+	
+								svg, img {
+									@include wh100;
+								}
+							}
+	
 							.details {
+								@include flex-column;
+								gap: length(4);
+								width: calc(100% - 2rem);
+	
 								.title {
-									color: $textprimary;
+									color: $secondarytext;
+									@include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(16.94, 14));
+									@include text-overflow;
+								}
+	
+								.date {
+									color: $textlight;
+									@include font-face($primaryFont, style('normal'), size(12), weight('normal'), line-height(15, 12));
+								}
+							}
+	
+							@include hover {
+								background: lighten($notificationborder, 5%);
+	
+								.details {
+									.title {
+										color: $textprimary;
+									}
 								}
 							}
 						}
 					}
+	
+					&-all {
+						@include flex-center;
+						text-align: center;
+	
+						.link {
+							@include w100;
+							padding: length(20);
+							color: lighten($primary, 10%);
+							@include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(16.94, 14));
+							@include transitionscolor;
+	
+							@include hover {
+								color: $primary;
+							}
+						}
+					}
+				}
+			}
+
+			.user-link {
+				@include flex-center-vert;
+				gap: length(16);
+
+				.user-thumbnail {
+					@include square(length(44));
+					@include circle;
+					@include flex-center;
+					overflow: hidden;
+					
+					img {
+						@include wh100;
+					}
 				}
 
-				&-all {
-					padding: length(20);
-					@include flex-center;
-					text-align: center;
+				.detail {
+					display: none;
 
-					.link {
-						color: $primary;
-						@include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(16.94, 14));
-						@include transitionscolor;
+					@include breakpoint(tab992) {
+						@include flex-column;
+					}
 
-						@include hover {
-							color: $primarydark;
+					.name {
+						color: $textprimary;
+						@include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(28, 16));
+					}
+
+					.designation {
+						color: $secondarytext;
+						@include font-face($primaryFont, style('normal'), size(13), weight('normal'), line-height(16.9, 13));
+					}
+				}
+			}
+
+			.userdropdown {
+				width: length(175);
+				position: absolute;
+				top: 100%;
+				right: 0;
+				display: none;
+				@extend %animation;
+				@extend %slideUpIn;
+				padding-top: length(16);
+				z-index: 100;
+
+				.user {
+					@include w100;
+					background: $white;
+					filter: $dropdown-shadow;
+
+					.userlist {
+						@include list-vertical;
+
+						&-link {
+							padding: length(8) length(20);
+							color: $secondarytext;
+							@include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(28, 16));
+							@include w100;
+
+							@include hover {
+								background: lighten($notificationborder, 2%);
+							}
+						}
+
+						&-item {
+							&:last-child {
+								.userlist-link {
+									@include border-single(top, solid, 1, $notificationborder);
+								}
+							}
 						}
 					}
 				}

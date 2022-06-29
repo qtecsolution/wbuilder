@@ -64,7 +64,7 @@ TABLE OF CONTENT
                 ANIMATION-STYLES
 =======================================================**/
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
-.header-nav .headerlist .notification {
+.header-nav .headerlist .notificationdropdown, .header-nav .headerlist .userdropdown {
   -webkit-animation-duration: 250ms;
           animation-duration: 250ms;
   -webkit-animation-fill-mode: both;
@@ -161,7 +161,7 @@ TABLE OF CONTENT
   }
 }
 
-.header-nav .headerlist .notification {
+.header-nav .headerlist .notificationdropdown, .header-nav .headerlist .userdropdown {
   -webkit-animation-name: slideUpIn;
           animation-name: slideUpIn;
 }
@@ -621,6 +621,7 @@ html {
                     DEFAULT-SETTINGS
 =======================================================**/
 body {
+  background: #eaedf0;
   margin: 0;
   padding: 0;
   position: relative;
@@ -922,7 +923,6 @@ select {
           align-items: center;
   -webkit-transition: top 250ms;
   transition: top 250ms;
-  background: brown;
 }
 
 .header.sticky-header {
@@ -942,7 +942,6 @@ select {
 }
 
 .header-nav .headerlist {
-  margin-left: auto;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -952,17 +951,39 @@ select {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  gap: 1rem;
+  padding: 1rem;
 }
 
 .header-nav .headerlist-item {
   position: relative;
 }
 
-.header-nav .headerlist-item:not([disabled]):hover .notification {
+.header-nav .headerlist-item:not([disabled]):hover .notificationdropdown {
+  display: block;
+}
+
+.header-nav .headerlist-item:not([disabled]):hover .userdropdown {
   display: block;
 }
 
 .header-nav .headerlist .notify-link {
+  height: 2.75rem;
+  width: 2.75rem;
+  border-radius: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+.header-nav .headerlist .notify-link .icon {
   height: 1.5rem;
   width: 1.5rem;
   display: -webkit-box;
@@ -977,25 +998,29 @@ select {
   overflow: hidden;
 }
 
-.header-nav .headerlist .notify-link svg {
+.header-nav .headerlist .notify-link .icon svg {
   width: 100%;
   height: 100%;
 }
 
-.header-nav .headerlist .notification {
+.header-nav .headerlist .notificationdropdown {
   position: absolute;
-  top: 0;
   top: 100%;
   right: 0;
+  width: 18.75rem;
+  display: none;
+  padding-top: 0.96875rem;
   z-index: 100;
+}
+
+.header-nav .headerlist .notificationdropdown .notification {
   background: white;
   -webkit-filter: drop-shadow(-0.25rem 0.25rem 0.25rem rgba(138, 146, 166, 0.15));
           filter: drop-shadow(-0.25rem 0.25rem 0.25rem rgba(138, 146, 166, 0.15));
-  width: 18.75rem;
-  display: none;
+  width: 100%;
 }
 
-.header-nav .headerlist .notification .notificationlist {
+.header-nav .headerlist .notificationdropdown .notification .notificationlist {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -1011,17 +1036,17 @@ select {
   overflow-y: scroll;
 }
 
-.header-nav .headerlist .notification .notificationlist::-webkit-scrollbar {
+.header-nav .headerlist .notificationdropdown .notification .notificationlist::-webkit-scrollbar {
   width: 0.5rem;
 }
 
-.header-nav .headerlist .notification .notificationlist::-webkit-scrollbar-thumb {
+.header-nav .headerlist .notificationdropdown .notification .notificationlist::-webkit-scrollbar-thumb {
   border-radius: 1.25rem;
   border-radius: 1.25rem;
   background: #d1d4dc;
 }
 
-.header-nav .headerlist .notification .notificationlist-link {
+.header-nav .headerlist .notificationdropdown .notification .notificationlist-link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1034,7 +1059,7 @@ select {
   background: white;
 }
 
-.header-nav .headerlist .notification .notificationlist-link .notification-thumbnail {
+.header-nav .headerlist .notificationdropdown .notification .notificationlist-link .notification-thumbnail {
   background: #f5f6fa;
   height: 2rem;
   width: 2rem;
@@ -1048,10 +1073,15 @@ select {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 0.5rem;
+  overflow: hidden;
 }
 
-.header-nav .headerlist .notification .notificationlist-link .details {
+.header-nav .headerlist .notificationdropdown .notification .notificationlist-link .notification-thumbnail svg, .header-nav .headerlist .notificationdropdown .notification .notificationlist-link .notification-thumbnail img {
+  width: 100%;
+  height: 100%;
+}
+
+.header-nav .headerlist .notificationdropdown .notification .notificationlist-link .details {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1063,7 +1093,7 @@ select {
   width: calc(100% - 2rem);
 }
 
-.header-nav .headerlist .notification .notificationlist-link .details .title {
+.header-nav .headerlist .notificationdropdown .notification .notificationlist-link .details .title {
   color: #8b93a7;
   font-family: "Inter";
   font-style: normal;
@@ -1076,7 +1106,7 @@ select {
   text-overflow: ellipsis;
 }
 
-.header-nav .headerlist .notification .notificationlist-link .details .date {
+.header-nav .headerlist .notificationdropdown .notification .notificationlist-link .details .date {
   color: #d1d4dc;
   font-family: "Inter";
   font-style: normal;
@@ -1085,16 +1115,15 @@ select {
   line-height: 1.25;
 }
 
-.header-nav .headerlist .notification .notificationlist-link:not([disabled]):hover {
+.header-nav .headerlist .notificationdropdown .notification .notificationlist-link:not([disabled]):hover {
   background: #fafafa;
 }
 
-.header-nav .headerlist .notification .notificationlist-link:not([disabled]):hover .details .title {
+.header-nav .headerlist .notificationdropdown .notification .notificationlist-link:not([disabled]):hover .details .title {
   color: #232d43;
 }
 
-.header-nav .headerlist .notification-all {
-  padding: 1.25rem;
+.header-nav .headerlist .notificationdropdown .notification-all {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1107,8 +1136,10 @@ select {
   text-align: center;
 }
 
-.header-nav .headerlist .notification-all .link {
-  color: #4a65ed;
+.header-nav .headerlist .notificationdropdown .notification-all .link {
+  width: 100%;
+  padding: 1.25rem;
+  color: #788df2;
   font-family: "Inter";
   font-style: normal;
   font-size: 0.875rem;
@@ -1118,8 +1149,122 @@ select {
   transition: color 250ms ease-in-out;
 }
 
-.header-nav .headerlist .notification-all .link:not([disabled]):hover {
-  color: #3b58e8;
+.header-nav .headerlist .notificationdropdown .notification-all .link:not([disabled]):hover {
+  color: #4a65ed;
+}
+
+.header-nav .headerlist .user-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+}
+
+.header-nav .headerlist .user-link .user-thumbnail {
+  height: 2.75rem;
+  width: 2.75rem;
+  border-radius: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+.header-nav .headerlist .user-link .user-thumbnail img {
+  width: 100%;
+  height: 100%;
+}
+
+.header-nav .headerlist .user-link .detail {
+  display: none;
+}
+
+@media screen and (min-width: 62rem) {
+  .header-nav .headerlist .user-link .detail {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.header-nav .headerlist .user-link .detail .name {
+  color: #232d43;
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.75;
+}
+
+.header-nav .headerlist .user-link .detail .designation {
+  color: #8b93a7;
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 0.8125rem;
+  font-weight: normal;
+  line-height: 1.3;
+}
+
+.header-nav .headerlist .userdropdown {
+  width: 10.9375rem;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  display: none;
+  padding-top: 1rem;
+  z-index: 100;
+}
+
+.header-nav .headerlist .userdropdown .user {
+  width: 100%;
+  background: white;
+  -webkit-filter: drop-shadow(-0.25rem 0.25rem 0.25rem rgba(138, 146, 166, 0.15));
+          filter: drop-shadow(-0.25rem 0.25rem 0.25rem rgba(138, 146, 166, 0.15));
+}
+
+.header-nav .headerlist .userdropdown .user .userlist {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.header-nav .headerlist .userdropdown .user .userlist-link {
+  padding: 0.5rem 1.25rem;
+  color: #8b93a7;
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.75;
+  width: 100%;
+}
+
+.header-nav .headerlist .userdropdown .user .userlist-link:not([disabled]):hover {
+  background: #f2f2f2;
+}
+
+.header-nav .headerlist .userdropdown .user .userlist-item:last-child .userlist-link {
+  border-top: solid 0.0625rem #ededed;
 }
 
 /**=======================================================**
