@@ -1,14 +1,12 @@
 /**==================================================
                 GOOGLE FONT CDN (INTER)
 ==================================================**/
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&family=Roboto:wght@100;300;400;500;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 
 /**==================================================
                 FONTS INFO START
 ==================================================**/
-$primaryFont: 'Roboto';
-$secondaryFont: 'Inter';
+$primaryFont: 'Inter';
 $font-styles: ('normal': normal, 'italic': italic, 'oblique': oblique);
 $font-weights: ('thin':100, 'extralight': 200, 'light': 300, 'normal': normal, 'medium': 500, 'semibold': 600, 'bold': 700, 'black': 900);
 
