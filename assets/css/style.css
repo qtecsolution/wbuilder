@@ -1042,7 +1042,7 @@ select {
 }
 
 .header-nav .headerlist .notificationdropdown .notification .notificationlist::-webkit-scrollbar {
-  width: 0.5rem;
+  width: 0.375rem;
 }
 
 .header-nav .headerlist .notificationdropdown .notification .notificationlist::-webkit-scrollbar-thumb {
