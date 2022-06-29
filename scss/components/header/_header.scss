@@ -57,13 +57,17 @@
 			.notificationdropdown {
 				position: absolute;
 				top: 100%;
-				right: 0;
+				right: length(-64);
 				width: length(300);
 				display: none;
 				@extend %animation;
 				@extend %slideUpIn;
 				padding-top: length(15.5);
 				z-index: 100;
+
+				@include breakpoint(mobile480) {
+					right: 0;
+				}
 
 				.notification {
 					background: $white;

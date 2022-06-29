@@ -1006,11 +1006,17 @@ select {
 .header-nav .headerlist .notificationdropdown {
   position: absolute;
   top: 100%;
-  right: 0;
+  right: -4rem;
   width: 18.75rem;
   display: none;
   padding-top: 0.96875rem;
   z-index: 100;
+}
+
+@media screen and (min-width: 30rem) {
+  .header-nav .headerlist .notificationdropdown {
+    right: 0;
+  }
 }
 
 .header-nav .headerlist .notificationdropdown .notification {
