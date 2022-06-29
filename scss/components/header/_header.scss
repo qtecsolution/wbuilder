@@ -20,7 +20,7 @@
 
 		.headerlist {
 			@include list-horizontal;
-			gap: length(16);
+			// gap: length(16);
 			padding: length(16);
 
 			&-item {
