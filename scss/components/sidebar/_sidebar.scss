@@ -9,7 +9,10 @@
   height: 100vh;
   background: $white;
   display: none;
-
+  transition: 0.2s ease-in-out;
+  .imageC {
+    display: none;
+  }
   @include breakpoint(tab992) {
     display: block;
   }
@@ -45,23 +48,23 @@
     overflow-y: scroll;
 
     &::-webkit-scrollbar {
-			background: transparent;
-			width: length(6);
-		}
+      background: transparent;
+      width: length(6);
+    }
 
-		&::-webkit-scrollbar-thumb {
-			@include radius(8);
-			background: $textlight;
-		}
-  
+    &::-webkit-scrollbar-thumb {
+      @include radius(8);
+      background: $textlight;
+    }
+
     .menulink {
       padding: length(10) length(12);
       @include flex-center-vert;
       gap: length(8);
       position: relative;
-  
+
       &::before {
-        content: '';
+        content: "";
         position: absolute;
         top: 0;
         left: 0;
@@ -71,40 +74,46 @@
         transition: all $time ease-in-out;
         @include double-radius(top, right, 4, bottom, right, 4);
       }
-  
+
       .icon {
         @include square(length(24));
         @include flex-center;
         overflow: hidden;
-  
+
         svg {
           @include wh100;
         }
-  
+
         .difficon {
           path {
             fill: none;
           }
         }
       }
-  
+
       .text {
         color: $secondarytext;
-        @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(28, 16));
+        @include font-face(
+          $primaryFont,
+          style("normal"),
+          size(16),
+          weight("normal"),
+          line-height(28, 16)
+        );
       }
-  
+
       &.active {
         &::before {
           @include h100;
         }
-  
+
         .icon {
           svg {
             path {
               fill: $primary;
             }
           }
-  
+
           .differicon {
             path {
               fill: none;
@@ -112,26 +121,26 @@
             }
           }
         }
-  
+
         .text {
           color: $primary;
         }
       }
-  
+
       &:hover:not(.active) {
         // background: $itemhover;
-  
+
         &::before {
           @include h100;
         }
-        
+
         .icon {
           svg {
             path {
               fill: $primary;
             }
           }
-  
+
           .differicon {
             path {
               fill: none;
@@ -139,22 +148,22 @@
             }
           }
         }
-  
+
         .text {
           color: $primary;
         }
       }
     }
-  
+
     .accordion {
       padding-bottom: length(120);
-  
+
       &-item {
         padding: length(10) length(12);
         position: relative;
-  
+
         &::before {
-          content: '';
+          content: "";
           position: absolute;
           top: 0;
           left: 0;
@@ -164,26 +173,26 @@
           transition: all $time ease-in-out;
           @include double-radius(top, right, 4, bottom, right, 4);
         }
-  
+
         .accordion-header {
           .accordion-button {
             background: transparent;
             @include flex-center-vert;
             gap: length(8);
-  
+
             .icon {
               @include square(length(24));
               @include flex-center;
               overflow: hidden;
-    
+
               svg {
                 @include wh100;
-    
+
                 path {
                   fill: $secondarytext;
                 }
               }
-  
+
               .differicon {
                 path {
                   fill: none;
@@ -191,19 +200,25 @@
                 }
               }
             }
-    
+
             .text {
               color: $secondarytext;
-              @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(28, 16));
+              @include font-face(
+                $primaryFont,
+                style("normal"),
+                size(16),
+                weight("normal"),
+                line-height(28, 16)
+              );
             }
           }
         }
-  
+
         &.active {
           &::before {
             @include h100;
           }
-  
+
           .accordion-header {
             .accordion-button {
               .icon {
@@ -212,7 +227,7 @@
                     fill: $primary;
                   }
                 }
-  
+
                 .differicon {
                   path {
                     fill: none;
@@ -220,19 +235,19 @@
                   }
                 }
               }
-    
+
               .text {
                 color: $primary;
               }
             }
           }
         }
-  
-        &:hover:not(.active) {	
+
+        &:hover:not(.active) {
           &::before {
             @include h100;
           }
-  
+
           .accordion-header {
             .accordion-button {
               .icon {
@@ -241,7 +256,7 @@
                     fill: $primary;
                   }
                 }
-  
+
                 .differicon {
                   path {
                     fill: none;
@@ -249,7 +264,7 @@
                   }
                 }
               }
-    
+
               .text {
                 color: $primary;
               }
@@ -257,32 +272,38 @@
           }
         }
       }
-  
+
       &-button {
         padding: length(0);
-  
+
         &:not(.collapsed) {
           &::after {
             @include transform(rotate(0deg));
           }
         }
-  
+
         &::after {
           @include transform(rotate(-90deg));
         }
       }
-  
+
       &-body {
         .sublist {
           @include list-vertical;
           padding-left: length(8);
-  
+
           &-link {
             padding: length(8) length(24);
             color: $secondarytext;
-            @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(28, 16));
+            @include font-face(
+              $primaryFont,
+              style("normal"),
+              size(16),
+              weight("normal"),
+              line-height(28, 16)
+            );
             position: relative;
-  
+
             &::before {
               position: absolute;
               top: 50%;
@@ -291,10 +312,10 @@
               @include square(length(24));
               content: url("data:image/svg+xml,%3Csvg width='25' height='24' viewBox='0 0 25 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath opacity='0.4' d='M17 12C17 14.2096 15.2092 16 13 16C10.7908 16 9 14.2096 9 12C9 9.7912 10.7908 8 13 8C15.2092 8 17 9.7912 17 12Z' fill='black'/%3E%3C/svg%3E%0A");
             }
-  
+
             @include hover {
               color: $primary;
-  
+
               &::before {
                 content: url("data:image/svg+xml,%3Csvg width='25' height='24' viewBox='0 0 25 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M17 12C17 14.2096 15.2092 16 13 16C10.7908 16 9 14.2096 9 12C9 9.7912 10.7908 8 13 8C15.2092 8 17 9.7912 17 12Z' fill='%234A66ED'/%3E%3C/svg%3E");
               }
@@ -303,7 +324,31 @@
         }
       }
     }
-  }  
+  }
+}
+
+.sidebardown {
+  width: length(55);
+  .text {
+    display: none;
+  }
+  .accordion-button::after {
+    width: 0%;
+  }
+  .desktopsidebar {
+    width: length(60);
+  }
+
+  .firstLogoImage {
+    display: none;
+  }
+  .imageC {
+    display: block;
+  }
+  transition: 0.2s ease-in-out;
+  .btn-toggle {
+    transform: translateY(-50%) rotate(180deg);
+  }
 }
 /**=====================================================
                       SIDEBAR END
