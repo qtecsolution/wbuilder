@@ -19,13 +19,9 @@
 }
 
 .offcanvas {
-	@include w100;
+	width: length(240);
 	min-height: 110vh;
 	z-index: 999999;
-
-	@include breakpoint(mobile500) {
-		width: length(300);
-	}
 
 	&-header {
 		position: relative;
@@ -86,7 +82,7 @@
 			@include flex-column;
 
 			.menulink {
-				padding: length(10) length(12);
+				padding: length(5) length(12);
 				@include flex-center-vert;
 				gap: length(8);
 				position: relative;
@@ -104,7 +100,7 @@
 				}
 
 				.icon {
-					@include square(length(24));
+					@include square(length(20));
 					@include flex-center;
 					overflow: hidden;
 
@@ -178,10 +174,10 @@
 			}
 
 			.accordion {
-				padding-bottom: length(120);
+				padding-bottom: length(48);
 
 				&-item {
-					padding: length(10) length(12);
+					padding: length(5) length(12);
 					position: relative;
 
 					&::before {
@@ -203,7 +199,7 @@
 							gap: length(8);
 	
 							.icon {
-								@include square(length(24));
+								@include square(length(20));
 								@include flex-center;
 								overflow: hidden;
 			
@@ -304,12 +300,14 @@
 				}
 
 				&-body {
+					padding: length(14);
+					
 					.sublist {
 						@include list-vertical;
 						padding-left: length(8);
 
 						&-link {
-							padding: length(8) length(24);
+							padding: length(4) length(24);
 							color: $secondarytext;
 							color: lighten($textprimary, 10%);
 							@include font-face($primaryFont, style("normal"), size(12), weight("normal"), line-height(16.8, 12));
@@ -318,9 +316,9 @@
 							&::before {
 								position: absolute;
 								top: 50%;
-								left: length(-8);
+								left: length(0);
 								@include transform(translateY(-50%));
-								@include square(length(24));
+								@include square(length(20));
 								content: url("data:image/svg+xml,%3Csvg width='25' height='24' viewBox='0 0 25 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath opacity='0.4' d='M17 12C17 14.2096 15.2092 16 13 16C10.7908 16 9 14.2096 9 12C9 9.7912 10.7908 8 13 8C15.2092 8 17 9.7912 17 12Z' fill='black'/%3E%3C/svg%3E%0A");
 							}
 

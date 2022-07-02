@@ -4,7 +4,7 @@
   overflow: hidden;
   
   @include breakpoint(tab992) {
-    margin-left: length(260);
+    margin-left: length(220);
   }
   
   &.maincollapsed {
