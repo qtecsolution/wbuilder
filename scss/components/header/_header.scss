@@ -213,7 +213,7 @@
 
 					.name {
 						color: $textprimary;
-						@include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(28, 16));
+						@include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(24, 16));
 					}
 
 					.designation {
