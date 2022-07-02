@@ -1843,18 +1843,33 @@ select {
   flex-wrap: wrap;
 }
 .main .tableinfo-header .tablefilter-body .formfilter .inputbox {
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  max-width: 13.75rem;
   position: relative;
 }
+@media screen and (min-width: 36rem) {
+  .main .tableinfo-header .tablefilter-body .formfilter .inputbox {
+    max-width: 13.75rem;
+  }
+}
 .main .tableinfo-header .tablefilter-body .formfilter .inputbox.idbox {
-  max-width: 6.875rem;
+  width: 100%;
+}
+@media screen and (min-width: 36rem) {
+  .main .tableinfo-header .tablefilter-body .formfilter .inputbox.idbox {
+    max-width: 6.875rem;
+  }
 }
 .main .tableinfo-header .tablefilter-body .formfilter .inputbox.selectbox {
-  min-width: 12.5rem;
-  max-width: 15rem;
+  width: 100%;
+}
+@media screen and (min-width: 36rem) {
+  .main .tableinfo-header .tablefilter-body .formfilter .inputbox.selectbox {
+    min-width: 12.5rem;
+    max-width: 15rem;
+  }
 }
 .main .tableinfo-header .tablefilter-body .formfilter .inputbox .inputlabel {
   color: hsl(223deg, 14%, 60%);
@@ -1924,7 +1939,12 @@ select {
   display: block;
 }
 .main .tableinfo-header .tablefilter-body .formfilter .submitbox {
-  width: 9.5625rem;
+  width: 100%;
+}
+@media screen and (min-width: 36rem) {
+  .main .tableinfo-header .tablefilter-body .formfilter .submitbox {
+    width: 9.5625rem;
+  }
 }
 .main .tableinfo-header .tablefilter-body .formfilter .submitbox .btn-filter {
   width: 100%;
@@ -1988,6 +2008,7 @@ table.dataTable {
   }
 }
 .table thead tr {
+  border-top: solid 0.0625rem hsl(210deg, 14%, 89%);
   border-bottom: solid 0.0625rem hsl(210deg, 14%, 89%);
 }
 .table thead tr th {
@@ -2001,6 +2022,11 @@ table.dataTable {
   border-left: solid 0.0625rem hsl(210deg, 14%, 89%);
   padding: 0.875rem 0.5rem;
   vertical-align: middle;
+}
+@media screen and (min-width: 62rem) {
+  .table thead tr th:first-of-type {
+    border-left: 0;
+  }
 }
 .table tbody {
   vertical-align: middle;
@@ -2032,6 +2058,11 @@ table.dataTable {
   padding: 0.875rem 0.5rem;
   vertical-align: middle;
 }
+@media screen and (min-width: 62rem) {
+  .table tbody tr td:first-of-type {
+    border-left: 0;
+  }
+}
 .table tbody tr td td:before {
   content: attr(data);
 }
@@ -2060,10 +2091,14 @@ table.dataTable {
     justify-content: space-between;
     align-items: center;
     padding: 0.5rem;
+    border-bottom: solid 0.0625rem hsl(210deg, 14%, 89%);
   }
   .table tbody tr td:first-of-type {
     width: 3rem;
     width: 95%;
+  }
+  .table tbody tr td:last-of-type {
+    border-bottom: 0;
   }
 }
 

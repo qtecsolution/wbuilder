@@ -46,18 +46,30 @@
             flex-wrap: wrap;
             
             .inputbox {
+              @include w100;
               @include flex-column;
               gap: length(8);
-              max-width: length(220);
               position: relative;
 
+              @include breakpoint(mobile576) {
+                max-width: length(220);
+              }
+
               &.idbox {
-                max-width: length(110);
+                @include w100;
+
+                @include breakpoint(mobile576) {
+                  max-width: length(110);
+                }
               }
 
               &.selectbox {
-                min-width: length(200);
-                max-width: length(240);
+                @include w100;
+
+                @include breakpoint(mobile576) {
+                  min-width: length(200);
+                  max-width: length(240);
+                }
               }
               
               .inputlabel {
@@ -119,7 +131,11 @@
             }
 
             .submitbox {
-              width: length(153);
+              @include w100;
+
+              @include breakpoint(mobile576) {
+                width: length(153);
+              }
               
               .btn-filter {
                 @include w100;

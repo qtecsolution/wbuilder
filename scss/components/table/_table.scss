@@ -21,6 +21,7 @@ table.dataTable {
     }
 
     tr {
+      @include border-single(top, solid, 1, $paginstionborder);
       @include border-single(bottom, solid, 1, $paginstionborder);
 
       th {
@@ -30,6 +31,12 @@ table.dataTable {
         @include border-single(left, solid, 1, $paginstionborder);
         padding: length(14) length(8);
         vertical-align: middle;
+
+        &:first-of-type {
+          @include breakpoint(tab992) {
+            border-left: 0;
+          }
+        }
       }
     }
   }
@@ -58,6 +65,12 @@ table.dataTable {
         padding: length(14) length(8);
         vertical-align: middle;
 
+        &:first-of-type {
+          @include breakpoint(tab992) {
+            border-left: 0;
+          }
+        }
+
         td:before  {
           content: attr(data);
         }
@@ -85,10 +98,15 @@ table.dataTable {
         @include breakpoint(mobile) {
           @include flex-center-between;
           padding: length(8);
+          @include border-single(bottom, solid, 1, $paginstionborder);
 
           &:first-of-type {
             width: length(48);
             width: 95%;
+          }
+
+          &:last-of-type {
+            border-bottom: 0;
           }
         }
       }
