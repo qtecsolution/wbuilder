@@ -1,9 +1,15 @@
 .main {
-  margin-left: length(260);
   transition: 0.2s ease-in-out;
   
+  @include breakpoint(tab992) {
+    margin-left: length(260);
+  }
+  
   &.maincollapsed {
-    margin-left: length(64);
     transition: 0.2s ease-in-out;
+  
+    @include breakpoint(tab992) {
+      margin-left: length(64);
+    }
   }
 }
