@@ -132,9 +132,11 @@
 
             .submitbox {
               @include w100;
+              @include flex-center-vert;
 
               @include breakpoint(mobile576) {
                 width: length(153);
+                margin-top: length(4);
               }
               
               .btn-filter {

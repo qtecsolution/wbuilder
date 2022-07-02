@@ -1,0 +1,25 @@
+.auth {
+  @include w100;
+  overflow: hidden;
+  margin: 0;
+  @include flex;
+  height: 100vh;
+
+  .authentication {
+    width: 50%;
+  }
+
+  &-thumbnail {
+    width: 50%;
+    display: none;
+
+    @include breakpoint(tab992) {
+      @include flex-center;
+    }
+
+    img {
+      @include wh100;
+      object-fit: cover;
+    }
+  }
+}
