@@ -1,5 +1,7 @@
 .main {
   transition: 0.2s ease-in-out;
+  padding: length(16);
+  overflow: hidden;
   
   @include breakpoint(tab992) {
     margin-left: length(260);
@@ -10,6 +12,148 @@
   
     @include breakpoint(tab992) {
       margin-left: length(64);
+    }
+  }
+
+  .tableinfo {
+    @include flex-column;
+    gap: length(16);
+
+    &-header {
+      background: $white;
+      padding: length(14);
+      @include radius(4);
+  
+      @include breakpoint(tab992) {
+        padding: length(12) length(20) length(24);
+      }
+
+      .tablefilter {
+        @include flex-column;
+        gap: length(20);
+
+        &-header {
+          .tablefilter-title {
+            color: $headingtext;
+            @include font-face($primaryFont, style('normal'), size(20), weight('semibold'), line-height(35, 20));
+          }
+        }
+        
+        &-body {
+          .formfilter {
+            @include flex-center-vert;
+            gap: length(16);
+            flex-wrap: wrap;
+            
+            .inputbox {
+              @include flex-column;
+              gap: length(8);
+              max-width: length(220);
+              position: relative;
+
+              &.idbox {
+                max-width: length(110);
+              }
+
+              &.selectbox {
+                min-width: length(200);
+                max-width: length(240);
+              }
+              
+              .inputlabel {
+                color: $secondarytext;
+                @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(22.4, 16));
+              }
+              
+              .inputfield {
+                color: $textprimary;
+                @include border(solid, 1, $textlight);
+                @include radius(4);
+                padding: length(12) length(16);
+                @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(19.6, 14));
+
+                &::after {
+                  color: $textlight;
+                }
+              }
+
+              .selectfield {
+                color: $textprimary;
+                @include border(solid, 1, $textlight);
+                @include radius(4);
+                @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(19.6, 14));
+                padding: length(12) length(16);
+                background: $white url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16 10L12 14L8 10' stroke='%238A92A6' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A") no-repeat center right 3%;
+                appearance: none;
+
+                option {
+                  color: $textprimary;
+                }
+              }
+
+              .btn-reset {
+                position: absolute;
+                top: 52%;
+                @include transform(translateY(-50%));
+                right: length(30);
+                @include transparent-button;
+                z-index: 100;
+              }
+
+              .error-message {
+                display: none;
+                color: $danger;
+                @include font-face($primaryFont, style('normal'), size(12), weight('medium'), line-height(16.8, 12));
+              }
+
+              &.errorfield {
+                .inputfield,
+                .selectfield {
+                  border-color: $danger;
+                }
+
+                .error-message {
+                  display: block;
+                }
+              }
+            }
+
+            .submitbox {
+              width: length(153);
+              
+              .btn-filter {
+                @include w100;
+                @include font-face($primaryFont, style('normal'), size(14), weight('semibold'), line-height(19.6, 14));
+                padding: length(11.5) length(32);
+                @include setBgColor($primary, $white);
+                @include radius(4);
+                text-align: center;
+                @include transitionsbackground;
+
+                @include hover {
+                  background: darken($primary, 15%);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &-body {
+      @include flex-column;
+      gap: length(16);
+      background: $white;
+      padding: length(16) length(20) length(32);
+      @include radius(4);
+      overflow: hidden;
+
+      .tableheader {
+        .tabletitle {
+          color: $headingtext;
+          @include font-face($primaryFont, style('normal'), size(20), weight('semibold'), line-height(35, 20));
+        }
+      }
     }
   }
 }

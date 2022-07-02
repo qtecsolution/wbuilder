@@ -7,7 +7,7 @@
 	margin-left: auto;
 	left: 100%;
 	@include circle;
-	padding: length(14);
+	padding: length(8);
 	@include flex-center;
 	cursor: pointer;
 }

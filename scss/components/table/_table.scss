@@ -1,25 +1,187 @@
-
-th{
-  color: #8A92A6;
-  font-weight: 500;
-  line-height:23.2px;
-  font-size: 16px;
-  min-width: length(110);
-}
-td{
-  font-family: $primaryFont;
-  color: #232D42;
+table.dataTable {
+  border-collapse: collapse !important;
+  margin: 0;
 }
 
-.minWidth{
-  min-width: 0%;
+.dataTable_wrapper {
+  @include flex-column;
+  gap: length(32);
 }
 
-.captions{
-  @include font-face($primaryFont, style('normal'), size(20),weight('normal'),line-height(35, 20));
-  color:#6A7081;
+.table {
+  overflow-x: scroll;
+  max-width: 99.5%;
+
+  thead {
+    background: $iconbg;
+    vertical-align: middle;
+
+    @include breakpoint(mobile) {
+      display: none;
+    }
+
+    tr {
+      @include border-single(bottom, solid, 1, $paginstionborder);
+
+      th {
+        color: $secondarytext;
+        @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(24, 16));
+        text-align: center;
+        @include border-single(left, solid, 1, $paginstionborder);
+        padding: length(14) length(8);
+        vertical-align: middle;
+      }
+    }
+  }
+  
+  tbody {
+    vertical-align: middle;
+
+    @include breakpoint(mobile) {
+      @include border-single(top, solid, 1, $paginstionborder);
+      @include border-single(right, solid, 1, $paginstionborder);
+      overflow: hidden;
+    }
+
+    tr {
+      @include border-single(bottom, solid, 1, $paginstionborder);
+
+      @include breakpoint(mobile) {
+        overflow: hidden;
+      }
+
+      td {
+        color: $textprimary;
+        @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(19.6, 14));
+        text-align: center;
+        @include border-single(left, solid, 1, $paginstionborder);
+        padding: length(14) length(8);
+        vertical-align: middle;
+
+        td:before  {
+          content: attr(data);
+        }
+
+        .title, .text {
+          color: inherit;
+          font: inherit;
+        }
+
+        .title {
+          display: none;
+
+          @include breakpoint(mobile) {
+            display: block;
+            overflow: hidden;
+          }
+        }
+
+        @include breakpoint(desktop) {
+          &:first-of-type {
+            width: length(48);
+          }
+        }
+
+        @include breakpoint(mobile) {
+          @include flex-center-between;
+          padding: length(8);
+
+          &:first-of-type {
+            width: length(48);
+            width: 95%;
+          }
+        }
+      }
+    }
+  }
 }
 
-.serialNumber{
-  color: #232D42;
+div.dataTables_wrapper div.dataTables_info {
+  position: absolute;
+  color: $secondarytext;
+  @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(19.6, 14));
+  
+  @include breakpoint(tab992) {
+    padding-top: length(35);
+    @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(24, 16));
+  }
+}
+
+div.dataTables_wrapper div.dataTables_paginate {
+  @include flex-end;
+  margin-top: length(55);
+
+  @include breakpoint(tab992) {
+    margin-top: length(30);
+  }
+
+  .pagination {
+    @include border(solid, 1, $paginstionborder);
+    @include radius(4);  
+    gap: length(1);
+    overflow: hidden;
+  
+    .page-item {
+      .page-link {
+        border: 0;
+        border-radius: 0;
+        padding: length(8) length(24);
+        @include setBgColor($white, $primary);
+        @include border-single(right, solid, 1, $paginstionborder);
+        @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(24, 16));
+  
+        &:focus {
+          box-shadow: none;
+          outline: none;
+        }
+      }
+  
+      &:hover:not(.active):not(.disabled) {
+        .page-link {
+          @include setBgColor($primary, $white);
+        }
+      }
+  
+      &.active {
+        .page-link {
+          @include setBgColor($primary, $white);
+        }
+      }
+
+      &.previous,
+      &.next {
+        .page-link {
+          font-size: 0;
+          color: transparent;
+          position: relative;
+          min-height: length(40);
+
+          &::before {
+            position: absolute;
+            @include position-center;
+          }
+        }
+      }
+
+      &.previous {
+        .page-link {
+          content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%234A66ED' class='bi bi-chevron-left' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3E%3C/svg%3E");
+          
+          @include hover {
+            content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23ffffff' class='bi bi-chevron-left' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3E%3C/svg%3E");
+          }
+        }
+      }
+
+      &.next {
+        .page-link {
+          content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%234A66ED' class='bi bi-chevron-right' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
+          
+          @include hover {
+            content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23ffffff' class='bi bi-chevron-right' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
+          }
+        }
+      }
+    }
+  }
 }

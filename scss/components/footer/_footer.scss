@@ -3,7 +3,69 @@
 =====================================================**/
 
 .footer {
+  background: $white;
+  margin-left: length(0);
+  padding: length(16);
+  overflow: hidden;
   
+  @include breakpoint(tab992) {
+    margin-left: length(260);
+  }
+
+  &-content {
+    @include flex-center-column;
+    gap: length(8);
+    
+    @include breakpoint(tab992) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  .footerlist {
+    @include list-horizontal;
+    gap: length(10);
+
+    &-link {
+      color: $textprimary;
+      @include font-face($primaryFont, style('normal'), size(12), weight('normal'), line-height(16.8, 12));
+      position: relative;
+
+      &::before {
+        content: '';
+        position: absolute;
+        bottom: length(1);
+        left: 0;
+        height: length(1);
+        width: 0;
+        background: $primary;
+        transition: $time;
+      }
+
+      @include breakpoint(tab992) {
+        @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(19.6, 14));
+      }
+
+      @include hover {
+        color: $primary;
+
+        &::before {
+          @include w100;
+        }
+      }
+    }
+  }
+
+  .text-copyright {
+    color: $textprimary;
+    @include font-face($primaryFont, style('normal'), size(12), weight('normal'), line-height(16.8, 12));
+    text-align: center;
+
+    @include breakpoint(tab992) {
+      @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(19.6, 14));
+      text-align: right;
+    }
+  }
 }
 
 /**=====================================================
