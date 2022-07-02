@@ -16,6 +16,11 @@
 				}
 			}
 		}
+		&:first-of-type {
+			.accordion-button {
+				border-radius: 0;
+			}
+		}
 	}
 
 	&-header {

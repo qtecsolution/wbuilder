@@ -28,7 +28,7 @@
   <!--========== PRELOADER-END ============-->
 
   <!--========== HEADER-START ============-->
-  <header class="header">
+  <header class="header sticky-top">
     <div class="container-fluid px-lg-4 px-3">
       <nav class="header-nav">
         <div class="hamburger-logo">
@@ -701,17 +701,19 @@
   <!--========== HEADER-END ==============-->
 
   <!--========== SIDEBAR-START ============-->
-  
-  <aside class="desktopsidebar">
+  <aside class="desktopsidebar" id="desktopsidebar">
+    <!-- SIDEBAR-HEADER START -->
     <div class="desktopsidebar-header">
-
+      <!-- LOGO -->
       <a href="index.html" class="logo">
-        <img src="assets/images/logo/logo.svg" alt="logo" class="firstLogoImage" >
-        <img src="Group 33618.svg" alt="" class="imageC">
+        <!-- FULL LOGO -->
+        <img src="assets/images/logo/logo.svg" class="full-logo" alt="logo">
+        <!-- ICON LOGO -->
+        <img src="assets/images/logo/icon-logo.svg" class="icon-logo" alt="icon-logo">
       </a>
-
       
-      <button class="btn-toggle" id="btn_toggles">
+      <!-- TOGGLE BUTTON -->
+      <button class="btn-toggle" id="btn-toggle">
         <svg  width="39" height="38" viewBox="0 0 39 38" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g filter="url(#toggleicon)">
             <rect x="34.126" y="2" width="30" height="30" rx="15" transform="rotate(90 34.126 2)" fill="#4A66ED"/>
@@ -731,9 +733,10 @@
           </defs>
         </svg>
       </button>
-
     </div>
+    <!-- SIDEBAR-HEADER END -->
 
+    <!-- SIDEBAR-BODY START -->
     <div class="desktopmenu">
       <a href="#" class="menulink">
         <span class="icon ">
@@ -1179,239 +1182,241 @@
         </a>
       </div>
     </div>
+    <!-- SIDEBAR-BODY END -->
   </aside>
   <!--========== SIDEBAR-END ==============-->
   
-  <!--========== DATATable-START ============-->
-  
-  <div class="table-responsive">
-    <div class="captions">
-      Data Table
-    </div>
-    <table class="table table-bordered">
-      <thead>
-        <tr>
-          <th scope="col" class="minWidth">#</th>
-      <div class="">
-        <th scope="col" class="uName">
-          User Name<img src="assets/images/icons/Frame.svg" alt="" class="float-end" />
-        </th>
+  <!--========== MAIN-SECTION START ============-->
+  <main class="main" id="main">
+    <div class="table-responsive">
+      <div class="captions">
+        Data Table
       </div>
-
-
-          <th scope="col">
-            User Email <img src="assets/images/icons/Frame.svg" alt="" class="float-end" />
+  
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th scope="col" class="minWidth">#</th>
+        <div class="">
+          <th scope="col" class="uName">
+            User Name<img src="assets/images/icons/Frame.svg" alt="" class="float-end" />
           </th>
-          <th scope="col">
-            Table <img src="assets/images/icons/Frame.svg" alt="" class="float-end" />
-          </th>
-          <th scope="col">
-            Details <img src="assets/images/icons/Frame.svg" alt="" class="float-end" />
-          </th>
-          <th scope="col">
-            Age <img src="assets/images/icons/Frame.svg" alt="" class="float-end" />
-          </th>
-          <th scope="col">
-            Balance <img src="assets/images/icons/Frame.svg" alt="" class="float-end" />
-          </th>
-          <th scope="col">
-            Header <img src="assets/images/icons/Frame.svg" alt="" class="float-end" />
-          </th>
-          <th scope="col" class="tbHeader">
-            Header <img src="assets/images/icons/Frame.svg" alt="" class="float-end" />
-          </th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th scope="row" class="serialNumber minWidth">1</th>
-          <td>test name</td>
-          <td>testmail@gmail.com</td>
-          <td>@mdo</td>
-          <td>the Bird</td>
-          <td>@twitter</td>
-          <td>the Bird</td>
-          <td>@twitter</td>
-          <td>@twitter</td>
-        </tr>
-        <tr>
-          <th scope="row" class="serialNumber minWidth">2</th>
-          <td>test name</td>
-          <td>testmail@gmail.com</td>
-          <td>random text</td>
-          <td>random text</td>
-          <td>random text</td>
-          <td>random text</td>
-          <td>random text</td>
-          <td>random text</td>
-        </tr>
-        <tr>
-          <th scope="row" class="serialNumber minWidth">3</th>
-          <td>test name</td>
-          <td>testmail@gmail.com</td>
-          <td>random text</td>
-          <td>random text</td>
-          <td>random text</td>
-          <td>random text</td>
-          <td>random text</td>
-          <td>random text</td>
-        </tr>
-
-        <tr>
-          <th scope="row" class="serialNumber minWidth">3</th>
-          <td>test name</td>
-          <td>testmail@gmail.com</td>
-          <td>random text</td>
-          <td>random text</td>
-          <td>random text</td>
-          <td>random text</td>
-          <td>random text</td>
-          <td>random text</td>
-        </tr>
-
-        <tr>
-          <th scope="row" class="serialNumber minWidth">4</th>
-          <td>test name</td>
-          <td>testmail@gmail.com</td>
-          <td>random text</td>
-          <td>random text</td>
-          <td>random text</td>
-          <td>random text</td>
-          <td>random text</td>
-          <td>random text</td>
-        </tr>
-
-        <tr>
-          <th scope="row" class="serialNumber minWidth">5</th>
-          <td>test name</td>
-          <td>testmail@gmail.com</td>
-          <td>random text</td>
-          <td>random text</td>
-          <td>random text</td>
-          <td>random text</td>
-          <td>random text</td>
-          <td>random text</td>
-        </tr>
-
-        <tr>
-          <th scope="row" class="serialNumber minWidth">6</th>
-          <td>test name</td>
-          <td>testmail@gmail.com</td>
-          <td>random text</td>
-          <td>random text</td>
-          <td>random text</td>
-          <td>random text</td>
-          <td>random text</td>
-          <td>random text</td>
-        </tr>
-
-        <tr>
-          <th scope="row" class="serialNumber minWidth">7</th>
-          <td>test name</td>
-          <td>testmail@gmail.com</td>
-          <td>random text</td>
-          <td>random text</td>
-          <td>random text</td>
-          <td>random text</td>
-          <td>random text</td>
-          <td>random text</td>
-        </tr>
-
-        <tr>
-          <th scope="row" class="serialNumber minWidth">8</th>
-          <td>test name</td>
-          <td>testmail@gmail.com</td>
-          <td>random text</td>
-          <td>random text</td>
-          <td>random text</td>
-          <td>random text</td>
-          <td>random text</td>
-          <td>random text</td>
-        </tr>
-
-        <tr>
-          <th scope="row" class="serialNumber minWidth">8</th>
-          <td>test name</td>
-          <td>testmail@gmail.com</td>
-          <td>random text</td>
-          <td>random text</td>
-          <td>random text</td>
-          <td>random text</td>
-          <td>random text</td>
-          <td>random text</td>
-        </tr>
-
-        <tr>
-          <th scope="row" class="serialNumber minWidth">10</th>
-          <td>test name</td>
-          <td>testmail@gmail.com</td>
-          <td>random text</td>
-          <td>random text</td>
-          <td>random text</td>
-          <td>random text</td>
-          <td>random text</td>
-          <td>random text</td>
-        </tr>
-
-        <tr>
-          <th scope="row" class="serialNumber minWidth">11</th>
-          <td>test name</td>
-          <td>testmail@gmail.com</td>
-          <td>random text</td>
-          <td>random text</td>
-          <td>random text</td>
-          <td>random text</td>
-          <td>random text</td>
-          <td>random text</td>
-        </tr>
-
-        <tr>
-          <th scope="row" class="serialNumber minWidth">12</th>
-          <td>test name</td>
-          <td>testmail@gmail.com</td>
-          <td>random text</td>
-          <td>random text</td>
-          <td>random text</td>
-          <td>random text</td>
-          <td>random text</td>
-          <td>random text</td>
-        </tr>
-
-        <tr>
-          <th scope="row" class="serialNumber minWidth">13</th>
-          <td>test name</td>
-          <td>testmail@gmail.com</td>
-          <td>random text</td>
-          <td>random text</td>
-          <td>random text</td>
-          <td>random text</td>
-          <td>random text</td>
-          <td>random text</td>
-        </tr>
-
-        <tr>
-          <th scope="row" class="serialNumber minWidth">14</th>
-          <td>test name</td>
-          <td>testmail@gmail.com</td>
-          <td>random text</td>
-          <td>random text</td>
-          <td>random text</td>
-          <td>random text</td>
-          <td>random text</td>
-          <td>random text</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-  <!--========== DATATable-END ============-->
-
+        </div>
+  
+  
+            <th scope="col">
+              User Email <img src="assets/images/icons/Frame.svg" alt="" class="float-end" />
+            </th>
+            <th scope="col">
+              Table <img src="assets/images/icons/Frame.svg" alt="" class="float-end" />
+            </th>
+            <th scope="col">
+              Details <img src="assets/images/icons/Frame.svg" alt="" class="float-end" />
+            </th>
+            <th scope="col">
+              Age <img src="assets/images/icons/Frame.svg" alt="" class="float-end" />
+            </th>
+            <th scope="col">
+              Balance <img src="assets/images/icons/Frame.svg" alt="" class="float-end" />
+            </th>
+            <th scope="col">
+              Header <img src="assets/images/icons/Frame.svg" alt="" class="float-end" />
+            </th>
+            <th scope="col" class="tbHeader">
+              Header <img src="assets/images/icons/Frame.svg" alt="" class="float-end" />
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row" class="serialNumber minWidth">1</th>
+            <td>test name</td>
+            <td>testmail@gmail.com</td>
+            <td>@mdo</td>
+            <td>the Bird</td>
+            <td>@twitter</td>
+            <td>the Bird</td>
+            <td>@twitter</td>
+            <td>@twitter</td>
+          </tr>
+          <tr>
+            <th scope="row" class="serialNumber minWidth">2</th>
+            <td>test name</td>
+            <td>testmail@gmail.com</td>
+            <td>random text</td>
+            <td>random text</td>
+            <td>random text</td>
+            <td>random text</td>
+            <td>random text</td>
+            <td>random text</td>
+          </tr>
+          <tr>
+            <th scope="row" class="serialNumber minWidth">3</th>
+            <td>test name</td>
+            <td>testmail@gmail.com</td>
+            <td>random text</td>
+            <td>random text</td>
+            <td>random text</td>
+            <td>random text</td>
+            <td>random text</td>
+            <td>random text</td>
+          </tr>
+  
+          <tr>
+            <th scope="row" class="serialNumber minWidth">3</th>
+            <td>test name</td>
+            <td>testmail@gmail.com</td>
+            <td>random text</td>
+            <td>random text</td>
+            <td>random text</td>
+            <td>random text</td>
+            <td>random text</td>
+            <td>random text</td>
+          </tr>
+  
+          <tr>
+            <th scope="row" class="serialNumber minWidth">4</th>
+            <td>test name</td>
+            <td>testmail@gmail.com</td>
+            <td>random text</td>
+            <td>random text</td>
+            <td>random text</td>
+            <td>random text</td>
+            <td>random text</td>
+            <td>random text</td>
+          </tr>
+  
+          <tr>
+            <th scope="row" class="serialNumber minWidth">5</th>
+            <td>test name</td>
+            <td>testmail@gmail.com</td>
+            <td>random text</td>
+            <td>random text</td>
+            <td>random text</td>
+            <td>random text</td>
+            <td>random text</td>
+            <td>random text</td>
+          </tr>
+  
+          <tr>
+            <th scope="row" class="serialNumber minWidth">6</th>
+            <td>test name</td>
+            <td>testmail@gmail.com</td>
+            <td>random text</td>
+            <td>random text</td>
+            <td>random text</td>
+            <td>random text</td>
+            <td>random text</td>
+            <td>random text</td>
+          </tr>
+  
+          <tr>
+            <th scope="row" class="serialNumber minWidth">7</th>
+            <td>test name</td>
+            <td>testmail@gmail.com</td>
+            <td>random text</td>
+            <td>random text</td>
+            <td>random text</td>
+            <td>random text</td>
+            <td>random text</td>
+            <td>random text</td>
+          </tr>
+  
+          <tr>
+            <th scope="row" class="serialNumber minWidth">8</th>
+            <td>test name</td>
+            <td>testmail@gmail.com</td>
+            <td>random text</td>
+            <td>random text</td>
+            <td>random text</td>
+            <td>random text</td>
+            <td>random text</td>
+            <td>random text</td>
+          </tr>
+  
+          <tr>
+            <th scope="row" class="serialNumber minWidth">8</th>
+            <td>test name</td>
+            <td>testmail@gmail.com</td>
+            <td>random text</td>
+            <td>random text</td>
+            <td>random text</td>
+            <td>random text</td>
+            <td>random text</td>
+            <td>random text</td>
+          </tr>
+  
+          <tr>
+            <th scope="row" class="serialNumber minWidth">10</th>
+            <td>test name</td>
+            <td>testmail@gmail.com</td>
+            <td>random text</td>
+            <td>random text</td>
+            <td>random text</td>
+            <td>random text</td>
+            <td>random text</td>
+            <td>random text</td>
+          </tr>
+  
+          <tr>
+            <th scope="row" class="serialNumber minWidth">11</th>
+            <td>test name</td>
+            <td>testmail@gmail.com</td>
+            <td>random text</td>
+            <td>random text</td>
+            <td>random text</td>
+            <td>random text</td>
+            <td>random text</td>
+            <td>random text</td>
+          </tr>
+  
+          <tr>
+            <th scope="row" class="serialNumber minWidth">12</th>
+            <td>test name</td>
+            <td>testmail@gmail.com</td>
+            <td>random text</td>
+            <td>random text</td>
+            <td>random text</td>
+            <td>random text</td>
+            <td>random text</td>
+            <td>random text</td>
+          </tr>
+  
+          <tr>
+            <th scope="row" class="serialNumber minWidth">13</th>
+            <td>test name</td>
+            <td>testmail@gmail.com</td>
+            <td>random text</td>
+            <td>random text</td>
+            <td>random text</td>
+            <td>random text</td>
+            <td>random text</td>
+            <td>random text</td>
+          </tr>
+  
+          <tr>
+            <th scope="row" class="serialNumber minWidth">14</th>
+            <td>test name</td>
+            <td>testmail@gmail.com</td>
+            <td>random text</td>
+            <td>random text</td>
+            <td>random text</td>
+            <td>random text</td>
+            <td>random text</td>
+            <td>random text</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+  <!--========== MAIN SECTION END ============-->
 
 
   <!--========== BOOTSTRAP JS ============-->
   <script src="assets/js/bootstrap/bootstrap.bundle.min.js"></script>
   <!--========== PRELOADER JS ============-->
   <script src="assets/js/preloader/loader.js"></script>
-<script src="index.js"></script>
+  <!--========== SIDEBAR JS ============-->
+  <script src="assets/js/sidebar/sidebar.js"></script>
 </body>
 </html>

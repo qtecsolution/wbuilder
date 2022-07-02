@@ -10,11 +10,10 @@
   background: $white;
   display: none;
   transition: 0.2s ease-in-out;
-  .imageC {
-    display: none;
-  }
+  z-index: 2000;
+  
   @include breakpoint(tab992) {
-    display: block;
+    @include flex-column;
   }
 
   &-header {
@@ -37,7 +36,20 @@
 
       svg {
         @include wh100;
+        @include transitionsall;
+      
+        &.active {
+          @include transform(rotate(180deg));
+        }
       }
+    }
+
+    .full-logo {
+      display: block;
+    }
+
+    .icon-logo {
+      display: none;
     }
   }
 
@@ -156,7 +168,7 @@
     }
 
     .accordion {
-      padding-bottom: length(120);
+      padding-bottom: length(24);
 
       &-item {
         padding: length(10) length(12);
@@ -325,31 +337,52 @@
       }
     }
   }
+
+  &.sidecollapsed {
+    width: length(64);
+    transition: 0.2s ease-in-out;
+    
+    .desktopsidebar-header {
+      .full-logo {
+        display: none;
+      }
+  
+      .icon-logo {
+        display: block;
+      }
+    }
+
+    .menulink {
+      .text {
+        display: none;
+      }
+    }
+
+    .accordion {
+      &-item,
+      &-header {
+        background: transparent;
+      }
+
+      &-button {
+        background: transparent;
+
+        .icon {
+          @include w100;
+        }
+
+        .text {
+          display: none;
+        }
+
+        &::after {
+          display: none;
+        }
+      }
+    }
+  }
 }
 
-.sidebardown {
-  width: length(55);
-  .text {
-    display: none;
-  }
-  .accordion-button::after {
-    width: 0%;
-  }
-  .desktopsidebar {
-    width: length(60);
-  }
-
-  .firstLogoImage {
-    display: none;
-  }
-  .imageC {
-    display: block;
-  }
-  transition: 0.2s ease-in-out;
-  .btn-toggle {
-    transform: translateY(-50%) rotate(180deg);
-  }
-}
 /**=====================================================
                       SIDEBAR END
 =====================================================**/
