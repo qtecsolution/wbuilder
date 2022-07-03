@@ -105,7 +105,7 @@
 
               .btn-reset {
                 position: absolute;
-                top: 29%;
+                top: 50%;
                 @include transform(translateY(-50%));
                 right: length(30);
                 @include transparent-button;
@@ -122,6 +122,10 @@
                 .inputfield,
                 .selectfield {
                   border-color: $danger;
+                }
+
+                .btn-reset {
+                  top: 29%;
                 }
 
                 .error-message {
