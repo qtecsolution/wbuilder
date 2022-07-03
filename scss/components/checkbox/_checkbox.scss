@@ -1,0 +1,58 @@
+.checkfield {
+  @include flex-center-vert;
+
+  .checkinput {
+    &:checked ~ .checklabel {
+      &::before {
+        background: $primary;
+        border-color: $primary;
+      }
+      
+      &::after {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+
+  .checklabel {
+    position: relative;
+    padding-left: length(26);
+    cursor: pointer;
+    color: $textdark;
+    @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(24, 14));
+
+    &::selection {
+      @include setBgColor(transparent, $textdark);
+    }
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+    }
+
+    &::before {
+      left: 0;
+      @include transform(translateY(-50%));
+      @include square(length(18));
+      background: $white;
+      @include border(solid, 2, $textlight);
+      @include radius(3);
+    }
+
+    &::after {
+      width: length(5);
+      height: length(10);
+      @include border(solid, 2, $white);
+      @include transform(translateY(-60%) rotate(45deg));
+      border-top: 0;
+      border-left: 0;
+      left: length(7);
+      opacity: 0;
+      visibility: hidden;
+      @include transitionsall;
+    }
+  }
+}

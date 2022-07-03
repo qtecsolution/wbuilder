@@ -42,8 +42,13 @@
         &-body {
           .formfilter {
             @include flex-center-vert;
-            gap: length(16);
+            align-items: flex-start;
+            gap: length(12);
             flex-wrap: wrap;
+  
+            @include breakpoint(tab992) {
+              gap: length(16);
+            }
             
             .inputbox {
               @include w100;
@@ -72,17 +77,12 @@
                 }
               }
               
-              .inputlabel {
-                color: $secondarytext;
-                @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(22.4, 16));
-              }
-              
               .inputfield {
                 color: $textprimary;
                 @include border(solid, 1, $textlight);
                 @include radius(4);
-                padding: length(12) length(16);
-                @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(19.6, 14));
+                padding: length(8) length(16);
+                @include font-face($primaryFont, style('normal'), size(12), weight('normal'), line-height(16, 12));
 
                 &::after {
                   color: $textlight;
@@ -93,8 +93,8 @@
                 color: $textprimary;
                 @include border(solid, 1, $textlight);
                 @include radius(4);
-                @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(19.6, 14));
-                padding: length(12) length(16);
+                @include font-face($primaryFont, style('normal'), size(12), weight('normal'), line-height(16, 12));
+                padding: length(8) length(16);
                 background: $white url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16 10L12 14L8 10' stroke='%238A92A6' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A") no-repeat center right 3%;
                 appearance: none;
 
@@ -105,7 +105,7 @@
 
               .btn-reset {
                 position: absolute;
-                top: 52%;
+                top: 29%;
                 @include transform(translateY(-50%));
                 right: length(30);
                 @include transparent-button;
@@ -136,13 +136,12 @@
 
               @include breakpoint(mobile576) {
                 width: length(153);
-                margin-top: length(4);
               }
               
               .btn-filter {
                 @include w100;
-                @include font-face($primaryFont, style('normal'), size(14), weight('semibold'), line-height(19.6, 14));
-                padding: length(11.5) length(32);
+                @include font-face($primaryFont, style('normal'), size(12), weight('semibold'), line-height(16, 12));
+                padding: length(9) length(32);
                 @include setBgColor($primary, $white);
                 @include radius(4);
                 text-align: center;

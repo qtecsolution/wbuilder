@@ -12,6 +12,17 @@
 	cursor: pointer;
 }
 
+.btn-submit {
+	@include setBgColor($primary, $white);
+	@include font-face($primaryFont, style('normal'), size(14), weight('semibold'), line-height(24, 14));
+	padding: length(12) length(40);
+	@include radius(4);
+	@include transitionsbackground;
+
+	@include hover {
+		background: darken($primary, 15%);
+	}
+}
 
 /**=======================================================**
                         BUTTONS END

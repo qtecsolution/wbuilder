@@ -857,6 +857,25 @@ select {
   cursor: pointer;
 }
 
+.btn-submit {
+  background: #4a65ed;
+  color: white;
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.71429;
+  padding: 0.75rem 2.5rem;
+  border-radius: 0.25rem;
+  border-radius: 0.25rem;
+  -webkit-transition: background 250ms ease-in-out;
+  transition: background 250ms ease-in-out;
+}
+
+.btn-submit:not([disabled]):hover {
+  background: #1535d5;
+}
+
 /**=======================================================**
                         BUTTONS END
 **=======================================================**/
@@ -872,13 +891,23 @@ select {
 .footer {
   background: white;
   margin-left: 0rem;
-  padding: 1rem;
+  padding: 1.5rem 2rem 1.5rem 1rem;
   overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @media screen and (min-width: 62rem) {
   .footer {
-    margin-left: 13.75rem;
+    margin-left: 13.875rem;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: calc(100% - 12.5rem);
   }
 }
 
@@ -2541,9 +2570,18 @@ select {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 1rem;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 0.75rem;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+}
+
+@media screen and (min-width: 62rem) {
+  .main .tableinfo-header .tablefilter-body .formfilter {
+    gap: 1rem;
+  }
 }
 
 .main .tableinfo-header .tablefilter-body .formfilter .inputbox {
@@ -2586,26 +2624,17 @@ select {
   }
 }
 
-.main .tableinfo-header .tablefilter-body .formfilter .inputbox .inputlabel {
-  color: #8b93a7;
-  font-family: "Inter";
-  font-style: normal;
-  font-size: 1rem;
-  font-weight: normal;
-  line-height: 1.4;
-}
-
 .main .tableinfo-header .tablefilter-body .formfilter .inputbox .inputfield {
   color: #232d43;
   border: solid 0.0625rem #d1d4dc;
   border-radius: 0.25rem;
   border-radius: 0.25rem;
-  padding: 0.75rem 1rem;
+  padding: 0.5rem 1rem;
   font-family: "Inter";
   font-style: normal;
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   font-weight: normal;
-  line-height: 1.4;
+  line-height: 1.33333;
 }
 
 .main .tableinfo-header .tablefilter-body .formfilter .inputbox .inputfield::after {
@@ -2619,10 +2648,10 @@ select {
   border-radius: 0.25rem;
   font-family: "Inter";
   font-style: normal;
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   font-weight: normal;
-  line-height: 1.4;
-  padding: 0.75rem 1rem;
+  line-height: 1.33333;
+  padding: 0.5rem 1rem;
   background: white url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16 10L12 14L8 10' stroke='%238A92A6' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A") no-repeat center right 3%;
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -2635,7 +2664,7 @@ select {
 
 .main .tableinfo-header .tablefilter-body .formfilter .inputbox .btn-reset {
   position: absolute;
-  top: 52%;
+  top: 29%;
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
   right: 1.875rem;
@@ -2676,7 +2705,6 @@ select {
 @media screen and (min-width: 36rem) {
   .main .tableinfo-header .tablefilter-body .formfilter .submitbox {
     width: 9.5625rem;
-    margin-top: 0.25rem;
   }
 }
 
@@ -2684,10 +2712,10 @@ select {
   width: 100%;
   font-family: "Inter";
   font-style: normal;
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   font-weight: 600;
-  line-height: 1.4;
-  padding: 0.71875rem 2rem;
+  line-height: 1.33333;
+  padding: 0.5625rem 2rem;
   background: #4a65ed;
   color: white;
   border-radius: 0.25rem;
@@ -2885,11 +2913,6 @@ div.dataTables_wrapper div.dataTables_info {
 @media screen and (min-width: 62rem) {
   div.dataTables_wrapper div.dataTables_info {
     padding-top: 2.1875rem;
-    font-family: "Inter";
-    font-style: normal;
-    font-size: 1rem;
-    font-weight: normal;
-    line-height: 1.5;
   }
 }
 
@@ -2915,18 +2938,19 @@ div.dataTables_wrapper div.dataTables_paginate .pagination {
   border-radius: 0.25rem;
   gap: 0.0625rem;
   overflow: hidden;
+  margin: 0 !important;
 }
 
 div.dataTables_wrapper div.dataTables_paginate .pagination .page-item .page-link {
   border: 0;
   border-radius: 0;
-  padding: 0.5rem 1.5rem;
+  padding: 0.5rem 1rem;
   background: white;
   color: #4a65ed;
   border-right: solid 0.0625rem #dfe3e7;
   font-family: "Inter";
   font-style: normal;
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-weight: normal;
   line-height: 1.5;
 }
@@ -2951,7 +2975,7 @@ div.dataTables_wrapper div.dataTables_paginate .pagination .page-item.previous .
   font-size: 0;
   color: transparent;
   position: relative;
-  min-height: 2.5rem;
+  min-height: 2.3125rem;
 }
 
 div.dataTables_wrapper div.dataTables_paginate .pagination .page-item.previous .page-link::before, div.dataTables_wrapper div.dataTables_paginate .pagination .page-item.next .page-link::before {
@@ -2990,11 +3014,352 @@ div.dataTables_wrapper div.dataTables_paginate .pagination .page-item.next .page
 }
 
 .auth .authentication {
-  width: 50%;
+  position: relative;
+  width: 100%;
+  background: white;
+}
+
+.auth .authentication-header {
+  padding: 1.5rem;
+}
+
+@media screen and (min-width: 62rem) {
+  .auth .authentication-header {
+    padding: 4rem 0rem 0rem 4.375rem;
+  }
+}
+
+.auth .authentication-body {
+  height: calc(100% - 4.5rem);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+@media screen and (min-width: 62rem) {
+  .auth .authentication-body {
+    height: calc(100% - 5.4375rem);
+  }
+}
+
+.auth .authentication-body .authinfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+  text-align: center;
+}
+
+.auth .authentication-body .authinfo .title {
+  color: #333333;
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.4;
+}
+
+.auth .authentication-body .authinfo .social-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 0.5rem;
+}
+
+.auth .authentication-body .authinfo .social-list-link {
+  background: transparent;
+  border: none;
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+.auth .authentication-body .authinfo .social-list-link svg {
+  width: 100%;
+  height: 100%;
+}
+
+.auth .authentication-body .authinfo .textauth {
+  color: #333333;
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.4;
+}
+
+.auth .authentication-body .authinfo .textauth .link {
+  color: #4a65ed;
+  font: inherit;
+}
+
+.auth .authentication-body .authinfo .textauth .link:not([disabled]):hover {
+  color: #1535d5;
+}
+
+.auth .authentication-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+}
+
+.auth .authentication-form-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5rem;
+  text-align: center;
+}
+
+.auth .authentication-form-header .auth-title {
+  color: #232d43;
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 2.0625rem;
+  font-weight: 600;
+  line-height: 1.2103;
+}
+
+.auth .authentication-form-header .auth-text {
+  color: #8b93a7;
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.4;
+}
+
+.auth .authentication-form-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+}
+
+.auth .authentication-form-body .inputbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5rem;
+}
+
+.auth .authentication-form-body .inputbox .inputlabel {
+  color: #333333;
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.71429;
+}
+
+.auth .authentication-form-body .inputbox .inputfield {
+  color: #333333;
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.71429;
+  border: solid 0.0625rem #d1d4dc;
+  border-radius: 0.25rem;
+  border-radius: 0.25rem;
+  padding: 0.5rem 1rem;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.auth .authentication-form-body .inputbox .inputfield::-webkit-input-placeholder {
+  color: #b4b9c5;
+}
+
+.auth .authentication-form-body .inputbox .inputfield:-ms-input-placeholder {
+  color: #b4b9c5;
+}
+
+.auth .authentication-form-body .inputbox .inputfield::-ms-input-placeholder {
+  color: #b4b9c5;
+}
+
+.auth .authentication-form-body .inputbox .inputfield::placeholder {
+  color: #b4b9c5;
+}
+
+.auth .authentication-form-body .inputbox .inputfield:focus {
+  border-color: #8b93a7;
+}
+
+.auth .authentication-form-body .inputbox .error-message {
+  color: #fc5a5a;
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1.4;
+  display: none;
+}
+
+.auth .authentication-form-body .inputbox.errorfield .inputfield {
+  border-color: #fc5a5a;
+}
+
+.auth .authentication-form-body .inputbox.errorfield .error-message {
+  display: block;
+}
+
+.auth .authentication-form-body .inputinfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5rem;
+}
+
+.auth .authentication-form-body .inputinfo .remember-forgot {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  align-items: center;
+}
+
+.auth .authentication-form-body .inputinfo .remember-forgot .forgotlink {
+  color: #4a65ed;
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.71429;
+  -webkit-transition: color 250ms ease-in-out;
+  transition: color 250ms ease-in-out;
+}
+
+.auth .authentication-form-body .inputinfo .remember-forgot .forgotlink:not([disabled]):hover {
+  color: #1535d5;
+}
+
+.auth .authentication-form-body .submitbox {
+  margin-top: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.auth .authentication .icon {
+  width: 20rem;
+  height: 10rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+  position: absolute;
+  z-index: 0;
+}
+
+@media screen and (min-width: 36rem) {
+  .auth .authentication .icon {
+    width: 26.875rem;
+    height: 15.625rem;
+  }
+}
+
+.auth .authentication .icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (min-width: 62rem) {
+  .auth .authentication {
+    width: 50%;
+  }
 }
 
 .auth-thumbnail {
-  width: 50%;
   display: none;
 }
 
@@ -3009,6 +3374,7 @@ div.dataTables_wrapper div.dataTables_paginate .pagination .page-item.next .page
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    width: 50%;
   }
 }
 
@@ -3017,4 +3383,83 @@ div.dataTables_wrapper div.dataTables_paginate .pagination .page-item.next .page
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.auth.login .authentication .icon {
+  bottom: -2rem;
+  left: 0rem;
+}
+
+.checkfield {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.checkfield .checkinput:checked ~ .checklabel::before {
+  background: #4a65ed;
+  border-color: #4a65ed;
+}
+
+.checkfield .checkinput:checked ~ .checklabel::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+.checkfield .checklabel {
+  position: relative;
+  padding-left: 1.625rem;
+  cursor: pointer;
+  color: #333333;
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.71429;
+}
+
+.checkfield .checklabel::-moz-selection {
+  background: transparent;
+  color: #333333;
+}
+
+.checkfield .checklabel::selection {
+  background: transparent;
+  color: #333333;
+}
+
+.checkfield .checklabel::before, .checkfield .checklabel::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+}
+
+.checkfield .checklabel::before {
+  left: 0;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  height: 1.125rem;
+  width: 1.125rem;
+  background: white;
+  border: solid 0.125rem #d1d4dc;
+  border-radius: 0.1875rem;
+  border-radius: 0.1875rem;
+}
+
+.checkfield .checklabel::after {
+  width: 0.3125rem;
+  height: 0.625rem;
+  border: solid 0.125rem white;
+  -webkit-transform: translateY(-60%) rotate(45deg);
+  transform: translateY(-60%) rotate(45deg);
+  border-top: 0;
+  border-left: 0;
+  left: 0.4375rem;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
 }

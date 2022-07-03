@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wbuilder | Login</title>
+  <!-- FAVICON ICON -->
+  <link rel="shortcut icon" href="../favicon.svg" type="image/svg">
+  <!-- BOOTSTRAP CSS -->
+  <link rel="stylesheet" href="../assets/css/bootstrap/bootstrap.min.css">
+  <!-- WBUILDER CSS -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body class="m-0 p-0">
+  <!--========== PRELOADER-START ==========-->
+  <div class="preloader" id="preloader">
+    <div class="preload">
+      <div class="circle-1"></div>
+      <div class="circle-2">
+        <svg width="33" height="19" viewBox="0 0 33 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0.874023 6.36487L7.96321 18.6375L15.0524 15.5454L22.0938 18.5177C20.6378 15.881 17.4298 10.1905 16.2459 8.52217C15.0619 6.85386 12.9042 6.38884 11.9733 6.36487H0.874023Z" fill="#8CA4FF"/>
+          <path d="M17.2719 2.43377L7.96289 18.6375L15.0521 15.5454L22.0935 18.5177L32.7392 0.0847046C30.0738 0.0207845 24.1224 -0.0687036 21.64 0.0847046C19.1576 0.238113 17.6936 1.71467 17.2719 2.43377Z" fill="#3A57E8" fill-opacity="0.8"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+  <!--========== PRELOADER-END ============-->
+
+
+  <!--========== AUTHENTICATION-START ==========-->
+  <div class="auth login">
+    <div class="authentication">
+      <div class="authentication-header">
+        <figure class="logo">
+          <img src="../assets/images/logo/logo.svg" alt="logo">
+        </figure>
+      </div>
+  
+      <div class="authentication-body">
+        <div class="col-md-6 col-12">
+          <form class="authentication-form">
+            <div class="authentication-form-header">
+              <h3 class="auth-title">Sign In</h3>
+              <p class="auth-text">Login to stay connected.</p>
+            </div>
+
+            <div class="authentication-form-body">
+              <div class="row">
+                <div class="col-12">
+                  <div class="inputbox errorfield">
+                    <label for="loginemail" class="inputlabel">Email</label>
+                    <input type="email" id="loginemail" placeholder="Enter your email" class="inputfield">
+                    <p class="error-message">Email is required</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-12">
+                  <div class="inputinfo">
+                    <div class="inputbox errorfield">
+                      <label for="loginpassword" class="inputlabel">Password</label>
+                      <input type="password" id="loginpassword" placeholder="Enter your password" class="inputfield">
+                      <p class="error-message">Password doesn't matched!</p>
+                    </div>
+
+                    <div class="remember-forgot">
+                      <div class="checkfield">
+                        <input type="checkbox" id="logincheck" class="checkinput" hidden>
+                        <label for="logincheck" class="checklabel">Remember me</label>
+                      </div>
+
+                      <div class="forgotpassword">
+                        <a href="forgot.html" class="forgotlink">Forgot Password?</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="submitbox">
+                  <button class="btn-submit" type="button">Sign In</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <div class="authinfo">
+          <h6 class="title">or sign in with other accounts?</h6>
+
+          <ul class="social-list">
+            <li class="social-list-item">
+              <button class="social-list-link">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M24.0001 11.9992C24.0001 5.37225 18.6279 0 12 0C5.37242 0 0 5.37225 0 11.9992C0 18.6262 5.37242 24 12 24C18.6281 24 24.0001 18.6262 24.0001 11.9992Z" fill="#395196"/>
+                  <path d="M13.0575 9.158V8.0213C13.0575 7.4677 13.427 7.3383 13.6857 7.3383C13.9452 7.3383 15.2811 7.3383 15.2811 7.3383V4.90422L13.0846 4.89453C10.6466 4.89453 10.093 6.711 10.093 7.8739V9.158H8.68359V12.0014H10.1052C10.1052 15.2233 10.1052 19.1082 10.1052 19.1082H12.9477C12.9477 19.1082 12.9477 15.1837 12.9477 12.0014H15.0575L15.317 9.158H13.0575Z" fill="white"/>
+                </svg>
+              </button>
+            </li>
+
+            <li class="social-list-item">
+              <button class="social-list-link">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g filter="url(#googleicon)">
+                    <path d="M32 16C32 9.37258 26.6274 4 20 4C13.3726 4 8 9.37258 8 16C8 22.6274 13.3726 28 20 28C26.6274 28 32 22.6274 32 16Z" fill="white"/>
+                    <mask id="googleiconmask" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="12" y="8" width="16" height="16">
+                      <path d="M20 24C24.4183 24 28 20.4183 28 16C28 15.4116 27.9365 14.838 27.8159 14.2857H20V17.6H24.4054C23.7515 19.4 22.0259 20.6857 20 20.6857C17.4121 20.6857 15.3143 18.5878 15.3143 16C15.3143 13.4122 17.4121 11.3143 20 11.3143C21.3191 11.3143 22.5108 11.8593 23.3624 12.7365L25.6945 10.3811C24.2439 8.91109 22.2284 8 20 8C15.5817 8 12 11.5817 12 16C12 20.4183 15.5817 24 20 24Z" fill="#C4C4C4"/>
+                    </mask>
+                    <g mask="url(#googleiconmask)">
+                      <path d="M6.85742 16.0312L12.0003 11.6593L17.7145 16.1164L12.0003 20.345L6.85742 16.0312Z" fill="#FEBD01"/>
+                      <path d="M12 11.6602L18.4571 5.20301L25.4285 7.7173L28.4571 13.0887L19.8285 13.4316L17.7143 16.1173L12 11.6602Z" fill="#FF4131"/>
+                      <path d="M19.6572 13.9434L28.9143 13.7148L28.8001 17.8291L26.5143 22.7434L21.8286 19.0863L19.6572 18.0577V13.9434Z" fill="#0286F7"/>
+                      <path d="M12 20.3458L17.7143 16.1172L18.3428 18.9743L21.8285 19.0886L26.5143 22.7458L21.7714 24.8029L15.8857 24.46L12 20.3458Z" fill="#01A94D"/>
+                    </g>
+                  </g>
+                  <defs>
+                    <filter id="googleicon" x="0" y="0" width="40" height="40" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                      <feOffset dy="4"/>
+                      <feGaussianBlur stdDeviation="4"/>
+                      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0.0627451 0 0 0 0 0.160784 0 0 0 0.1 0"/>
+                      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_182_45"/>
+                      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_182_45" result="shape"/>
+                    </filter>
+                  </defs>
+                </svg>
+              </button>
+            </li>
+          </ul>
+
+          <p class="textauth">
+            Don’t have an account? <a href="register.html" class="link">Click here to sign up</a>.
+          </p>
+        </div>
+      </div>
+
+      <div class="icon">
+        <svg width="317" height="163" viewBox="0 0 317 163" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g opacity="0.2">
+            <path d="M-113 85.5279L-17.3371 250.442L78.3259 208.891L173.345 248.831C153.697 213.401 110.407 136.935 94.4307 114.517C78.4547 92.0987 49.3371 85.85 36.7753 85.5279H-113Z" fill="#8CA4FF"/>
+            <path d="M108.28 32.7038L-17.3379 250.442L78.325 208.891L173.344 248.831L316.999 1.13822C281.032 0.279292 200.722 -0.923205 167.224 1.13822C133.726 3.19964 113.97 23.0408 108.28 32.7038Z" fill="#3A57E8" fill-opacity="0.8"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+
+    <figu class="auth-thumbnail">
+      <img src="../assets/images/authentication/auth-banner.svg" alt="auth-thumbnail">
+    </figure>
+  </div>
+  <!--========== AUTHENTICATION-END ==========-->
+
+  <!--========== PRELOADER JS ============-->
+  <script src="../assets/js/preloader/loader.js"></script>
+</body>
+</html>

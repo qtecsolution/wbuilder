@@ -6,15 +6,195 @@
   height: 100vh;
 
   .authentication {
-    width: 50%;
+    position: relative;
+    @include w100;
+    background: $white;
+
+    &-header {
+      padding: length(24);
+
+      @include breakpoint(tab992) {
+        padding: length(64) length(0) length(0) length(70);
+      }
+    }
+
+    &-body {
+      height: calc(100% - 4.5rem);
+      @include flex-center-column;
+      justify-content: flex-start;
+      gap: length(32);
+      padding: length(32);
+
+      @include breakpoint(tab992) {
+        height: calc(100% - 5.4375rem);
+      }
+
+      .authinfo {
+        @include flex-center-column;
+        gap: length(16);
+        text-align: center;
+
+        .title {
+          color: $textdark;
+          @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(19.6, 14));
+        }
+
+        .social-list {
+          @include list-horizontal;
+          justify-content: center;
+          gap: length(8);
+
+          &-link {
+            @include transparent-button;
+            @include square(length(24));
+            @include circle;
+            @include flex-center;
+            overflow: hidden;
+
+            svg {
+              @include wh100;
+            }
+          }
+        }
+
+        .textauth {
+          color: $textdark;
+          @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(19.6, 14));
+
+          .link {
+            color: $primary;
+            font: inherit;
+
+            @include hover {
+              color: darken($primary, 15%);
+            }
+          }
+        }
+      }
+    }
+
+    &-form {
+      @include flex-column;
+      gap: length(32);
+
+      &-header {
+        @include flex-center-column;
+        gap: length(8);
+        text-align: center;
+
+        .auth-title {
+          color: $textprimary;
+          @include font-face($primaryFont, style('normal'), size(33), weight('semibold'), line-height(39.94, 33));
+        }
+
+        .auth-text {
+          color: $secondarytext;
+          @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(22.4, 16));
+        }
+      }
+
+      &-body {
+        @include flex-column;
+        gap: length(16);
+
+        .inputbox {
+          @include flex-column;
+          gap: length(8);
+
+          .inputlabel {
+            color: $textdark;
+            @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(24, 14));
+          }
+
+          .inputfield {
+            color: $textdark;
+            @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(24, 14));
+            @include border(solid, 1, $textlight);
+            @include radius(4);
+            padding: length(8) length(16);
+            @include transitionsall;
+
+            &::placeholder {
+              color: darken($textlight, 10%);
+            }
+
+            &:focus {
+              border-color: $secondarytext;
+            }
+          }
+
+          .error-message {
+            color: $danger;
+            @include font-face($primaryFont, style('normal'), size(12), weight('medium'), line-height(16.8, 12));
+            display: none;
+          }
+
+          &.errorfield {
+            .inputfield {
+              border-color: $danger;
+            }
+
+            .error-message {
+              display: block;
+            }
+          }
+        }
+
+        .inputinfo {
+          @include flex-column;
+          gap: length(8);
+
+          .remember-forgot {
+            @include flex-center-between;
+
+            .forgotlink {
+              color: $primary;
+              @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(24, 14));
+              @include transitionscolor;
+
+              @include hover {
+                color: darken($primary, 15%);
+              }
+            }
+          }
+        }
+
+        .submitbox {
+          margin-top: length(16);
+          @include flex-center;
+        }
+      }
+    }
+
+    .icon {
+      width: length(320);
+      height: length(160);
+      @include flex-center;
+      overflow: hidden;
+      position: absolute;
+      z-index: 0;
+
+      @include breakpoint(mobile576) {
+        width: length(430);
+        height: length(250);
+      }
+
+      svg {
+        @include wh100;
+      }
+    }
+
+    @include breakpoint(tab992) {
+      width: 50%;
+    }
   }
 
   &-thumbnail {
-    width: 50%;
     display: none;
 
     @include breakpoint(tab992) {
       @include flex-center;
+      width: 50%;
     }
 
     img {
@@ -24,6 +204,11 @@
   }
 
   &.login {
-    
+    .authentication {
+      .icon {
+        bottom: length(-32);
+        left: length(0);
+      }
+    }
   }
 }
