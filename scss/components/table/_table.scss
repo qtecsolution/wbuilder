@@ -62,7 +62,7 @@ table.dataTable {
         @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(19.6, 14));
         text-align: center;
         @include border-single(left, solid, 1, $paginstionborder);
-        padding: length(14) length(8);
+        padding: length(8);
         vertical-align: middle;
 
         &:first-of-type {
@@ -97,7 +97,6 @@ table.dataTable {
 
         @include breakpoint(mobile) {
           @include flex-center-between;
-          padding: length(8);
           @include border-single(bottom, solid, 1, $paginstionborder);
 
           &:first-of-type {

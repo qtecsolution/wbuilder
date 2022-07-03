@@ -223,6 +223,11 @@
 								color: lighten($textprimary, 10%);
 								@include font-face($primaryFont, style("normal"), size(14), weight("normal"), line-height(19.6, 14));
 							}
+
+							&::after {
+								@include square(length(16));
+								background-size: length(16);
+							}
 						}
 					}
 

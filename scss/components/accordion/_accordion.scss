@@ -4,7 +4,7 @@
 
 .accordion {
 	@include flex-column;
-	gap: length(8);
+	// gap: length(8);
 
 	&-item {
 		border: none;
