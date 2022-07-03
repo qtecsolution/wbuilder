@@ -20,7 +20,21 @@
 	@include transitionsbackground;
 
 	@include hover {
-		background: darken($primary, 15%);
+		@include setBgColor(darken($primary, 15%), $white);
+	}
+}
+
+.btn-back {
+	@include border(solid, 1, $primary);
+	padding: length(5) length(16);
+	@include radius(4);
+	display: inline-block;
+	text-align: center;
+	@include font-face($primaryFont, style('normal'), size(12), weight('semibold'), line-height(24, 12));
+	@include transitionsall;
+
+	@include hover {
+		@include setBgColor($primary, $white);
 	}
 }
 

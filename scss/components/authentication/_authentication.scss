@@ -5,6 +5,10 @@
   @include flex;
   height: 100vh;
 
+  @include breakpoint(tab992) {
+    min-height: 100vh;
+  }
+
   .authentication {
     position: relative;
     @include w100;
@@ -33,6 +37,8 @@
         @include flex-center-column;
         gap: length(16);
         text-align: center;
+        position: relative;
+        z-index: 100;
 
         .title {
           color: $textdark;
@@ -69,6 +75,17 @@
               color: darken($primary, 15%);
             }
           }
+
+          .btn-resend {
+            @include transparent-button;
+            color: $primary;
+            font: inherit;
+            text-transform: uppercase;
+
+            @include hover {
+              color: darken($primary, 15%);
+            }
+          }
         }
       }
     }
@@ -90,6 +107,11 @@
         .auth-text {
           color: $secondarytext;
           @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(22.4, 16));
+        }
+
+        .confirmed-title {
+          color: $textdark;
+          @include font-face($primaryFont, style('normal'), size(14), weight('semibold'), line-height(19.6, 14));
         }
       }
 
@@ -159,25 +181,121 @@
           }
         }
 
+        .verification {
+          @include flex-column;
+          gap: length(12);
+
+          .verify {
+            @include flex-center;
+            gap: length(16);
+            @include w100;
+            overflow: hidden;
+
+            .inputfield {
+              @include square(length(60));
+              @include circle;
+              @include setBgColor($inputbg, $textdark);
+              @include border(solid, 1, transparent);
+              @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(24, 14));
+              text-align: center;
+              @include transitionsall;
+
+              &::placeholder {
+                color: darken($textlight, 10%);
+              }
+
+              &:focus {
+                border-color: $secondarytext;
+                background: transparent;
+              }
+            }
+          }
+
+          .error-message {
+            color: $danger;
+            @include font-face($primaryFont, style('normal'), size(12), weight('medium'), line-height(16.8, 12));
+            display: none;
+            text-align: center;
+            text-align: center;
+          }
+
+          &.errorfield {
+            .verify {
+              .inputfield {
+                border-color: $danger;
+                background: transparent;
+              }
+            }
+
+            .error-message {
+              display: block;
+            }
+          }
+        }
+
         .submitbox {
           margin-top: length(16);
           @include flex-center;
         }
+
+        .confirmed {
+          width: length(182);
+          height: length(222);
+          margin-inline: auto;
+          @include flex-center;
+          overflow: hidden;
+
+          svg {
+            @include wh100;
+          }
+        }
       }
     }
 
-    .icon {
+    .logicon {
       width: length(320);
       height: length(160);
       @include flex-center;
       overflow: hidden;
       position: absolute;
+      bottom: length(-32);
+      left: length(0);
       z-index: 0;
 
       @include breakpoint(mobile576) {
         width: length(430);
         height: length(250);
       }
+
+      svg {
+        @include wh100;
+      }
+    }
+
+    .logicon {
+      width: length(317);
+      height: length(163);
+      @include flex-center;
+      overflow: hidden;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: 0;
+
+      svg {
+        @include wh100;
+      }
+    }
+
+    .regicon {
+      width: length(289);
+      height: length(169);
+      @include flex-center;
+      overflow: hidden;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      z-index: 0;
 
       svg {
         @include wh100;
@@ -200,15 +318,6 @@
     img {
       @include wh100;
       object-fit: cover;
-    }
-  }
-
-  &.login {
-    .authentication {
-      .icon {
-        bottom: length(-32);
-        left: length(0);
-      }
     }
   }
 }

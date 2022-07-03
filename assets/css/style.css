@@ -874,6 +874,28 @@ select {
 
 .btn-submit:not([disabled]):hover {
   background: #1535d5;
+  color: white;
+}
+
+.btn-back {
+  border: solid 0.0625rem #4a65ed;
+  padding: 0.3125rem 1rem;
+  border-radius: 0.25rem;
+  border-radius: 0.25rem;
+  display: inline-block;
+  text-align: center;
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 2;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.btn-back:not([disabled]):hover {
+  background: #4a65ed;
+  color: white;
 }
 
 /**=======================================================**
@@ -3017,6 +3039,12 @@ div.dataTables_wrapper div.dataTables_paginate .pagination .page-item.next .page
   height: 100vh;
 }
 
+@media screen and (min-width: 62rem) {
+  .auth {
+    min-height: 100vh;
+  }
+}
+
 .auth .authentication {
   position: relative;
   width: 100%;
@@ -3077,6 +3105,8 @@ div.dataTables_wrapper div.dataTables_paginate .pagination .page-item.next .page
           flex-direction: column;
   gap: 1rem;
   text-align: center;
+  position: relative;
+  z-index: 100;
 }
 
 .auth .authentication-body .authinfo .title {
@@ -3145,6 +3175,18 @@ div.dataTables_wrapper div.dataTables_paginate .pagination .page-item.next .page
   color: #1535d5;
 }
 
+.auth .authentication-body .authinfo .textauth .btn-resend {
+  background: transparent;
+  border: none;
+  color: #4a65ed;
+  font: inherit;
+  text-transform: uppercase;
+}
+
+.auth .authentication-body .authinfo .textauth .btn-resend:not([disabled]):hover {
+  color: #1535d5;
+}
+
 .auth .authentication-form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3189,6 +3231,15 @@ div.dataTables_wrapper div.dataTables_paginate .pagination .page-item.next .page
   font-style: normal;
   font-size: 1rem;
   font-weight: normal;
+  line-height: 1.4;
+}
+
+.auth .authentication-form-header .confirmed-title {
+  color: #333333;
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 600;
   line-height: 1.4;
 }
 
@@ -3315,6 +3366,91 @@ div.dataTables_wrapper div.dataTables_paginate .pagination .page-item.next .page
   color: #1535d5;
 }
 
+.auth .authentication-form-body .verification {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.75rem;
+}
+
+.auth .authentication-form-body .verification .verify {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 1rem;
+  width: 100%;
+  overflow: hidden;
+}
+
+.auth .authentication-form-body .verification .verify .inputfield {
+  height: 3.75rem;
+  width: 3.75rem;
+  border-radius: 100%;
+  background: #f7f7f7;
+  color: #333333;
+  border: solid 0.0625rem transparent;
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.71429;
+  text-align: center;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.auth .authentication-form-body .verification .verify .inputfield::-webkit-input-placeholder {
+  color: #b4b9c5;
+}
+
+.auth .authentication-form-body .verification .verify .inputfield:-ms-input-placeholder {
+  color: #b4b9c5;
+}
+
+.auth .authentication-form-body .verification .verify .inputfield::-ms-input-placeholder {
+  color: #b4b9c5;
+}
+
+.auth .authentication-form-body .verification .verify .inputfield::placeholder {
+  color: #b4b9c5;
+}
+
+.auth .authentication-form-body .verification .verify .inputfield:focus {
+  border-color: #8b93a7;
+  background: transparent;
+}
+
+.auth .authentication-form-body .verification .error-message {
+  color: #fc5a5a;
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1.4;
+  display: none;
+  text-align: center;
+  text-align: center;
+}
+
+.auth .authentication-form-body .verification.errorfield .verify .inputfield {
+  border-color: #fc5a5a;
+  background: transparent;
+}
+
+.auth .authentication-form-body .verification.errorfield .error-message {
+  display: block;
+}
+
 .auth .authentication-form-body .submitbox {
   margin-top: 1rem;
   display: -webkit-box;
@@ -3328,7 +3464,28 @@ div.dataTables_wrapper div.dataTables_paginate .pagination .page-item.next .page
           justify-content: center;
 }
 
-.auth .authentication .icon {
+.auth .authentication-form-body .confirmed {
+  width: 11.375rem;
+  height: 13.875rem;
+  margin-inline: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+.auth .authentication-form-body .confirmed svg {
+  width: 100%;
+  height: 100%;
+}
+
+.auth .authentication .logicon {
   width: 20rem;
   height: 10rem;
   display: -webkit-box;
@@ -3342,17 +3499,67 @@ div.dataTables_wrapper div.dataTables_paginate .pagination .page-item.next .page
           justify-content: center;
   overflow: hidden;
   position: absolute;
+  bottom: -2rem;
+  left: 0rem;
   z-index: 0;
 }
 
 @media screen and (min-width: 36rem) {
-  .auth .authentication .icon {
+  .auth .authentication .logicon {
     width: 26.875rem;
     height: 15.625rem;
   }
 }
 
-.auth .authentication .icon svg {
+.auth .authentication .logicon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.auth .authentication .logicon {
+  width: 19.8125rem;
+  height: 10.1875rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.auth .authentication .logicon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.auth .authentication .regicon {
+  width: 18.0625rem;
+  height: 10.5625rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 0;
+}
+
+.auth .authentication .regicon svg {
   width: 100%;
   height: 100%;
 }
@@ -3387,11 +3594,6 @@ div.dataTables_wrapper div.dataTables_paginate .pagination .page-item.next .page
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-}
-
-.auth.login .authentication .icon {
-  bottom: -2rem;
-  left: 0rem;
 }
 
 .checkfield {
@@ -3467,3 +3669,62 @@ div.dataTables_wrapper div.dataTables_paginate .pagination .page-item.next .page
   -webkit-transition: all 250ms ease-in-out;
   transition: all 250ms ease-in-out;
 }
+
+/**=======================================================**
+                        ERROR START
+**=======================================================**/
+.error {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  padding: 1rem;
+  background: white;
+}
+
+.error-thumbnail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+  padding: 1rem;
+}
+
+@media screen and (min-width: 36rem) {
+  .error-thumbnail {
+    height: 18.75rem;
+    width: 18.75rem;
+  }
+}
+
+@media screen and (min-width: 62rem) {
+  .error-thumbnail {
+    height: 31.25rem;
+    width: 31.25rem;
+  }
+}
+
+.error-thumbnail svg {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+/**=======================================================**
+                        ERROR END
+**=======================================================**/

@@ -1,0 +1,35 @@
+/**=======================================================**
+                        ERROR START
+**=======================================================**/
+
+.error {
+  @include flex-center;
+  @include w100;
+  height: 100vh;
+  overflow: hidden;
+  padding: length(16);
+  background: $white;
+
+  &-thumbnail {
+    @include flex-center;
+    overflow: hidden;
+    padding: length(16);
+
+    @include breakpoint(mobile576) {
+      @include square(length(300));
+    }
+
+    @include breakpoint(tab992) {
+      @include square(length(500));
+    }
+
+    svg {
+      @include wh100;
+      object-fit: contain;
+    }
+  }
+}
+
+/**=======================================================**
+                        ERROR END
+**=======================================================**/

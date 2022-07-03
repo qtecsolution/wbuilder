@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wbuilder | Password Verification</title>
+  <!-- FAVICON ICON -->
+  <link rel="shortcut icon" href="../favicon.svg" type="image/svg">
+  <!-- BOOTSTRAP CSS -->
+  <link rel="stylesheet" href="../assets/css/bootstrap/bootstrap.min.css">
+  <!-- WBUILDER CSS -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body class="m-0 p-0">
+  <!--========== PRELOADER-START ==========-->
+  <div class="preloader" id="preloader">
+    <div class="preload">
+      <div class="circle-1"></div>
+      <div class="circle-2">
+        <svg width="33" height="19" viewBox="0 0 33 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0.874023 6.36487L7.96321 18.6375L15.0524 15.5454L22.0938 18.5177C20.6378 15.881 17.4298 10.1905 16.2459 8.52217C15.0619 6.85386 12.9042 6.38884 11.9733 6.36487H0.874023Z" fill="#8CA4FF"/>
+          <path d="M17.2719 2.43377L7.96289 18.6375L15.0521 15.5454L22.0935 18.5177L32.7392 0.0847046C30.0738 0.0207845 24.1224 -0.0687036 21.64 0.0847046C19.1576 0.238113 17.6936 1.71467 17.2719 2.43377Z" fill="#3A57E8" fill-opacity="0.8"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+  <!--========== PRELOADER-END ============-->
+
+  <!--========== AUTHENTICATION-START ==========-->
+  <div class="auth register">
+    <!-- AUTHENTICATION THUMBNAIL START -->
+    <figure class="auth-thumbnail">
+      <img src="../assets/images/authentication/auth-banner.svg" alt="auth-thumbnail">
+    </figure>
+    <!-- AUTHENTICATION THUMBNAIL END -->
+
+    <!-- AUTHENTICATION START -->
+    <div class="authentication">
+      <!-- AUTHENTICATION-HEADER START -->
+      <div class="authentication-header">
+        <figure class="logo">
+          <img src="../assets/images/logo/logo.svg" alt="logo">
+        </figure>
+      </div>
+      <!-- AUTHENTICATION-HEADER END -->
+  
+      <!-- AUTHENTICATION-BODY START -->
+      <div class="authentication-body">
+        <div class="col-md-6 col-12">
+          <form class="authentication-form">
+            <div class="authentication-form-header">
+              <h3 class="auth-title">Verification</h3>
+              <p class="auth-text">We sent you a code to verify your phone number.</p>
+            </div>
+
+            <div class="authentication-form-body">
+              <div class="row">
+                <div class="col-12">
+                  <div class="verification errorfield">
+                    <div class="verify">
+                      <input type="number" placeholder="1" class="inputfield">
+                      <input type="number" placeholder="2" class="inputfield">
+                      <input type="number" placeholder="3" class="inputfield">
+                      <input type="number" placeholder="4" class="inputfield">
+                    </div>
+
+                    <p class="error-message">OTP Verification is failed 🙁! Please try again 🙂</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="submitbox">
+                  <button class="btn-submit d-none" type="button">Send OTP</button>
+                  <a href="changepassword.html" class="btn-submit" role="button">Send OTP</a>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <div class="authinfo">
+          <p class="textauth">
+            Didn't recieve any code? <button class="btn-resend">RESEND</button>.
+          </p>
+        </div>
+      </div>
+      <!-- AUTHENTICATON-BODY END -->
+
+      <!-- REGISTER ICON -->
+      <div class="regicon">
+        <svg width="289" height="169" viewBox="0 0 289 169" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g opacity="0.2">
+            <path d="M0 85.7711L95.6629 250.685L191.326 209.134L286.345 249.074C266.697 213.644 223.407 137.178 207.431 114.76C191.455 92.3419 162.337 86.0932 149.775 85.7711H0Z" fill="#8CA4FF"/>
+            <path d="M221.28 32.9469L95.6621 250.685L191.325 209.134L286.344 249.074L429.999 1.38138C394.032 0.522456 313.722 -0.680041 280.224 1.38138C246.726 3.44281 226.97 23.284 221.28 32.9469Z" fill="#3A57E8" fill-opacity="0.8"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+    <!-- AUTHENTICATION END -->
+  </div>
+  <!--========== AUTHENTICATION-END ==========-->
+
+
+  <!--========== PRELOADER JS ============-->
+  <script src="../assets/js/preloader/loader.js"></script>
+</body>
+</html>

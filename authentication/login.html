@@ -28,16 +28,19 @@
   </div>
   <!--========== PRELOADER-END ============-->
 
-
   <!--========== AUTHENTICATION-START ==========-->
   <div class="auth login">
+    <!-- AUTHENTICATION START -->
     <div class="authentication">
+      <!-- AUTHENTICATION-HEADER START -->
       <div class="authentication-header">
         <figure class="logo">
           <img src="../assets/images/logo/logo.svg" alt="logo">
         </figure>
       </div>
+      <!-- AUTHENTICATION-HEADER END -->
   
+      <!-- AUTHENTICATION-BODY START -->
       <div class="authentication-body">
         <div class="col-md-6 col-12">
           <form class="authentication-form">
@@ -63,7 +66,7 @@
                     <div class="inputbox errorfield">
                       <label for="loginpassword" class="inputlabel">Password</label>
                       <input type="password" id="loginpassword" placeholder="Enter your password" class="inputfield">
-                      <p class="error-message">Password doesn't matched!</p>
+                      <p class="error-message">Password doesn't match!</p>
                     </div>
 
                     <div class="remember-forgot">
@@ -82,7 +85,8 @@
 
               <div class="row">
                 <div class="submitbox">
-                  <button class="btn-submit" type="button">Sign In</button>
+                  <button class="btn-submit d-none" type="button">Sign In</button>
+                  <a href="../index.html" class="btn-submit" role="button">Sign In</a>
                 </div>
               </div>
             </div>
@@ -104,30 +108,11 @@
 
             <li class="social-list-item">
               <button class="social-list-link">
-                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <g filter="url(#googleicon)">
-                    <path d="M32 16C32 9.37258 26.6274 4 20 4C13.3726 4 8 9.37258 8 16C8 22.6274 13.3726 28 20 28C26.6274 28 32 22.6274 32 16Z" fill="white"/>
-                    <mask id="googleiconmask" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="12" y="8" width="16" height="16">
-                      <path d="M20 24C24.4183 24 28 20.4183 28 16C28 15.4116 27.9365 14.838 27.8159 14.2857H20V17.6H24.4054C23.7515 19.4 22.0259 20.6857 20 20.6857C17.4121 20.6857 15.3143 18.5878 15.3143 16C15.3143 13.4122 17.4121 11.3143 20 11.3143C21.3191 11.3143 22.5108 11.8593 23.3624 12.7365L25.6945 10.3811C24.2439 8.91109 22.2284 8 20 8C15.5817 8 12 11.5817 12 16C12 20.4183 15.5817 24 20 24Z" fill="#C4C4C4"/>
-                    </mask>
-                    <g mask="url(#googleiconmask)">
-                      <path d="M6.85742 16.0312L12.0003 11.6593L17.7145 16.1164L12.0003 20.345L6.85742 16.0312Z" fill="#FEBD01"/>
-                      <path d="M12 11.6602L18.4571 5.20301L25.4285 7.7173L28.4571 13.0887L19.8285 13.4316L17.7143 16.1173L12 11.6602Z" fill="#FF4131"/>
-                      <path d="M19.6572 13.9434L28.9143 13.7148L28.8001 17.8291L26.5143 22.7434L21.8286 19.0863L19.6572 18.0577V13.9434Z" fill="#0286F7"/>
-                      <path d="M12 20.3458L17.7143 16.1172L18.3428 18.9743L21.8285 19.0886L26.5143 22.7458L21.7714 24.8029L15.8857 24.46L12 20.3458Z" fill="#01A94D"/>
-                    </g>
-                  </g>
-                  <defs>
-                    <filter id="googleicon" x="0" y="0" width="40" height="40" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-                      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-                      <feOffset dy="4"/>
-                      <feGaussianBlur stdDeviation="4"/>
-                      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0.0627451 0 0 0 0 0.160784 0 0 0 0.1 0"/>
-                      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_182_45"/>
-                      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_182_45" result="shape"/>
-                    </filter>
-                  </defs>
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M13.16 7.14584C13.16 6.69084 13.1192 6.25334 13.0433 5.83334H7V8.31542H10.4533C10.3046 9.1175 9.8525 9.79709 9.17292 10.2521V11.8621H11.2467C12.46 10.745 13.16 9.1 13.16 7.14584V7.14584Z" fill="#4285F4"/>
+                  <path d="M6.99979 13.4167C8.73229 13.4167 10.1848 12.8421 11.2465 11.8621L9.17271 10.2521C8.59812 10.6371 7.86312 10.8646 6.99979 10.8646C5.32854 10.8646 3.91396 9.73583 3.40937 8.21916H1.26562V9.88166C2.32146 11.9787 4.49146 13.4167 6.99979 13.4167Z" fill="#34A853"/>
+                  <path d="M3.40926 8.21917C3.28093 7.83417 3.20801 7.42292 3.20801 7C3.20801 6.57708 3.28093 6.16583 3.40926 5.78083V4.11833H1.26551C0.816341 5.0125 0.582612 5.99936 0.583008 7C0.583008 8.03542 0.830925 9.01542 1.26551 9.88167L3.40926 8.21917V8.21917Z" fill="#FBBC05"/>
+                  <path d="M6.99979 3.13542C7.94188 3.13542 8.78771 3.45917 9.45271 4.095L11.2931 2.25459C10.1819 1.21917 8.72938 0.583336 6.99979 0.583336C4.49146 0.583336 2.32146 2.02125 1.26562 4.11834L3.40937 5.78084C3.91396 4.26417 5.32854 3.13542 6.99979 3.13542Z" fill="#EA4335"/>
                 </svg>
               </button>
             </li>
@@ -138,8 +123,10 @@
           </p>
         </div>
       </div>
+      <!-- AUTHENTICATION-BODY START -->
 
-      <div class="icon">
+      <!-- LOGIN ICON -->
+      <div class="logicon">
         <svg width="317" height="163" viewBox="0 0 317 163" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g opacity="0.2">
             <path d="M-113 85.5279L-17.3371 250.442L78.3259 208.891L173.345 248.831C153.697 213.401 110.407 136.935 94.4307 114.517C78.4547 92.0987 49.3371 85.85 36.7753 85.5279H-113Z" fill="#8CA4FF"/>
@@ -148,13 +135,21 @@
         </svg>
       </div>
     </div>
+    <!-- AUTHENTICATION END -->
 
-    <figu class="auth-thumbnail">
+    <!-- AUTHENTICATION THUMBNAIL START -->
+    <figure class="auth-thumbnail">
       <img src="../assets/images/authentication/auth-banner.svg" alt="auth-thumbnail">
     </figure>
+    <!-- AUTHENTICATION THUMBNAIL END -->
   </div>
   <!--========== AUTHENTICATION-END ==========-->
 
+
+  <!--========== BOOTSTRAP JS ============-->
+  <script src="assets/js/bootstrap/bootstrap.bundle.min.js"></script>
+  <!--========== TOOLTIP JS ============-->
+  <script src="assets/js/bootstrap/tooltip/tooltip.js"></script>
   <!--========== PRELOADER JS ============-->
   <script src="../assets/js/preloader/loader.js"></script>
 </body>
