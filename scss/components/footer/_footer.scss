@@ -5,16 +5,16 @@
 .footer {
   background: $white;
   margin-left: length(0);
-  padding: length(24) length(32) length(24) length(16);
+  padding: length(16);
   overflow: hidden;
   @include flex-center-vert;
   
   @include breakpoint(tab992) {
     margin-left: length(222);
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: calc(100% - 12.5rem);
+    // position: fixed;
+    // bottom: 0;
+    // left: 0;
+    // width: calc(100% - 12.5rem);
   }
 
   &-content {

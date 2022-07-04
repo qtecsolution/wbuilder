@@ -133,21 +133,32 @@ div.dataTables_wrapper div.dataTables_paginate {
   }
 
   .pagination {
-    @include border(solid, 1, $paginstionborder);
-    @include radius(4);  
-    gap: length(1);
     overflow: hidden;
     margin: 0 !important;
   
     .page-item {
+      @include flex-center;
+      overflow: hidden;
+      @include square(length(40));
+
+      &:not(:first-child) {
+        .page-link {
+          margin-left: 0;
+        }
+      }
+
       .page-link {
+        @include square(length(40));
         border: 0;
         border-radius: 0;
-        padding: length(8) length(16);
+        padding: length(0);
         @include setBgColor($white, $primary);
-        @include border-single(right, solid, 1, $paginstionborder);
-        @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(21, 14));
-  
+        @include border(solid, 1, $paginstionborder);
+        border-right: 0;
+        @include flex-center;
+        @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(20, 14));
+        text-align: center;
+
         &:focus {
           box-shadow: none;
           outline: none;
@@ -157,12 +168,14 @@ div.dataTables_wrapper div.dataTables_paginate {
       &:hover:not(.active):not(.disabled) {
         .page-link {
           @include setBgColor($primary, $white);
+          border-color: $primary;
         }
       }
   
       &.active {
         .page-link {
           @include setBgColor($primary, $white);
+          border-color: $primary;
         }
       }
 
@@ -172,7 +185,7 @@ div.dataTables_wrapper div.dataTables_paginate {
           font-size: 0;
           color: transparent;
           position: relative;
-          min-height: length(37);
+          @include square(length(40));
 
           &::before {
             position: absolute;
@@ -183,20 +196,33 @@ div.dataTables_wrapper div.dataTables_paginate {
 
       &.previous {
         .page-link {
-          content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%234A66ED' class='bi bi-chevron-left' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3E%3C/svg%3E");
+          @include double-radius(top, left, 4, bottom, left, 4);
+
+          &::before {
+            content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%234A66ED' class='bi bi-chevron-left' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3E%3C/svg%3E");
+          }
           
           @include hover {
-            content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23ffffff' class='bi bi-chevron-left' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3E%3C/svg%3E");
+            &::before {
+              content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23ffffff' class='bi bi-chevron-left' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3E%3C/svg%3E");
+            }
           }
         }
       }
 
       &.next {
         .page-link {
-          content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%234A66ED' class='bi bi-chevron-right' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
+          @include double-radius(top, right, 4, bottom, right, 4);
+          @include border-single(right, solid, 1, $paginstionborder);
+
+          &::before {
+            content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%234A66ED' class='bi bi-chevron-right' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
+          }
           
           @include hover {
-            content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23ffffff' class='bi bi-chevron-right' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
+            &::before {
+              content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23ffffff' class='bi bi-chevron-right' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
+            }
           }
         }
       }
