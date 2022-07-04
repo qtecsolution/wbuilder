@@ -3,10 +3,10 @@
   overflow: hidden;
   margin: 0;
   @include flex;
-  height: 100vh;
+  min-height: 100vh;
 
   @include breakpoint(tab992) {
-    min-height: 100vh;
+    height: 100vh;
   }
 
   .authentication {
