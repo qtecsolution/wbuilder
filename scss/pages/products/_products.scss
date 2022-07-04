@@ -1,0 +1,138 @@
+/**=======================================================**
+                        PRODUCT-INFO START
+**=======================================================**/
+
+.productinfo {
+  background: $white;
+  padding: length(16) length(20) length(32);
+  @include radius(4);
+  @include flex-column;
+  gap: length(16);
+
+  &-header {
+    .breadcrumb {
+      margin-bottom: 0;
+      @include list-horizontal;
+      gap: length(10);
+
+      &-item {
+        @include flex-center-vert;
+        gap: length(4);
+
+        .icon {
+          @include square(length(18));
+          @include flex-center;
+          overflow: hidden;
+
+          @include breakpoint(mobile768) {
+            @include square(length(20));
+          }
+
+          svg {
+            @include wh100;
+
+            path {
+              fill: $headingtext;
+            }
+          }
+        }
+
+        .text {
+          color: $headingtext;
+          @include font-face($primaryFont, style('normal'), size(12), weight('semibold'), line-height(16.8, 12));
+
+          @include breakpoint(mobile768) {
+            @include font-face($primaryFont, style('normal'), size(14), weight('semibold'), line-height(19.6, 14));
+          }
+        }
+
+        &.active {
+          .icon {
+            svg {
+              path {
+                fill: $textprimary;
+              }
+            }
+          }
+
+          .text {
+            color: $textprimary;
+          }
+        }
+
+        &:hover:not(.active) {
+          .breadcrumb-link {
+            .icon {
+              svg {
+                path {
+                  fill: $textprimary;
+                }
+              }
+            }
+  
+            .text {
+              color: $textprimary;
+            }
+          }
+        }
+      }
+
+      &-link {
+        @include flex-center-vert;
+        gap: length(4);
+
+        .icon {
+          @include square(length(18));
+          @include flex-center;
+          overflow: hidden;
+
+          @include breakpoint(mobile768) {
+            @include square(length(20));
+          }
+
+          svg {
+            @include wh100;
+
+            path {
+              fill: $headingtext;
+            }
+          }
+        }
+
+        .text {
+          color: $headingtext;
+          @include font-face($primaryFont, style('normal'), size(12), weight('semibold'), line-height(16.8, 12));
+
+          @include breakpoint(mobile768) {
+            @include font-face($primaryFont, style('normal'), size(14), weight('semibold'), line-height(19.6, 14));
+          }
+        }
+      }
+
+      .divider {
+        height: length(16);
+        width: length(2);
+        @include flex-center;
+        overflow: hidden;
+
+        @include breakpoint(mobile768) {
+          height: length(18);
+        }
+
+        svg {
+          @include wh100;
+        }
+      }
+    }
+  }
+
+  &-body {
+    .info {
+      
+    }
+  }
+}
+
+/**=======================================================**
+                        PRODUCT-INFO END
+**=======================================================**/

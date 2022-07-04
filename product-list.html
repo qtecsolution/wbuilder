@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Wbuilder | Add Products</title>
+  <title>Wbuilder | Product List</title>
   <!-- FAVICON ICON -->
   <link rel="shortcut icon" href="assets/images/favicon/favicon.svg" type="image/svg">
   <!-- DATA TABLE CSS -->
@@ -1192,27 +1192,19 @@
   
   <!--========== MAIN-SECTION START ============-->
   <main class="main" id="main">
-    <div class="form-check form-switch d-none">
-      <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
-      <label class="form-check-label" for="flexSwitchCheckChecked"></label>
-    </div>
-
     <div class="productinfo">
       <!-- PRODUCT-INFO HEADER START -->
       <div class="productinfo-header">
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb">
-            <li class="breadcrumb-item">
-              <a href="product-list.html" class="breadcrumb-link">
-                <span class="icon">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path opacity="0.4" d="M16.191 2H7.81C4.77 2 3 3.78 3 6.83V17.16C3 20.26 4.77 22 7.81 22H16.191C19.28 22 21 20.26 21 17.16V6.83C21 3.78 19.28 2 16.191 2Z" fill="#8A92A6"/>
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M8.07996 6.6499V6.6599C7.64896 6.6599 7.29996 7.0099 7.29996 7.4399C7.29996 7.8699 7.64896 8.2199 8.07996 8.2199H11.069C11.5 8.2199 11.85 7.8699 11.85 7.4289C11.85 6.9999 11.5 6.6499 11.069 6.6499H8.07996ZM15.92 12.7399H8.07996C7.64896 12.7399 7.29996 12.3899 7.29996 11.9599C7.29996 11.5299 7.64896 11.1789 8.07996 11.1789H15.92C16.35 11.1789 16.7 11.5299 16.7 11.9599C16.7 12.3899 16.35 12.7399 15.92 12.7399ZM15.92 17.3099H8.07996C7.77996 17.3499 7.48996 17.1999 7.32996 16.9499C7.16996 16.6899 7.16996 16.3599 7.32996 16.1099C7.48996 15.8499 7.77996 15.7099 8.07996 15.7399H15.92C16.319 15.7799 16.62 16.1199 16.62 16.5299C16.62 16.9289 16.319 17.2699 15.92 17.3099Z" fill="#8A92A6"/>
-                  </svg>
-                </span>
-                
-                <span class="text">Product List</span>
-              </a>
+            <li class="breadcrumb-item active" aria-current="page">
+              <span class="icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path opacity="0.4" d="M16.191 2H7.81C4.77 2 3 3.78 3 6.83V17.16C3 20.26 4.77 22 7.81 22H16.191C19.28 22 21 20.26 21 17.16V6.83C21 3.78 19.28 2 16.191 2Z" fill="#8A92A6"/>
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M8.07996 6.6499V6.6599C7.64896 6.6599 7.29996 7.0099 7.29996 7.4399C7.29996 7.8699 7.64896 8.2199 8.07996 8.2199H11.069C11.5 8.2199 11.85 7.8699 11.85 7.4289C11.85 6.9999 11.5 6.6499 11.069 6.6499H8.07996ZM15.92 12.7399H8.07996C7.64896 12.7399 7.29996 12.3899 7.29996 11.9599C7.29996 11.5299 7.64896 11.1789 8.07996 11.1789H15.92C16.35 11.1789 16.7 11.5299 16.7 11.9599C16.7 12.3899 16.35 12.7399 15.92 12.7399ZM15.92 17.3099H8.07996C7.77996 17.3499 7.48996 17.1999 7.32996 16.9499C7.16996 16.6899 7.16996 16.3599 7.32996 16.1099C7.48996 15.8499 7.77996 15.7099 8.07996 15.7399H15.92C16.319 15.7799 16.62 16.1199 16.62 16.5299C16.62 16.9289 16.319 17.2699 15.92 17.3099Z" fill="#8A92A6"/>
+                </svg>
+              </span>
+              <span class="text">Product List</span>
             </li>
 
             <li class="divider">
@@ -1221,15 +1213,17 @@
               </svg>
             </li>
 
-            <li class="breadcrumb-item active" aria-current="page">
-              <span class="icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path opacity="0.4" d="M12 1.99976C17.515 1.99976 22 6.48576 22 11.9998C22 17.5138 17.515 21.9998 12 21.9998C6.486 21.9998 2 17.5138 2 11.9998C2 6.48576 6.486 1.99976 12 1.99976Z" fill="#6A7081"/>
-                  <path d="M15.1085 11.198L12.8031 11.1985L12.8031 8.8938C12.8037 8.4511 12.4439 8.09138 12.0013 8.09202C11.5567 8.0907 11.1989 8.44976 11.1989 8.89307L11.1984 11.1985L8.89167 11.1977C8.44836 11.1977 8.09061 11.5581 8.08933 12.0001C8.08999 12.4427 8.44971 12.8025 8.89176 12.8025L11.1991 12.8026L11.1985 15.1041C11.1985 15.5474 11.5583 15.9071 12.0003 15.9058C12.2226 15.9065 12.4222 15.8171 12.5674 15.6719C12.7132 15.5261 12.8026 15.3265 12.8026 15.1048L12.8025 12.8026L15.1092 12.8021C15.3309 12.8021 15.5305 12.7127 15.6757 12.5675C15.8209 12.4223 15.9103 12.2214 15.9109 12.0004C15.9109 11.5571 15.5518 11.198 15.1085 11.198Z" fill="#232D42"/>
-                </svg>
-              </span>
-
-              <span class="text">Add Product</span>
+            <li class="breadcrumb-item">
+              <a href="add-product.html" class="breadcrumb-link">
+                <span class="icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path opacity="0.4" d="M12 1.99976C17.515 1.99976 22 6.48576 22 11.9998C22 17.5138 17.515 21.9998 12 21.9998C6.486 21.9998 2 17.5138 2 11.9998C2 6.48576 6.486 1.99976 12 1.99976Z" fill="#6A7081"/>
+                    <path d="M15.1085 11.198L12.8031 11.1985L12.8031 8.8938C12.8037 8.4511 12.4439 8.09138 12.0013 8.09202C11.5567 8.0907 11.1989 8.44976 11.1989 8.89307L11.1984 11.1985L8.89167 11.1977C8.44836 11.1977 8.09061 11.5581 8.08933 12.0001C8.08999 12.4427 8.44971 12.8025 8.89176 12.8025L11.1991 12.8026L11.1985 15.1041C11.1985 15.5474 11.5583 15.9071 12.0003 15.9058C12.2226 15.9065 12.4222 15.8171 12.5674 15.6719C12.7132 15.5261 12.8026 15.3265 12.8026 15.1048L12.8025 12.8026L15.1092 12.8021C15.3309 12.8021 15.5305 12.7127 15.6757 12.5675C15.8209 12.4223 15.9103 12.2214 15.9109 12.0004C15.9109 11.5571 15.5518 11.198 15.1085 11.198Z" fill="#232D42"/>
+                  </svg>
+                </span>
+  
+                <span class="text">Add Product</span>
+              </a>
             </li>
           </ol>
         </nav>
@@ -1238,257 +1232,7 @@
       
       <!-- PRODUCT-INFO BODY START -->
       <div class="productinfo-body">
-        <div class="row g-4">
-          <div class="col-lg-5 col-12">
-            <div class="info">
-              <div class="row g-3">
-                <div class="col-lg-9">
-                  <div class="inputbox errorfield">
-                    <label for="productname" class="inputlabel">Product Name <span class="required">*</span></label>
-                    <input type="text" id="productname" class="inputfield" placeholder="KT Ladies Pump Shoes for Woman : Article KTF L44">
-                    <p class="error-message">This field is required</p>
-                  </div>
-                </div>
-                
-                <div class="col-lg-3">
-                  <div class="inputbox">
-                    <label for="singlelimit" class="inputlabel">Single order limit</label>
-                    <input type="number" id="singlelimit" class="inputfield" placeholder="1">
-                  </div>
-                </div>
-              </div>
-
-              <div class="row g-3">
-                <div class="col-lg-9">
-                  <div class="inputbox">
-                    <label for="category" class="inputlabel">Category <span class="required">*</span></label>
-                    <select id="category" class="selectfield">
-                      <option value="">Category One</option>
-                      <option value="">Category Two</option>
-                      <option value="">Category Three</option>
-                      <option value="">Category Four</option>
-                      <option value="">Category Five</option>
-                    </select>
-
-                    <button class="btn-remove">
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M15.6865 14.1741L13.5125 12.0011L15.6853 9.82809C16.1033 9.41129 16.1033 8.73299 15.6853 8.31623C15.2674 7.89581 14.5916 7.89703 14.1736 8.31501L11.9995 10.4881L9.82545 8.31257C9.40753 7.89459 8.7305 7.89703 8.31255 8.31257C7.89582 8.73055 7.89582 9.40884 8.31255 9.82565L10.4878 12.0011L8.31743 14.1704C7.89948 14.5884 7.89948 15.2667 8.31743 15.6822C8.52641 15.8924 8.79893 15.9963 9.07268 15.9963C9.34765 15.9963 9.62014 15.8924 9.82912 15.6835L11.9995 13.5129L14.1748 15.6871C14.3838 15.8961 14.6563 16 14.9301 16C15.2038 16 15.4776 15.8949 15.6865 15.6871C16.1045 15.2691 16.1045 14.5921 15.6865 14.1741Z" fill="#8A92A6"/>
-                      </svg>
-                    </button>
-
-                    <p class="error-message">This field is required</p>
-                  </div>
-                </div>
-
-                <div class="col-lg-3">
-                  <div class="inputbox">
-                    <label for="backorder" class="inputlabel">Take back order</label>
-                    <select id="backorder" class="selectfield">
-                      <option value="">No</option>
-                      <option value="">Yes</option>
-                    </select>
-
-                    <button class="btn-remove">
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M15.6865 14.1741L13.5125 12.0011L15.6853 9.82809C16.1033 9.41129 16.1033 8.73299 15.6853 8.31623C15.2674 7.89581 14.5916 7.89703 14.1736 8.31501L11.9995 10.4881L9.82545 8.31257C9.40753 7.89459 8.7305 7.89703 8.31255 8.31257C7.89582 8.73055 7.89582 9.40884 8.31255 9.82565L10.4878 12.0011L8.31743 14.1704C7.89948 14.5884 7.89948 15.2667 8.31743 15.6822C8.52641 15.8924 8.79893 15.9963 9.07268 15.9963C9.34765 15.9963 9.62014 15.8924 9.82912 15.6835L11.9995 13.5129L14.1748 15.6871C14.3838 15.8961 14.6563 16 14.9301 16C15.2038 16 15.4776 15.8949 15.6865 15.6871C16.1045 15.2691 16.1045 14.5921 15.6865 14.1741Z" fill="#8A92A6"/>
-                      </svg>
-                    </button>
-                  </div>
-                </div>
-              </div>
-
-              <div class="row g-3">
-                <div class="col-lg-9">
-                  <div class="inputbox">
-                    <label for="brand" class="inputlabel">Brand <span class="required">*</span></label>
-                    <select id="brand" class="selectfield">
-                      <option value="">Brand One</option>
-                      <option value="">Brand Two</option>
-                      <option value="">Brand Three</option>
-                      <option value="">Brand Four</option>
-                      <option value="">Brand Five</option>
-                    </select>
-
-                    <button class="btn-remove">
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M15.6865 14.1741L13.5125 12.0011L15.6853 9.82809C16.1033 9.41129 16.1033 8.73299 15.6853 8.31623C15.2674 7.89581 14.5916 7.89703 14.1736 8.31501L11.9995 10.4881L9.82545 8.31257C9.40753 7.89459 8.7305 7.89703 8.31255 8.31257C7.89582 8.73055 7.89582 9.40884 8.31255 9.82565L10.4878 12.0011L8.31743 14.1704C7.89948 14.5884 7.89948 15.2667 8.31743 15.6822C8.52641 15.8924 8.79893 15.9963 9.07268 15.9963C9.34765 15.9963 9.62014 15.8924 9.82912 15.6835L11.9995 13.5129L14.1748 15.6871C14.3838 15.8961 14.6563 16 14.9301 16C15.2038 16 15.4776 15.8949 15.6865 15.6871C16.1045 15.2691 16.1045 14.5921 15.6865 14.1741Z" fill="#8A92A6"/>
-                      </svg>
-                    </button>
-
-                    <p class="error-message">This field is required</p>
-                  </div>
-                </div>
-
-                <div class="col-lg-3">
-                  <div class="inputbox">
-                    <label for="preorder" class="inputlabel">Pre-order</label>
-                    <select id="preorder" class="selectfield">
-                      <option value="">No</option>
-                      <option value="">Yes</option>
-                    </select>
-
-                    <button class="btn-remove">
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M15.6865 14.1741L13.5125 12.0011L15.6853 9.82809C16.1033 9.41129 16.1033 8.73299 15.6853 8.31623C15.2674 7.89581 14.5916 7.89703 14.1736 8.31501L11.9995 10.4881L9.82545 8.31257C9.40753 7.89459 8.7305 7.89703 8.31255 8.31257C7.89582 8.73055 7.89582 9.40884 8.31255 9.82565L10.4878 12.0011L8.31743 14.1704C7.89948 14.5884 7.89948 15.2667 8.31743 15.6822C8.52641 15.8924 8.79893 15.9963 9.07268 15.9963C9.34765 15.9963 9.62014 15.8924 9.82912 15.6835L11.9995 13.5129L14.1748 15.6871C14.3838 15.8961 14.6563 16 14.9301 16C15.2038 16 15.4776 15.8949 15.6865 15.6871C16.1045 15.2691 16.1045 14.5921 15.6865 14.1741Z" fill="#8A92A6"/>
-                      </svg>
-                    </button>
-                  </div>
-                </div>
-              </div>
-
-              <div class="row">
-                <div class="col-12">
-                  <div class="inputbox">
-                    <label for="model" class="inputlabel">Model <span class="required">*</span></label>
-                    <input type="text" id="model" class="inputfield" placeholder="Model">
-
-                    <p class="error-message">This field is required</p>
-                  </div>                  
-                </div>
-              </div>
-
-              <div class="row">
-                <div class="col-12">
-                  <div class="inputbox">
-                    <label for="videolink" class="inputlabel">Video Link</label>
-                    <input type="text" id="videolink" class="inputfield" placeholder="Link">
-                  </div>   
-                </div>
-              </div>
-
-              <div class="row">
-                <div class="col-12">
-                  <div class="inputbox">
-                    <label for="note" class="inputlabel">Special Note</label>
-                    <input type="text" id="note" class="inputfield" placeholder="Special Note">
-                  </div>
-                </div>
-              </div>
-
-              <div class="row g-3">
-                <div class="col-lg-6">
-                  <div class="inputbox">
-                    <label for="filter" class="inputlabel">Filter <span class="required">*</span></label>
-                    <select id="filter" class="selectfield">
-                      <option value="">Filter One</option>
-                      <option value="">Filter Two</option>
-                      <option value="">Filter Three</option>
-                      <option value="">Filter Four</option>
-                      <option value="">Filter Five</option>
-                    </select>
-
-                    <button class="btn-remove">
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M15.6865 14.1741L13.5125 12.0011L15.6853 9.82809C16.1033 9.41129 16.1033 8.73299 15.6853 8.31623C15.2674 7.89581 14.5916 7.89703 14.1736 8.31501L11.9995 10.4881L9.82545 8.31257C9.40753 7.89459 8.7305 7.89703 8.31255 8.31257C7.89582 8.73055 7.89582 9.40884 8.31255 9.82565L10.4878 12.0011L8.31743 14.1704C7.89948 14.5884 7.89948 15.2667 8.31743 15.6822C8.52641 15.8924 8.79893 15.9963 9.07268 15.9963C9.34765 15.9963 9.62014 15.8924 9.82912 15.6835L11.9995 13.5129L14.1748 15.6871C14.3838 15.8961 14.6563 16 14.9301 16C15.2038 16 15.4776 15.8949 15.6865 15.6871C16.1045 15.2691 16.1045 14.5921 15.6865 14.1741Z" fill="#8A92A6"/>
-                      </svg>
-                    </button>
-
-                    <p class="error-message">This field is required</p>
-                  </div>
-                </div>
-
-                <div class="col-lg-6">
-                  <div class="inputbox">
-                    <label for="relatedproduct" class="inputlabel">Related Product</label>
-                    <select id="relatedproduct" class="selectfield">
-                      <option value="">Product One</option>
-                      <option value="">Product Two</option>
-                      <option value="">Product Three</option>
-                      <option value="">Product Four</option>
-                      <option value="">Product Five</option>
-                    </select>
-
-                    <button class="btn-remove">
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M15.6865 14.1741L13.5125 12.0011L15.6853 9.82809C16.1033 9.41129 16.1033 8.73299 15.6853 8.31623C15.2674 7.89581 14.5916 7.89703 14.1736 8.31501L11.9995 10.4881L9.82545 8.31257C9.40753 7.89459 8.7305 7.89703 8.31255 8.31257C7.89582 8.73055 7.89582 9.40884 8.31255 9.82565L10.4878 12.0011L8.31743 14.1704C7.89948 14.5884 7.89948 15.2667 8.31743 15.6822C8.52641 15.8924 8.79893 15.9963 9.07268 15.9963C9.34765 15.9963 9.62014 15.8924 9.82912 15.6835L11.9995 13.5129L14.1748 15.6871C14.3838 15.8961 14.6563 16 14.9301 16C15.2038 16 15.4776 15.8949 15.6865 15.6871C16.1045 15.2691 16.1045 14.5921 15.6865 14.1741Z" fill="#8A92A6"/>
-                      </svg>
-                    </button>
-                  </div>
-                </div>
-              </div>
-
-              <div class="row g-3">
-                <div class="col-lg-6">
-                  <div class="inputbox">
-                    <label for="review" class="inputlabel">Review <span class="required">*</span></label>
-                    
-                    <div class="review">
-                      <div class="reviewbox">
-                        <input type="radio" name="review" id="review-5" class="radiofield" hidden>
-                        <label for="review-5" class="inputfield">5</label>
-                      </div>
-
-                      <div class="reviewbox">
-                        <input type="radio" name="review" id="review-4" class="radiofield" hidden>
-                        <label for="review-4" class="inputfield">4</label>
-                      </div>
-
-                      <div class="reviewbox">
-                        <input type="radio" name="review" id="review-3" class="radiofield" hidden>
-                        <label for="review-3" class="inputfield">3</label>
-                      </div>
-
-                      <div class="reviewbox">
-                        <input type="radio" name="review" id="review-2" class="radiofield" hidden>
-                        <label for="review-2" class="inputfield">2</label>
-                      </div>
-
-                      <div class="reviewbox">
-                        <input type="radio" name="review" id="review-1" class="radiofield" hidden>
-                        <label for="review-1" class="inputfield">1</label>
-                      </div>
-                    </div>
-
-                    <p class="error-message">This field is required</p>
-                  </div>
-                </div>
-
-                <div class="col-lg-6">
-                  <div class="inputbox">
-                    <label for="warranty" class="inputlabel">Warranty</label>
-                    <select id="warranty" class="selectfield">
-                      <option value="">Warranty One</option>
-                      <option value="">Warranty Two</option>
-                      <option value="">Warranty Three</option>
-                      <option value="">Warranty Four</option>
-                      <option value="">Warranty Five</option>
-                    </select>
-
-                    <button class="btn-remove">
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M15.6865 14.1741L13.5125 12.0011L15.6853 9.82809C16.1033 9.41129 16.1033 8.73299 15.6853 8.31623C15.2674 7.89581 14.5916 7.89703 14.1736 8.31501L11.9995 10.4881L9.82545 8.31257C9.40753 7.89459 8.7305 7.89703 8.31255 8.31257C7.89582 8.73055 7.89582 9.40884 8.31255 9.82565L10.4878 12.0011L8.31743 14.1704C7.89948 14.5884 7.89948 15.2667 8.31743 15.6822C8.52641 15.8924 8.79893 15.9963 9.07268 15.9963C9.34765 15.9963 9.62014 15.8924 9.82912 15.6835L11.9995 13.5129L14.1748 15.6871C14.3838 15.8961 14.6563 16 14.9301 16C15.2038 16 15.4776 15.8949 15.6865 15.6871C16.1045 15.2691 16.1045 14.5921 15.6865 14.1741Z" fill="#8A92A6"/>
-                      </svg>
-                    </button>
-                  </div>
-                </div>
-              </div>
-
-              <div class="row">
-                <div class="col-12">
-                  <div class="inputbox">
-                    <label for="description" class="inputlabel">Description <span class="required">*</span></label>
-                    <textarea id="description" rows="6"></textarea>
-
-                    <p class="error-message">This field is required</p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="row">
-                <div class="col-12">
-                  <div class="inputbox">
-                    <label for="specification" class="inputlabel">Specification</label>
-                    <textarea id="specification" rows="6"></textarea>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-
-          </div>
-
-          <div class="col-lg-7 col-12"></div>
-        </div>
+        
       </div>
       <!-- PRODUCT-INFO BODY END -->
     </div>

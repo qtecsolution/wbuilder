@@ -3802,3 +3802,200 @@ div.dataTables_wrapper div.dataTables_paginate .pagination .page-item.next .page
 /**=======================================================**
                         ERROR END
 **=======================================================**/
+/**=======================================================**
+                        PRODUCT-INFO START
+**=======================================================**/
+.productinfo {
+  background: white;
+  padding: 1rem 1.25rem 2rem;
+  border-radius: 0.25rem;
+  border-radius: 0.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+}
+
+.productinfo-header .breadcrumb {
+  margin-bottom: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.625rem;
+}
+
+.productinfo-header .breadcrumb-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.25rem;
+}
+
+.productinfo-header .breadcrumb-item .icon {
+  height: 1.125rem;
+  width: 1.125rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 48rem) {
+  .productinfo-header .breadcrumb-item .icon {
+    height: 1.25rem;
+    width: 1.25rem;
+  }
+}
+
+.productinfo-header .breadcrumb-item .icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.productinfo-header .breadcrumb-item .icon svg path {
+  fill: #6a7081;
+}
+
+.productinfo-header .breadcrumb-item .text {
+  color: #6a7081;
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+@media screen and (min-width: 48rem) {
+  .productinfo-header .breadcrumb-item .text {
+    font-family: "Inter";
+    font-style: normal;
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 1.4;
+  }
+}
+
+.productinfo-header .breadcrumb-item.active .icon svg path {
+  fill: #232d43;
+}
+
+.productinfo-header .breadcrumb-item.active .text {
+  color: #232d43;
+}
+
+.productinfo-header .breadcrumb-item:hover:not(.active) .breadcrumb-link .icon svg path {
+  fill: #232d43;
+}
+
+.productinfo-header .breadcrumb-item:hover:not(.active) .breadcrumb-link .text {
+  color: #232d43;
+}
+
+.productinfo-header .breadcrumb-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.25rem;
+}
+
+.productinfo-header .breadcrumb-link .icon {
+  height: 1.125rem;
+  width: 1.125rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 48rem) {
+  .productinfo-header .breadcrumb-link .icon {
+    height: 1.25rem;
+    width: 1.25rem;
+  }
+}
+
+.productinfo-header .breadcrumb-link .icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.productinfo-header .breadcrumb-link .icon svg path {
+  fill: #6a7081;
+}
+
+.productinfo-header .breadcrumb-link .text {
+  color: #6a7081;
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+@media screen and (min-width: 48rem) {
+  .productinfo-header .breadcrumb-link .text {
+    font-family: "Inter";
+    font-style: normal;
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 1.4;
+  }
+}
+
+.productinfo-header .breadcrumb .divider {
+  height: 1rem;
+  width: 0.125rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 48rem) {
+  .productinfo-header .breadcrumb .divider {
+    height: 1.125rem;
+  }
+}
+
+.productinfo-header .breadcrumb .divider svg {
+  width: 100%;
+  height: 100%;
+}
+
+/**=======================================================**
+                        PRODUCT-INFO END
+**=======================================================**/
