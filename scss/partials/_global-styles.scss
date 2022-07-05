@@ -189,6 +189,10 @@ select:focus {
 
 textarea {
 	resize: none;
+
+	&:focus {
+		outline: none;
+	}
 }
 
 ::-webkit-datetime-edit-year-field:not([aria-valuenow]),

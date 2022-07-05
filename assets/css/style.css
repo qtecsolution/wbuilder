@@ -676,6 +676,10 @@ textarea {
   resize: none;
 }
 
+textarea:focus {
+  outline: none;
+}
+
 ::-webkit-datetime-edit-year-field:not([aria-valuenow]),
 ::-webkit-datetime-edit-month-field:not([aria-valuenow]),
 ::-webkit-datetime-edit-day-field:not([aria-valuenow]) {
@@ -3994,6 +3998,349 @@ div.dataTables_wrapper div.dataTables_paginate .pagination .page-item.next .page
 .productinfo-header .breadcrumb .divider svg {
   width: 100%;
   height: 100%;
+}
+
+.productinfo-body .productdescription {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+}
+
+.productinfo-body .productdescription-header .productdescription-title {
+  color: #6a7081;
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.75;
+}
+
+.productinfo-body .productdescription .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+}
+
+.productinfo-body .productdescription .info .inputbox {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5rem;
+  position: relative;
+}
+
+.productinfo-body .productdescription .info .inputbox .inputlabel {
+  color: #333333;
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: normal;
+  line-height: 1.33333;
+}
+
+.productinfo-body .productdescription .info .inputbox .inputlabel .required {
+  color: #fc5a5a;
+}
+
+.productinfo-body .productdescription .info .inputbox .inputfield {
+  color: #232d43;
+  border: solid 0.0625rem #d1d4dc;
+  border-radius: 0.25rem;
+  border-radius: 0.25rem;
+  padding: 0.5rem 1rem;
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: normal;
+  line-height: 1.33333;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.productinfo-body .productdescription .info .inputbox .inputfield::after {
+  color: #d1d4dc;
+}
+
+.productinfo-body .productdescription .info .inputbox .inputfield:focus {
+  border-color: #8b93a7;
+}
+
+.productinfo-body .productdescription .info .inputbox .selectfield {
+  color: #232d43;
+  border: solid 0.0625rem #d1d4dc;
+  border-radius: 0.25rem;
+  border-radius: 0.25rem;
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: normal;
+  line-height: 1.33333;
+  padding: 0.5rem 1rem;
+  background: white url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16 10L12 14L8 10' stroke='%238A92A6' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A") no-repeat center right 3%;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  cursor: pointer;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.productinfo-body .productdescription .info .inputbox .selectfield option {
+  color: #232d43;
+}
+
+.productinfo-body .productdescription .info .inputbox .selectfield:focus {
+  border-color: #8b93a7;
+}
+
+.productinfo-body .productdescription .info .inputbox .btn-remove {
+  position: absolute;
+  top: 72%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  right: 2.5rem;
+  background: transparent;
+  border: none;
+  z-index: 100;
+}
+
+.productinfo-body .productdescription .info .inputbox .review {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1.25rem;
+  height: 2.12375rem;
+}
+
+.productinfo-body .productdescription .info .inputbox .review .radiofield:checked ~ .radiolabel::before {
+  border-color: #4a65ed;
+}
+
+.productinfo-body .productdescription .info .inputbox .review .radiofield:checked ~ .radiolabel::after {
+  opacity: 1;
+  visibility: visible;
+  background: #4a65ed;
+}
+
+.productinfo-body .productdescription .info .inputbox .review .radiolabel {
+  color: #232d43;
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: normal;
+  line-height: 1.33333;
+  position: relative;
+  padding-left: 1.5rem;
+  cursor: pointer;
+}
+
+.productinfo-body .productdescription .info .inputbox .review .radiolabel::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  height: 1rem;
+  width: 1rem;
+  background: white;
+  border: solid 0.0625rem #d1d4dc;
+  border-radius: 100%;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.productinfo-body .productdescription .info .inputbox .review .radiolabel::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0.25rem;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  height: 0.5rem;
+  width: 0.5rem;
+  background: white;
+  border-radius: 100%;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.productinfo-body .productdescription .info .inputbox .error-message {
+  display: none;
+  color: #fc5a5a;
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.productinfo-body .productdescription .info .inputbox.errorfield .inputfield,
+.productinfo-body .productdescription .info .inputbox.errorfield .selectfield {
+  border-color: #fc5a5a;
+}
+
+.productinfo-body .productdescription .info .inputbox.errorfield .review .radiolabel::before {
+  border-color: #fc5a5a;
+}
+
+.productinfo-body .productdescription .info .inputbox.errorfield .btn-remove {
+  top: 50%;
+}
+
+.productinfo-body .productdescription .info .inputbox.errorfield .error-message {
+  display: block;
+}
+
+.productinfo-body .productdetail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+}
+
+.productinfo-body .productdetail .productimages {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+}
+
+.productinfo-body .productdetail .productimages-header .productimages-title {
+  color: #6a7081;
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.75;
+}
+
+.productinfo-body .productdetail .productimages-body .product-thumbnail {
+  background: rgba(164, 180, 242, 0.1);
+  border-radius: 0.25rem;
+  border-radius: 0.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+  padding: 0.625rem;
+  position: relative;
+}
+
+.productinfo-body .productdetail .productimages-body .product-thumbnail img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.productinfo-body .productdetail .productimages-body .product-thumbnail .btn-delete {
+  background: transparent;
+  border: none;
+  position: absolute;
+  top: 0.625rem;
+  right: 0.625rem;
+  height: 1.6875rem;
+  width: 1.6875rem;
+  z-index: 100;
+}
+
+.productinfo-body .productdetail .productimages-body .product-thumbnail .btn-delete svg {
+  width: 100%;
+  height: 100%;
+}
+
+.productinfo-body .productdetail .productimages-body .upload {
+  background: rgba(164, 180, 242, 0.1);
+  border-radius: 0.25rem;
+  border-radius: 0.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.75rem;
+  padding: 0.625rem;
+  border: dashed 0.125rem #a6b5f2;
+  height: 100%;
+  text-align: center;
+  overflow: hidden;
+}
+
+.productinfo-body .productdetail .productimages-body .upload .icon {
+  height: 2.75rem;
+  width: 2.75rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+.productinfo-body .productdetail .productimages-body .upload .icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.productinfo-body .productdetail .productimages-body .upload .uploadinfo .uploadlabel {
+  color: #333333;
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: normal;
+  line-height: 1.33333;
+  cursor: pointer;
+}
+
+.productinfo-body .productdetail .productimages-body .upload .uploadinfo .uploadlabel .text {
+  color: #4a65ed;
 }
 
 /**=======================================================**
