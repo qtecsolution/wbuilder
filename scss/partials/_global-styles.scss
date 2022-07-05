@@ -183,16 +183,17 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 input:focus,
-select:focus {
+select:focus,
+textarea:focus {
 	outline: none;
+}
+
+select {
+	cursor: pointer;
 }
 
 textarea {
 	resize: none;
-
-	&:focus {
-		outline: none;
-	}
 }
 
 ::-webkit-datetime-edit-year-field:not([aria-valuenow]),
@@ -211,8 +212,4 @@ input[type="date"]:valid {
 	&::before {
 		display: none
 	}
-}
-
-select {
-	cursor: pointer;
 }

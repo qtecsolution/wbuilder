@@ -1192,49 +1192,253 @@
   
   <!--========== MAIN-SECTION START ============-->
   <main class="main" id="main">
-    <div class="productinfo">
-      <!-- PRODUCT-INFO HEADER START -->
-      <div class="productinfo-header">
-        <nav aria-label="breadcrumb">
-          <ol class="breadcrumb">
-            <li class="breadcrumb-item active" aria-current="page">
-              <span class="icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path opacity="0.4" d="M16.191 2H7.81C4.77 2 3 3.78 3 6.83V17.16C3 20.26 4.77 22 7.81 22H16.191C19.28 22 21 20.26 21 17.16V6.83C21 3.78 19.28 2 16.191 2Z" fill="#8A92A6"/>
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M8.07996 6.6499V6.6599C7.64896 6.6599 7.29996 7.0099 7.29996 7.4399C7.29996 7.8699 7.64896 8.2199 8.07996 8.2199H11.069C11.5 8.2199 11.85 7.8699 11.85 7.4289C11.85 6.9999 11.5 6.6499 11.069 6.6499H8.07996ZM15.92 12.7399H8.07996C7.64896 12.7399 7.29996 12.3899 7.29996 11.9599C7.29996 11.5299 7.64896 11.1789 8.07996 11.1789H15.92C16.35 11.1789 16.7 11.5299 16.7 11.9599C16.7 12.3899 16.35 12.7399 15.92 12.7399ZM15.92 17.3099H8.07996C7.77996 17.3499 7.48996 17.1999 7.32996 16.9499C7.16996 16.6899 7.16996 16.3599 7.32996 16.1099C7.48996 15.8499 7.77996 15.7099 8.07996 15.7399H15.92C16.319 15.7799 16.62 16.1199 16.62 16.5299C16.62 16.9289 16.319 17.2699 15.92 17.3099Z" fill="#8A92A6"/>
-                </svg>
-              </span>
-              <span class="text">Product List</span>
-            </li>
+    <div class="tableinfo">
+      <div class="tableinfo-header">
+        <div class="tablefilter">
+          <div class="tablefilter-body">
+            <form class="formfilter">
+              <div class="inputbox idbox errorfield">
+                <input type="number" class="inputfield" placeholder="ID...">
 
-            <li class="divider">
-              <svg width="2" height="25" viewBox="0 0 2 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect width="2" height="25" fill="#6A7081"/>
-              </svg>
-            </li>
+                <p class="error-message">ID is required</p>
+              </div>
 
-            <li class="breadcrumb-item">
-              <a href="add-product.html" class="breadcrumb-link">
-                <span class="icon">
+              <div class="inputbox">
+                <input type="text" class="inputfield" placeholder="Random Header">
+
+                <p class="error-message">Input is required</p>
+              </div>
+
+              <div class="inputbox">
+                <input type="text" class="inputfield" placeholder="Random Header">
+
+                <p class="error-message">Input is required</p>
+              </div>
+              
+              <div class="inputbox">
+                <input type="text" class="inputfield" placeholder="Random Header">
+
+                <p class="error-message">Input is required</p>
+              </div>
+
+              <div class="inputbox selectbox">
+                <select class="selectfield">
+                  <option value="">Selective field</option>
+                  <option value="">Selective field 2</option>
+                  <option value="">Selective field 3</option>
+                  <option value="">Selective field 4</option>
+                </select>
+
+                <p class="error-message">Input is required</p>
+
+                <button type="button" class="btn-reset">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path opacity="0.4" d="M12 1.99976C17.515 1.99976 22 6.48576 22 11.9998C22 17.5138 17.515 21.9998 12 21.9998C6.486 21.9998 2 17.5138 2 11.9998C2 6.48576 6.486 1.99976 12 1.99976Z" fill="#6A7081"/>
-                    <path d="M15.1085 11.198L12.8031 11.1985L12.8031 8.8938C12.8037 8.4511 12.4439 8.09138 12.0013 8.09202C11.5567 8.0907 11.1989 8.44976 11.1989 8.89307L11.1984 11.1985L8.89167 11.1977C8.44836 11.1977 8.09061 11.5581 8.08933 12.0001C8.08999 12.4427 8.44971 12.8025 8.89176 12.8025L11.1991 12.8026L11.1985 15.1041C11.1985 15.5474 11.5583 15.9071 12.0003 15.9058C12.2226 15.9065 12.4222 15.8171 12.5674 15.6719C12.7132 15.5261 12.8026 15.3265 12.8026 15.1048L12.8025 12.8026L15.1092 12.8021C15.3309 12.8021 15.5305 12.7127 15.6757 12.5675C15.8209 12.4223 15.9103 12.2214 15.9109 12.0004C15.9109 11.5571 15.5518 11.198 15.1085 11.198Z" fill="#232D42"/>
+                    <path d="M15.6865 14.1741L13.5125 12.0011L15.6853 9.82809C16.1033 9.41129 16.1033 8.73299 15.6853 8.31623C15.2674 7.89581 14.5916 7.89703 14.1736 8.31501L11.9995 10.4881L9.82545 8.31257C9.40753 7.89459 8.7305 7.89703 8.31255 8.31257C7.89582 8.73055 7.89582 9.40884 8.31255 9.82565L10.4878 12.0011L8.31743 14.1704C7.89948 14.5884 7.89948 15.2667 8.31743 15.6822C8.52641 15.8924 8.79893 15.9963 9.07268 15.9963C9.34765 15.9963 9.62014 15.8924 9.82912 15.6835L11.9995 13.5129L14.1748 15.6871C14.3838 15.8961 14.6563 16 14.9301 16C15.2038 16 15.4776 15.8949 15.6865 15.6871C16.1045 15.2691 16.1045 14.5921 15.6865 14.1741Z" fill="#8A92A6"/>
+                    </svg>
+                </button>
+              </div>
+              
+              <div class="inputbox selectbox errorfield">
+                <select class="selectfield">
+                  <option value="">Selective field</option>
+                  <option value="">Selective field 2</option>
+                  <option value="">Selective field 3</option>
+                  <option value="">Selective field 4</option>
+                </select>
+
+                <p class="error-message">Input is required</p>
+
+                <button type="button" class="btn-reset">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15.6865 14.1741L13.5125 12.0011L15.6853 9.82809C16.1033 9.41129 16.1033 8.73299 15.6853 8.31623C15.2674 7.89581 14.5916 7.89703 14.1736 8.31501L11.9995 10.4881L9.82545 8.31257C9.40753 7.89459 8.7305 7.89703 8.31255 8.31257C7.89582 8.73055 7.89582 9.40884 8.31255 9.82565L10.4878 12.0011L8.31743 14.1704C7.89948 14.5884 7.89948 15.2667 8.31743 15.6822C8.52641 15.8924 8.79893 15.9963 9.07268 15.9963C9.34765 15.9963 9.62014 15.8924 9.82912 15.6835L11.9995 13.5129L14.1748 15.6871C14.3838 15.8961 14.6563 16 14.9301 16C15.2038 16 15.4776 15.8949 15.6865 15.6871C16.1045 15.2691 16.1045 14.5921 15.6865 14.1741Z" fill="#8A92A6"/>
+                    </svg>
+                </button>
+              </div>
+
+              <div class="submitbox">
+                <button type="button" class="btn-filter">Filter</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="tableinfo-body">
+        <div class="productinfo p-0">
+          <!-- PRODUCT-INFO HEADER START -->
+          <div class="productinfo-header">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item active" aria-current="page">
+                  <span class="icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path opacity="0.4" d="M16.191 2H7.81C4.77 2 3 3.78 3 6.83V17.16C3 20.26 4.77 22 7.81 22H16.191C19.28 22 21 20.26 21 17.16V6.83C21 3.78 19.28 2 16.191 2Z" fill="#8A92A6"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M8.07996 6.6499V6.6599C7.64896 6.6599 7.29996 7.0099 7.29996 7.4399C7.29996 7.8699 7.64896 8.2199 8.07996 8.2199H11.069C11.5 8.2199 11.85 7.8699 11.85 7.4289C11.85 6.9999 11.5 6.6499 11.069 6.6499H8.07996ZM15.92 12.7399H8.07996C7.64896 12.7399 7.29996 12.3899 7.29996 11.9599C7.29996 11.5299 7.64896 11.1789 8.07996 11.1789H15.92C16.35 11.1789 16.7 11.5299 16.7 11.9599C16.7 12.3899 16.35 12.7399 15.92 12.7399ZM15.92 17.3099H8.07996C7.77996 17.3499 7.48996 17.1999 7.32996 16.9499C7.16996 16.6899 7.16996 16.3599 7.32996 16.1099C7.48996 15.8499 7.77996 15.7099 8.07996 15.7399H15.92C16.319 15.7799 16.62 16.1199 16.62 16.5299C16.62 16.9289 16.319 17.2699 15.92 17.3099Z" fill="#8A92A6"/>
+                    </svg>
+                  </span>
+                  <span class="text">Product List</span>
+                </li>
+    
+                <li class="divider">
+                  <svg width="2" height="25" viewBox="0 0 2 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="2" height="25" fill="#6A7081"/>
                   </svg>
-                </span>
-  
-                <span class="text">Add Product</span>
-              </a>
-            </li>
-          </ol>
-        </nav>
-      </div>
-      <!-- PRODUCT-INFO HEADER END -->
+                </li>
+    
+                <li class="breadcrumb-item">
+                  <a href="add-product.html" class="breadcrumb-link">
+                    <span class="icon">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path opacity="0.4" d="M12 1.99976C17.515 1.99976 22 6.48576 22 11.9998C22 17.5138 17.515 21.9998 12 21.9998C6.486 21.9998 2 17.5138 2 11.9998C2 6.48576 6.486 1.99976 12 1.99976Z" fill="#6A7081"/>
+                        <path d="M15.1085 11.198L12.8031 11.1985L12.8031 8.8938C12.8037 8.4511 12.4439 8.09138 12.0013 8.09202C11.5567 8.0907 11.1989 8.44976 11.1989 8.89307L11.1984 11.1985L8.89167 11.1977C8.44836 11.1977 8.09061 11.5581 8.08933 12.0001C8.08999 12.4427 8.44971 12.8025 8.89176 12.8025L11.1991 12.8026L11.1985 15.1041C11.1985 15.5474 11.5583 15.9071 12.0003 15.9058C12.2226 15.9065 12.4222 15.8171 12.5674 15.6719C12.7132 15.5261 12.8026 15.3265 12.8026 15.1048L12.8025 12.8026L15.1092 12.8021C15.3309 12.8021 15.5305 12.7127 15.6757 12.5675C15.8209 12.4223 15.9103 12.2214 15.9109 12.0004C15.9109 11.5571 15.5518 11.198 15.1085 11.198Z" fill="#232D42"/>
+                      </svg>
+                    </span>
       
-      <!-- PRODUCT-INFO BODY START -->
-      <div class="productinfo-body">
-        
+                    <span class="text">Add Product</span>
+                  </a>
+                </li>
+              </ol>
+            </nav>
+
+            <ul class="iconlist">
+              <li class="iconlist-item">
+                <a href="edit-product.html" class="iconlist-link">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path opacity="0.4" d="M19.9927 18.9534H14.2984C13.7429 18.9534 13.291 19.4124 13.291 19.9767C13.291 20.5422 13.7429 21.0001 14.2984 21.0001H19.9927C20.5483 21.0001 21.0001 20.5422 21.0001 19.9767C21.0001 19.4124 20.5483 18.9534 19.9927 18.9534Z" fill="#4A66ED"/>
+                    <path d="M10.309 6.90385L15.7049 11.2639C15.835 11.3682 15.8573 11.5596 15.7557 11.6929L9.35874 20.0282C8.95662 20.5431 8.36402 20.8344 7.72908 20.8452L4.23696 20.8882C4.05071 20.8903 3.88775 20.7613 3.84542 20.5764L3.05175 17.1258C2.91419 16.4915 3.05175 15.8358 3.45388 15.3306L9.88256 6.95545C9.98627 6.82108 10.1778 6.79743 10.309 6.90385Z" fill="#4A66ED"/>
+                    <path opacity="0.4" d="M18.1208 8.66544L17.0806 9.96401C16.9758 10.0962 16.7874 10.1177 16.6573 10.0124C15.3927 8.98901 12.1545 6.36285 11.2561 5.63509C11.1249 5.52759 11.1069 5.33625 11.2127 5.20295L12.2159 3.95706C13.126 2.78534 14.7133 2.67784 15.9938 3.69906L17.4647 4.87078C18.0679 5.34377 18.47 5.96726 18.6076 6.62299C18.7663 7.3443 18.597 8.0527 18.1208 8.66544Z" fill="#4A66ED"/>
+                  </svg>
+                </a>
+              </li>
+
+              <li class="iconlist-item">
+                <button type="button" class="iconlist-link">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path opacity="0.4" d="M19.643 9.48851C19.643 9.5565 19.11 16.2973 18.8056 19.1342C18.615 20.8751 17.4927 21.9311 15.8092 21.9611C14.5157 21.9901 13.2494 22.0001 12.0036 22.0001C10.6809 22.0001 9.38741 21.9901 8.13185 21.9611C6.50477 21.9221 5.38147 20.8451 5.20057 19.1342C4.88741 16.2873 4.36418 9.5565 4.35445 9.48851C4.34473 9.28351 4.41086 9.08852 4.54507 8.93053C4.67734 8.78453 4.86796 8.69653 5.06831 8.69653H18.9388C19.1382 8.69653 19.3191 8.78453 19.4621 8.93053C19.5953 9.08852 19.6624 9.28351 19.643 9.48851Z" fill="#4A66ED"/>
+                    <path d="M21 5.97686C21 5.56588 20.6761 5.24389 20.2871 5.24389H17.3714C16.7781 5.24389 16.2627 4.8219 16.1304 4.22692L15.967 3.49795C15.7385 2.61698 14.9498 2 14.0647 2H9.93624C9.0415 2 8.26054 2.61698 8.02323 3.54595L7.87054 4.22792C7.7373 4.8219 7.22185 5.24389 6.62957 5.24389H3.71385C3.32386 5.24389 3 5.56588 3 5.97686V6.35685C3 6.75783 3.32386 7.08982 3.71385 7.08982H20.2871C20.6761 7.08982 21 6.75783 21 6.35685V5.97686Z" fill="#4A66ED"/>
+                  </svg>
+                </button>
+              </li>
+            </ul>
+          </div>
+          <!-- PRODUCT-INFO HEADER END -->
+        </div>
+
+        <div class="tablebody">
+          <table id="example" class="table table-responsive-md">
+            <thead>
+              <tr>
+                <th>
+                  <div class="checkfield">
+                    <input type="checkbox" id="allcheck" class="checkinput" hidden>
+                    <label for="allcheck" class="checklabel"></label>
+                  </div>
+                </th>
+                <th>ID</th>
+                <th>Variants</th>
+                <th>Product Name</th>
+                <th>Categories</th>
+                <th>Created Date</th>
+                <th>Image</th>
+                <th>Status</th>
+                <th></th>
+              </tr>
+            </thead>
+  
+            <tbody>
+              <tr>
+                <td>
+                  <div class="checkfield">
+                    <input type="checkbox" id="allcheck-mob" class="checkinput" hidden>
+                    <label for="allcheck-mob" class="checklabel"></label>
+                  </div>
+                </td>
+                <td>
+                  <span class="title">ID</span>
+                  <a href="edit-product.html" class="linktext">ID : 3762</a>
+                </td>
+                <td>
+                  <span class="title">Variants</span>
+                  <span class="text variantname">1 Variants</span>
+                </td>
+                <td>
+                  <span class="title">Product Name</span>
+                  <a href="edit-product.html" class="linktext">KT Ladies Pump Shoes For Woman : Article KTF L44</a>
+                </td>
+                <td>
+                  <span class="title">Categories</span>
+                  <span class="text categoryname">Category 1</span>
+                </td>
+                <td>
+                  <span class="title">Created Date</span>
+                  <span class="text">June 14, 2022, 3 p.m.</span>
+                </td>
+                <td>
+                  <span class="title">Image</span>
+                  <span class="imgbox">
+                    <img src="assets/images/products/product-1.png" alt="product-image">
+                  </span>
+                </td>
+                <td>
+                  <span class="title">Status</span>
+                  <span class="status activestatus">Active</span>
+                </td>
+                <td>
+                  <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="switch-1" checked>
+                    <label class="form-check-label" for="switch-1"></label>
+                  </div>
+                </td>
+              </tr>
+              
+              <tr>
+                <td>
+                  <div class="checkfield">
+                    <input type="checkbox" id="check-1" class="checkinput" hidden>
+                    <label for="check-1" class="checklabel"></label>
+                  </div>
+                </td>
+                <td>
+                  <span class="title">ID</span>
+                  <a href="edit-product.html" class="linktext">ID : 3762</a>
+                </td>
+                <td>
+                  <span class="title">Variants</span>
+                  <span class="text variantname">2 Variants</span>
+                </td>
+                <td>
+                  <span class="title">Product Name</span>
+                  <a href="edit-product.html" class="linktext">KT Ladies Pump Shoes For Woman : Article KTF L44</a>
+                </td>
+                <td>
+                  <span class="title">Categories</span>
+                  <span class="text categoryname">Edinburgh</span>
+                </td>
+                <td>
+                  <span class="title">Created Date</span>
+                  <span class="text">June 13, 2022, 2 p.m.</span>
+                </td>
+                <td>
+                  <span class="title">Image</span>
+                  <span class="imgbox">
+                    <img src="assets/images/products/product-1.png" alt="product-image">
+                  </span>
+                </td>
+                <td>
+                  <span class="title">Status</span>
+                  <span class="status inactivestatus">Inactive</span>
+                </td>
+                <td>
+                  <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="switch-1" checked>
+                    <label class="form-check-label" for="switch-1"></label>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
-      <!-- PRODUCT-INFO BODY END -->
     </div>
   </main>
   <!--========== MAIN SECTION END ============-->

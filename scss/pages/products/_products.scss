@@ -10,6 +10,8 @@
   gap: length(16);
 
   &-header {
+    @include flex-center-between;
+    
     .breadcrumb {
       margin-bottom: 0;
       @include list-horizontal;
@@ -124,6 +126,22 @@
         }
       }
     }
+
+    .iconlist {
+      @include list-horizontal;
+      gap: length(16);
+
+      &-link {
+        @include transparent-button;
+        @include square(length(24));
+        @include flex-center;
+        overflow: hidden;
+
+        svg {
+          @include wh100;
+        }
+      }
+    }
   }
 
   &-body {
@@ -132,9 +150,30 @@
       gap: length(16);
 
       &-header {
+        @include flex-center-vert;
+        gap: length(16);
+
         .productdescription-title {
           color: $headingtext;
           @include font-face($primaryFont, style('normal'), size(20), weight('semibold'), line-height(35, 20));
+        }
+
+        .buttonlist {
+          @include flex-center-vert;
+          gap: length(10);
+
+          .btn-cross,
+          .btn-right {
+            @include transparent-button;
+            @include square(length(21));
+            @include circle;
+            @include flex-center;
+            overflow: hidden;
+
+            svg {
+              @include wh100;
+            }
+          }
         }
       }
 
@@ -287,6 +326,19 @@
             }
           }
         }
+
+        .infoadd {
+          @include flex-center-vert;
+          gap: length(14);
+
+          .inputbox {
+            width: calc(100% - 5.5rem);
+          }
+
+          .addbox {
+            width: length(88);
+          }
+        }
       }
     }
 
@@ -306,6 +358,29 @@
         }
 
         &-body {
+          @include flex-column;
+          gap: length(16);
+
+          .warning {
+            @include flex-center-vert;
+            gap: length(8);
+
+            .icon {
+              @include square(length(24));
+              @include flex-center;
+              overflow: hidden;
+
+              svg {
+                @include wh100;
+              }
+            }
+
+            .message {
+              color: $textdark;
+              @include font-face($primaryFont, style('normal'), size(12), weight('normal'), line-height(16, 12));
+            }
+          }
+
           .product-thumbnail {
             background: $productbg;
             @include radius(4);
@@ -383,8 +458,138 @@
                 }
               }
             }
+
+            &.errorfield {
+              border-color: $danger;
+            }
           }
         }
+      }
+
+      .deliverycharge {
+        @include flex-column;
+        gap: length(16);
+
+        &-header {
+          .deliverycharge-title {
+            color: $headingtext;
+            @include font-face($primaryFont, style('normal'), size(20), weight('semibold'), line-height(35, 20));
+          }
+        }
+
+        &-body {
+          @include flex-center-vert;
+          gap: length(16);
+          flex-wrap: wrap;
+
+          .delivery {
+            @include flex-column;
+            gap: length(8);
+            max-width: calc(50% - 0.5rem);
+            
+            @include breakpoint(mobile576) {
+              max-width: length(160);
+            }
+
+            &-body {
+              @include flex-center-vert;
+              @include border(solid, 1, $textlight);
+              @include radius(4);
+              overflow: hidden;
+              @include transitionsall;
+
+              .deliverylabel {
+                padding: length(8);
+                @include border-single(right, solid, 1, $textlight);
+                color: $textdark;
+                @include font-face($primaryFont, style('normal'), size(12), weight('normal'), line-height(16, 12));
+                width: length(48);
+                text-align: center;
+              }
+
+              .deliveryinput {
+                padding: length(8);
+                color: $textdark;
+                @include font-face($primaryFont, style('normal'), size(12), weight('normal'), line-height(16, 12));
+                width: calc(100% - 3rem);
+              }
+
+              &:focus-within {
+                border-color: $secondarytext;
+              }
+            }
+          }
+        }
+      }
+
+      .seoinformation {
+        @include flex-column;
+        gap: length(16);
+
+        &-header {
+          .seoinformation-title {
+            color: $headingtext;
+            @include font-face($primaryFont, style('normal'), size(20), weight('semibold'), line-height(35, 20));
+          }
+        }
+
+        &-body {
+          @include flex-column;
+          gap: length(16);
+              
+          .inputbox {
+            @include w100;
+            @include flex-column;
+            gap: length(8);
+            position: relative;
+    
+            .inputlabel {
+              color: $textdark;
+              @include font-face($primaryFont, style('normal'), size(12), weight('normal'), line-height(16, 12));
+    
+              .required {
+                color: $danger;
+              }
+            }
+            
+            .inputfield {
+              color: $textprimary;
+              @include border(solid, 1, $textlight);
+              @include radius(4);
+              padding: length(8) length(16);
+              @include font-face($primaryFont, style('normal'), size(12), weight('normal'), line-height(16, 12));
+              @include transitionsall;
+    
+              &::after {
+                color: $textlight;
+              }
+    
+              &:focus {
+                border-color: $secondarytext;
+              }
+            }
+    
+            .error-message {
+              display: none;
+              color: $danger;
+              @include font-face($primaryFont, style('normal'), size(12), weight('medium'), line-height(16.8, 12));
+            }
+    
+            &.errorfield {
+              .inputfield {
+                border-color: $danger;
+              }
+    
+              .error-message {
+                display: block;
+              }
+            }
+          }
+        }
+      }
+
+      .submitbox {
+        @include flex-end;
       }
     }
   }

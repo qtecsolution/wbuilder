@@ -10,7 +10,7 @@
   background: $white;
   display: none;
   transition: 0.2s ease-in-out;
-  z-index: 2000;
+  z-index: 1000;
   
   @include breakpoint(tab992) {
     @include flex-column;

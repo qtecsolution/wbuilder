@@ -7,6 +7,7 @@ toggleButton.addEventListener("click", () => {
 	const sidebar = document.querySelector("#desktopsidebar");
 	const main = document.querySelector("#main");
   const icon = document.querySelector("#btn-toggle svg");
+	const footer = document.querySelector(".footer");
 	
 	// ADD AND REMOVE ACTIVE CLASS IN TOGGLE ICON
 	if(icon.classList.contains('active')) {
@@ -22,10 +23,17 @@ toggleButton.addEventListener("click", () => {
 		sidebar.classList.add('sidecollapsed');
 	}
 	
-	// ADD AND REMOVE COLLAPSED CLASS WITH MAIN SECTION
+	// ADD AND REMOVE COLLAPSED CLASS WITH MAIN
 	if(main.classList.contains('maincollapsed')) {
 		main.classList.remove('maincollapsed');
 	} else {
 		main.classList.add('maincollapsed');
+	}
+	
+	// ADD AND REMOVE COLLAPSED CLASS WITH FOOTER
+	if(footer.classList.contains('footercollapsed')) {
+		footer.classList.remove('footercollapsed');
+	} else {
+		footer.classList.add('footercollapsed');
 	}
 });

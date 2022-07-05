@@ -15,6 +15,8 @@ $textlight: hsl(224, 13%, 84%); //#D0D3DB
 $headingtext: hsl(224, 10%, 46%); //#6A7081
 $danger: hsl(0, 96%, 67%); //#FC5A5A
 $textdark: hsl(0, 0%, 20%); //#333333
+$categorytext: hsl(34, 100%, 50%); //#FF9100
+$varianttext: hsl(175, 98%, 24%); //#01796F
 
 /**=====================================================**
                     BACKGROUND-COLORS
@@ -48,9 +50,12 @@ $shadow-1: rgb(138, 146, 166);
 $dropdown-shadow: drop-shadow(-0.25rem .25rem .25rem rgba($shadow-1, 0.15));
 
 /**=====================================================**
-                        TEXT-SHADOWS
+                        STATUS
 =======================================================**/
-
+$inactivebg: hsl(0, 100%, 90%); //#FFCCCC
+$inactivecolor: hsl(0, 66%, 47%); //#C62828
+$activebg: hsl(124, 100%, 90%); //#CCFFCF
+$activecolor: hsl(146, 64%, 36%); //#219653
 
 /**=====================================================**
                     TIMING-VARIABLES

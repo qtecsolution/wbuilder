@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Wbuilder | Add Products</title>
+  <title>Wbuilder | Update Products</title>
   <!-- FAVICON ICON -->
   <link rel="shortcut icon" href="assets/images/favicon/favicon.svg" type="image/svg">
   <!-- DATA TABLE CSS -->
@@ -1198,15 +1198,8 @@
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb">
             <li class="breadcrumb-item">
-              <a href="product-list.html" class="breadcrumb-link">
-                <span class="icon">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path opacity="0.4" d="M16.191 2H7.81C4.77 2 3 3.78 3 6.83V17.16C3 20.26 4.77 22 7.81 22H16.191C19.28 22 21 20.26 21 17.16V6.83C21 3.78 19.28 2 16.191 2Z" fill="#8A92A6"/>
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M8.07996 6.6499V6.6599C7.64896 6.6599 7.29996 7.0099 7.29996 7.4399C7.29996 7.8699 7.64896 8.2199 8.07996 8.2199H11.069C11.5 8.2199 11.85 7.8699 11.85 7.4289C11.85 6.9999 11.5 6.6499 11.069 6.6499H8.07996ZM15.92 12.7399H8.07996C7.64896 12.7399 7.29996 12.3899 7.29996 11.9599C7.29996 11.5299 7.64896 11.1789 8.07996 11.1789H15.92C16.35 11.1789 16.7 11.5299 16.7 11.9599C16.7 12.3899 16.35 12.7399 15.92 12.7399ZM15.92 17.3099H8.07996C7.77996 17.3499 7.48996 17.1999 7.32996 16.9499C7.16996 16.6899 7.16996 16.3599 7.32996 16.1099C7.48996 15.8499 7.77996 15.7099 8.07996 15.7399H15.92C16.319 15.7799 16.62 16.1199 16.62 16.5299C16.62 16.9289 16.319 17.2699 15.92 17.3099Z" fill="#8A92A6"/>
-                  </svg>
-                </span>
-                
-                <span class="text">Product List</span>
+              <a href="managevariant.html" class="breadcrumb-link">                
+                <span class="text">Manage variant</span>
               </a>
             </li>
 
@@ -1217,14 +1210,7 @@
             </li>
 
             <li class="breadcrumb-item active" aria-current="page">
-              <span class="icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path opacity="0.4" d="M12 1.99976C17.515 1.99976 22 6.48576 22 11.9998C22 17.5138 17.515 21.9998 12 21.9998C6.486 21.9998 2 17.5138 2 11.9998C2 6.48576 6.486 1.99976 12 1.99976Z" fill="#6A7081"/>
-                  <path d="M15.1085 11.198L12.8031 11.1985L12.8031 8.8938C12.8037 8.4511 12.4439 8.09138 12.0013 8.09202C11.5567 8.0907 11.1989 8.44976 11.1989 8.89307L11.1984 11.1985L8.89167 11.1977C8.44836 11.1977 8.09061 11.5581 8.08933 12.0001C8.08999 12.4427 8.44971 12.8025 8.89176 12.8025L11.1991 12.8026L11.1985 15.1041C11.1985 15.5474 11.5583 15.9071 12.0003 15.9058C12.2226 15.9065 12.4222 15.8171 12.5674 15.6719C12.7132 15.5261 12.8026 15.3265 12.8026 15.1048L12.8025 12.8026L15.1092 12.8021C15.3309 12.8021 15.5305 12.7127 15.6757 12.5675C15.8209 12.4223 15.9103 12.2214 15.9109 12.0004C15.9109 11.5571 15.5518 11.198 15.1085 11.198Z" fill="#232D42"/>
-                </svg>
-              </span>
-
-              <span class="text">Add Product</span>
+              <span class="text">Update product</span>
             </li>
           </ol>
         </nav>
@@ -1238,6 +1224,22 @@
             <div class="productdescription">
               <div class="productdescription-header">
                 <h3 class="productdescription-title">Product Info</h3>
+
+                <div class="buttonlist">
+                  <button type="button" class="btn-cross">
+                    <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="10.5" cy="10.5" r="10.5" fill="#FC5A5A" fill-opacity="0.2"/>
+                      <path d="M13.7257 12.4023L11.8234 10.501L13.7247 8.59958C14.0904 8.23488 14.0904 7.64137 13.7247 7.2767C13.3589 6.90883 12.7676 6.9099 12.4019 7.27564L10.4996 9.17705L8.59727 7.2735C8.23159 6.90777 7.63918 6.9099 7.27348 7.2735C6.90884 7.63923 6.90884 8.23274 7.27348 8.59744L9.17684 10.501L7.27775 12.3991C6.91205 12.7649 6.91205 13.3584 7.27775 13.722C7.46061 13.9059 7.69907 13.9968 7.93859 13.9968C8.17919 13.9968 8.41763 13.9059 8.60048 13.723L10.4996 11.8238L12.403 13.7262C12.5858 13.9091 12.8243 14 13.0638 14C13.3033 14 13.5429 13.908 13.7257 13.7262C14.0914 13.3605 14.0914 12.7681 13.7257 12.4023Z" fill="#FC5A5A"/>
+                    </svg>
+                  </button>
+
+                  <button type="button" class="btn-right">
+                    <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="10.5" cy="10.5" r="10.5" fill="#3B844C" fill-opacity="0.2"/>
+                      <path d="M9.63767 13.6549C9.44248 13.8463 9.12977 13.8454 8.93561 13.653L6.3676 11.1077C6.16666 10.9086 6.17084 10.5825 6.37681 10.3886L7.0769 9.72936C7.27306 9.54466 7.58028 9.5486 7.77164 9.73826L8.93374 10.8901C9.12863 11.0832 9.4428 11.0832 9.63769 10.8901L14.2194 6.34886C14.4143 6.15569 14.7285 6.15569 14.9234 6.34886L15.6398 7.0589C15.8379 7.25526 15.837 7.57573 15.6379 7.77102L9.63767 13.6549Z" fill="#3B844C"/>
+                    </svg>
+                  </button>
+                </div>
               </div>
 
               <div class="info">
@@ -1261,7 +1263,7 @@
                 <div class="row g-3">
                   <div class="col-xl-9">
                     <div class="infoadd">
-                      <div class="inputbox errorfield">
+                      <div class="inputbox errorfield w-100">
                         <label for="category" class="inputlabel">Category <span class="required">*</span></label>
                         <select id="category" class="selectfield">
                           <option value="">Category One</option>
@@ -1278,10 +1280,6 @@
                         </button>
     
                         <p class="error-message">This field is required</p>
-                      </div>
-
-                      <div class="addbox">
-                        <button class="btn-filter" type="button" data-bs-toggle="modal" data-bs-target="#addCategory">Add</button>
                       </div>
                     </div>
                   </div>
@@ -1306,7 +1304,7 @@
                 <div class="row g-3">
                   <div class="col-xl-9">
                     <div class="infoadd">
-                      <div class="inputbox errorfield">
+                      <div class="inputbox errorfield w-100">
                         <label for="brand" class="inputlabel">Brand <span class="required">*</span></label>
                         <select id="brand" class="selectfield">
                           <option value="">Brand One</option>
@@ -1323,10 +1321,6 @@
                         </button>
     
                         <p class="error-message">This field is required</p>
-                      </div>
-
-                      <div class="addbox">
-                        <button class="btn-filter" type="button" data-bs-toggle="modal" data-bs-target="#addBrand">Add</button>
                       </div>
                     </div>
                   </div>
@@ -1712,7 +1706,7 @@
               <!-- SEO-INFORMATION END -->
 
               <div class="submitbox">
-                <button type="button" class="btn-add">Add Product</button>
+                <button type="button" class="btn-add">Update Product</button>
               </div>
             </div>
           </div>
@@ -1741,52 +1735,6 @@
     </div>
   </footer>
   <!--========== FOOTER SECTION END ==============-->
-
-  <!--========== ADD-CATEGORY MODAL START ==============-->
-  <div class="modal fade" id="addCategory" tabindex="-1" aria-labelledby="addCategoryLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="addCategoryLabel">Add Category</h5>
-
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
-            <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect width="27" height="27" rx="6" fill="#FC5A5A" fill-opacity="0.2"/>
-              <path d="M17.6474 15.9459L15.2015 13.5012L17.646 11.0566C18.1162 10.5877 18.1162 9.82461 17.646 9.35576C17.1758 8.88279 16.4155 8.88416 15.9453 9.35439L13.4995 11.7991L11.0536 9.35164C10.5835 8.88141 9.82181 8.88416 9.35161 9.35164C8.8828 9.82186 8.8828 10.585 9.35161 11.0539L11.7988 13.5012L9.35711 15.9417C8.88692 16.412 8.88692 17.175 9.35711 17.6425C9.59221 17.879 9.8988 17.9959 10.2068 17.9959C10.5161 17.9959 10.8227 17.879 11.0578 17.6439L13.4995 15.202L15.9467 17.648C16.1818 17.8831 16.4884 18 16.7963 18C17.1043 18 17.4123 17.8818 17.6474 17.648C18.1175 17.1778 18.1175 16.4161 17.6474 15.9459Z" fill="#FC5A5A"/>
-            </svg>
-          </button>
-        </div>
-
-        <div class="modal-body">
-          add category
-        </div>
-      </div>
-    </div>
-  </div>
-  <!--========== ADD-CATEGORY MODAL END ================-->
-
-  <!--========== ADD-BRAND MODAL START ==============-->
-  <div class="modal fade" id="addBrand" tabindex="-1" aria-labelledby="addBrandLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Add Brand</h5>
-
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
-            <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect width="27" height="27" rx="6" fill="#FC5A5A" fill-opacity="0.2"/>
-              <path d="M17.6474 15.9459L15.2015 13.5012L17.646 11.0566C18.1162 10.5877 18.1162 9.82461 17.646 9.35576C17.1758 8.88279 16.4155 8.88416 15.9453 9.35439L13.4995 11.7991L11.0536 9.35164C10.5835 8.88141 9.82181 8.88416 9.35161 9.35164C8.8828 9.82186 8.8828 10.585 9.35161 11.0539L11.7988 13.5012L9.35711 15.9417C8.88692 16.412 8.88692 17.175 9.35711 17.6425C9.59221 17.879 9.8988 17.9959 10.2068 17.9959C10.5161 17.9959 10.8227 17.879 11.0578 17.6439L13.4995 15.202L15.9467 17.648C16.1818 17.8831 16.4884 18 16.7963 18C17.1043 18 17.4123 17.8818 17.6474 17.648C18.1175 17.1778 18.1175 16.4161 17.6474 15.9459Z" fill="#FC5A5A"/>
-            </svg>
-          </button>
-        </div>
-
-        <div class="modal-body">
-          add brand
-        </div>
-      </div>
-    </div>
-  </div>
-  <!--========== ADD-BRAND MODAL END ================-->
 
 
   <!--========== BOOTSTRAP JS ============-->

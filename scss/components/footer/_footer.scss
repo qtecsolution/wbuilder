@@ -11,10 +11,14 @@
   
   @include breakpoint(tab992) {
     margin-left: length(222);
-    // position: fixed;
-    // bottom: 0;
-    // left: 0;
-    // width: calc(100% - 12.5rem);
+  }
+  
+  &.footercollapsed {
+    transition: 0.2s ease-in-out;
+  
+    @include breakpoint(tab992) {
+      margin-left: length(66);
+    }
   }
 
   &-content {

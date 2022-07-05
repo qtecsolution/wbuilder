@@ -37,6 +37,14 @@ table.dataTable {
             border-left: 0;
           }
         }
+
+        .checkfield {
+          @include square(length(18));
+        }
+
+        &:first-child {
+          // @include flex-center;
+        }
       }
     }
   }
@@ -75,9 +83,53 @@ table.dataTable {
           content: attr(data);
         }
 
-        .title, .text {
+        .title, .text, .linktext {
           color: inherit;
           font: inherit;
+        }
+
+        .title {
+          text-align: left;
+        }
+
+        .text {
+          text-align: right;
+        }
+
+        .linktext {
+          @include hover {
+            color: $primary;
+          }
+        }
+
+        .checkfield {
+          @include square(length(18));
+
+          @include breakpoint(tab992) {
+            margin-inline: auto;
+          }
+        }
+
+        .variantname {
+          color: $varianttext;
+        }
+
+        .categoryname {
+          color: $categorytext;
+        }
+
+        .imgbox {
+          @include square(length(48));
+          @include flex-center;
+          overflow: hidden;
+          
+          @include breakpoint(tab992) {
+            margin-inline: auto;
+          }
+
+          img {
+            @include wh100;
+          }
         }
 
         .title {

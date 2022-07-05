@@ -38,6 +38,47 @@
 	}
 }
 
+.btn-add {
+	@include setBgColor($primary, $white);
+	@include font-face($primaryFont, style('normal'), size(14), weight('semibold'), line-height(24, 14));
+	padding: length(10) length(32);
+	@include radius(4);
+	@include transitionsbackground;
+
+	@include hover {
+		@include setBgColor(darken($primary, 15%), $white);
+	}
+}
+              
+.btn-filter {
+	@include w100;
+	@include font-face($primaryFont, style('normal'), size(12), weight('semibold'), line-height(16, 12));
+	padding: length(9) length(32);
+	@include setBgColor($primary, $white);
+	@include radius(4);
+	text-align: center;
+	@include transitionsbackground;
+
+	@include hover {
+		background: darken($primary, 15%);
+	}
+}
+
+.status {
+	padding: length(5) length(14);
+	text-align: center;
+	@include font-face($primaryFont, style('normal'), size(12), weight('semibold'), line-height(16, 12));
+	@include radius(32);
+
+	&.activestatus {
+		@include setBgColor($activebg, $activecolor);
+	}
+
+	&.inactivestatus {
+		@include setBgColor($inactivebg, $inactivecolor);
+	}
+}
+
 /**=======================================================**
                         BUTTONS END
 **=======================================================**/
