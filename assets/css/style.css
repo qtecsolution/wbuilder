@@ -1939,7 +1939,7 @@ input[type="date"]:valid::before {
 }
 
 .offcanvas-body .mobilemenu .menulink {
-  padding: 0.3125rem 0.75rem;
+  padding: 0.625rem 0.75rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2036,7 +2036,7 @@ input[type="date"]:valid::before {
 }
 
 .offcanvas-body .mobilemenu .accordion-item {
-  padding: 0.3125rem 0.75rem;
+  padding: 0.625rem 0.75rem;
   position: relative;
 }
 
@@ -2513,7 +2513,7 @@ input[type="date"]:valid::before {
 }
 
 .desktopsidebar .desktopmenu .menulink {
-  padding: 0.3125rem 0.75rem;
+  padding: 0.625rem 0.75rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2610,7 +2610,7 @@ input[type="date"]:valid::before {
 }
 
 .desktopsidebar .desktopmenu .accordion-item {
-  padding: 0.3125rem 0.75rem;
+  padding: 0.625rem 0.75rem;
   position: relative;
 }
 

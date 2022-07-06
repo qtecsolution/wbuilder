@@ -82,7 +82,7 @@
 			@include flex-column;
 
 			.menulink {
-				padding: length(5) length(12);
+				padding: length(10) length(12);
 				@include flex-center-vert;
 				gap: length(8);
 				position: relative;
@@ -177,7 +177,7 @@
 				padding-bottom: length(48);
 
 				&-item {
-					padding: length(5) length(12);
+					padding: length(10) length(12);
 					position: relative;
 
 					&::before {
