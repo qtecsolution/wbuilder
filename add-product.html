@@ -1758,7 +1758,118 @@
         </div>
 
         <div class="modal-body">
-          add category
+          <div class="categoryinfo">
+            <div class="row">
+              <div class="col-12">
+                <div class="inputbox errorfield">
+                  <label for="addcategory" class="inputlabel">Category <span class="required">*</span></label>
+                  <select id="addcategory" class="selectfield">
+                    <option value="">Category One</option>
+                    <option value="">Category Two</option>
+                    <option value="">Category Three</option>
+                    <option value="">Category Four</option>
+                    <option value="">Category Five</option>
+                  </select>
+
+                  <button class="btn-remove">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M15.6865 14.1741L13.5125 12.0011L15.6853 9.82809C16.1033 9.41129 16.1033 8.73299 15.6853 8.31623C15.2674 7.89581 14.5916 7.89703 14.1736 8.31501L11.9995 10.4881L9.82545 8.31257C9.40753 7.89459 8.7305 7.89703 8.31255 8.31257C7.89582 8.73055 7.89582 9.40884 8.31255 9.82565L10.4878 12.0011L8.31743 14.1704C7.89948 14.5884 7.89948 15.2667 8.31743 15.6822C8.52641 15.8924 8.79893 15.9963 9.07268 15.9963C9.34765 15.9963 9.62014 15.8924 9.82912 15.6835L11.9995 13.5129L14.1748 15.6871C14.3838 15.8961 14.6563 16 14.9301 16C15.2038 16 15.4776 15.8949 15.6865 15.6871C16.1045 15.2691 16.1045 14.5921 15.6865 14.1741Z" fill="#8A92A6"/>
+                    </svg>
+                  </button>
+
+                  <p class="error-message">This field is required</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-12">
+                <div class="inputbox errorfield">
+                  <label for="addsubcategory" class="inputlabel">Sub Category <span class="required">*</span></label>
+                  <select id="addsubcategory" class="selectfield">
+                    <option value="">Sub Category One</option>
+                    <option value="">Sub Category Two</option>
+                    <option value="">Sub Category Three</option>
+                    <option value="">Sub Category Four</option>
+                    <option value="">Sub Category Five</option>
+                  </select>
+
+                  <button class="btn-remove">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M15.6865 14.1741L13.5125 12.0011L15.6853 9.82809C16.1033 9.41129 16.1033 8.73299 15.6853 8.31623C15.2674 7.89581 14.5916 7.89703 14.1736 8.31501L11.9995 10.4881L9.82545 8.31257C9.40753 7.89459 8.7305 7.89703 8.31255 8.31257C7.89582 8.73055 7.89582 9.40884 8.31255 9.82565L10.4878 12.0011L8.31743 14.1704C7.89948 14.5884 7.89948 15.2667 8.31743 15.6822C8.52641 15.8924 8.79893 15.9963 9.07268 15.9963C9.34765 15.9963 9.62014 15.8924 9.82912 15.6835L11.9995 13.5129L14.1748 15.6871C14.3838 15.8961 14.6563 16 14.9301 16C15.2038 16 15.4776 15.8949 15.6865 15.6871C16.1045 15.2691 16.1045 14.5921 15.6865 14.1741Z" fill="#8A92A6"/>
+                    </svg>
+                  </button>
+
+                  <p class="error-message">This field is required</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-12">
+                <div class="inputbox errorfield">
+                  <label for="addcategoryname" class="inputlabel">Category Name <span class="required">*</span></label>
+                  <input type="text" id="addcategoryname" class="inputfield" placeholder="Add Category Name">
+
+                  <p class="error-message">This field is required</p>
+                </div>                  
+              </div>
+            </div>
+
+            <div class="row g-3">
+              <div class="col-lg-6">
+                <div class="uploadbox">
+                  <label class="labelupload">Category Image <span class="required">*</span></label>
+
+                  <div class="upload errorfield">
+                    <div class="icon">
+                      <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M38.8853 14.4819V29.4254C38.8853 34.962 35.4203 38.867 29.8837 38.867H14.0253C8.48866 38.867 5.04199 34.962 5.04199 29.4254V14.4819C5.04199 8.94528 8.50699 5.04211 14.0253 5.04211H29.8837C35.4203 5.04211 38.8853 8.94528 38.8853 14.4819Z" stroke="#8A92A6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M9.68262 30.1237L12.484 27.1666C13.4575 26.1344 15.08 26.0849 16.114 27.0566C16.1451 27.0877 17.8318 28.8019 17.8318 28.8019C18.8494 29.8377 20.5122 29.8542 21.548 28.8386C21.6159 28.7726 25.8269 23.6649 25.8269 23.6649C26.9122 22.3467 28.861 22.1579 30.181 23.2451C30.269 23.3184 34.2475 27.4012 34.2475 27.4012" stroke="#8A92A6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M18.9069 16.7441C18.9069 18.5207 17.4678 19.9599 15.6913 19.9599C13.9148 19.9599 12.4756 18.5207 12.4756 16.7441C12.4756 14.9676 13.9148 13.5284 15.6913 13.5284C17.4678 13.5303 18.9069 14.9676 18.9069 16.7441Z" stroke="#8A92A6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                      </svg>
+                    </div>
+  
+                    <div class="uploadinfo">
+                      <input type="file" id="uploadctgimage" hidden>
+                      <label for="uploadctgimage" class="uploadlabel">
+                        Drop your images here, or 
+                        select <span class="text">click to browse</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-6">
+                <div class="uploadbox">
+                  <label class="labelupload">Category Icon <span class="required">*</span></label>
+
+                  <div class="upload errorfield">
+                    <div class="icon">
+                      <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M38.8853 14.4819V29.4254C38.8853 34.962 35.4203 38.867 29.8837 38.867H14.0253C8.48866 38.867 5.04199 34.962 5.04199 29.4254V14.4819C5.04199 8.94528 8.50699 5.04211 14.0253 5.04211H29.8837C35.4203 5.04211 38.8853 8.94528 38.8853 14.4819Z" stroke="#8A92A6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M9.68262 30.1237L12.484 27.1666C13.4575 26.1344 15.08 26.0849 16.114 27.0566C16.1451 27.0877 17.8318 28.8019 17.8318 28.8019C18.8494 29.8377 20.5122 29.8542 21.548 28.8386C21.6159 28.7726 25.8269 23.6649 25.8269 23.6649C26.9122 22.3467 28.861 22.1579 30.181 23.2451C30.269 23.3184 34.2475 27.4012 34.2475 27.4012" stroke="#8A92A6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M18.9069 16.7441C18.9069 18.5207 17.4678 19.9599 15.6913 19.9599C13.9148 19.9599 12.4756 18.5207 12.4756 16.7441C12.4756 14.9676 13.9148 13.5284 15.6913 13.5284C17.4678 13.5303 18.9069 14.9676 18.9069 16.7441Z" stroke="#8A92A6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                      </svg>
+                    </div>
+  
+                    <div class="uploadinfo">
+                      <input type="file" id="uploadctgicon" hidden>
+                      <label for="uploadctgicon" class="uploadlabel">
+                        Drop your images here, or 
+                        select <span class="text">click to browse</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <div class="submitbox">
+              <button class="btn-add">Add Category</button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -1781,7 +1892,72 @@
         </div>
 
         <div class="modal-body">
-          add brand
+          <div class="categoryinfo">
+            <div class="row">
+              <div class="col-12">
+                <div class="inputbox errorfield">
+                  <label for="addbrandname" class="inputlabel">Brand Name <span class="required">*</span></label>
+                  <input type="text" id="addbrandname" class="inputfield" placeholder="Add Category Name">
+
+                  <p class="error-message">This field is required</p>
+                </div>                  
+              </div>
+            </div>
+
+            <div class="row g-3">
+              <div class="col-lg-6">
+                <div class="uploadbox">
+                  <label class="labelupload">Brand Banner</label>
+
+                  <div class="upload errorfield">
+                    <div class="icon">
+                      <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M38.8853 14.4819V29.4254C38.8853 34.962 35.4203 38.867 29.8837 38.867H14.0253C8.48866 38.867 5.04199 34.962 5.04199 29.4254V14.4819C5.04199 8.94528 8.50699 5.04211 14.0253 5.04211H29.8837C35.4203 5.04211 38.8853 8.94528 38.8853 14.4819Z" stroke="#8A92A6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M9.68262 30.1237L12.484 27.1666C13.4575 26.1344 15.08 26.0849 16.114 27.0566C16.1451 27.0877 17.8318 28.8019 17.8318 28.8019C18.8494 29.8377 20.5122 29.8542 21.548 28.8386C21.6159 28.7726 25.8269 23.6649 25.8269 23.6649C26.9122 22.3467 28.861 22.1579 30.181 23.2451C30.269 23.3184 34.2475 27.4012 34.2475 27.4012" stroke="#8A92A6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M18.9069 16.7441C18.9069 18.5207 17.4678 19.9599 15.6913 19.9599C13.9148 19.9599 12.4756 18.5207 12.4756 16.7441C12.4756 14.9676 13.9148 13.5284 15.6913 13.5284C17.4678 13.5303 18.9069 14.9676 18.9069 16.7441Z" stroke="#8A92A6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                      </svg>
+                    </div>
+  
+                    <div class="uploadinfo">
+                      <input type="file" id="uploadbrandimage" hidden>
+                      <label for="uploadbrandimage" class="uploadlabel">
+                        Drop your images here, or 
+                        select <span class="text">click to browse</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-6">
+                <div class="uploadbox">
+                  <label class="labelupload">Brand Icon <span class="required">*</span></label>
+
+                  <div class="upload errorfield">
+                    <div class="icon">
+                      <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M38.8853 14.4819V29.4254C38.8853 34.962 35.4203 38.867 29.8837 38.867H14.0253C8.48866 38.867 5.04199 34.962 5.04199 29.4254V14.4819C5.04199 8.94528 8.50699 5.04211 14.0253 5.04211H29.8837C35.4203 5.04211 38.8853 8.94528 38.8853 14.4819Z" stroke="#8A92A6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M9.68262 30.1237L12.484 27.1666C13.4575 26.1344 15.08 26.0849 16.114 27.0566C16.1451 27.0877 17.8318 28.8019 17.8318 28.8019C18.8494 29.8377 20.5122 29.8542 21.548 28.8386C21.6159 28.7726 25.8269 23.6649 25.8269 23.6649C26.9122 22.3467 28.861 22.1579 30.181 23.2451C30.269 23.3184 34.2475 27.4012 34.2475 27.4012" stroke="#8A92A6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M18.9069 16.7441C18.9069 18.5207 17.4678 19.9599 15.6913 19.9599C13.9148 19.9599 12.4756 18.5207 12.4756 16.7441C12.4756 14.9676 13.9148 13.5284 15.6913 13.5284C17.4678 13.5303 18.9069 14.9676 18.9069 16.7441Z" stroke="#8A92A6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                      </svg>
+                    </div>
+  
+                    <div class="uploadinfo">
+                      <input type="file" id="uploadbrandicon" hidden>
+                      <label for="uploadbrandicon" class="uploadlabel">
+                        Drop your images here, or 
+                        select <span class="text">click to browse</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <div class="submitbox">
+              <button class="btn-add">Add Brand</button>
+            </div>
+          </div>
         </div>
       </div>
     </div>

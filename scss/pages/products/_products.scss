@@ -180,7 +180,7 @@
       .info {
         @include flex-column;
         gap: length(16);
-              
+        
         .inputbox {
           @include w100;
           @include flex-column;

@@ -1596,6 +1596,226 @@ input[type="date"]:valid::before {
           box-shadow: none;
 }
 
+.modal-body .categoryinfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+}
+
+.modal-body .categoryinfo .inputbox {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5rem;
+  position: relative;
+}
+
+.modal-body .categoryinfo .inputbox .inputlabel {
+  color: #333333;
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: normal;
+  line-height: 1.33333;
+}
+
+.modal-body .categoryinfo .inputbox .inputlabel .required {
+  color: #fc5a5a;
+}
+
+.modal-body .categoryinfo .inputbox .inputfield {
+  color: #232d43;
+  border: solid 0.0625rem #d1d4dc;
+  border-radius: 0.25rem;
+  border-radius: 0.25rem;
+  padding: 0.5rem 1rem;
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: normal;
+  line-height: 1.33333;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.modal-body .categoryinfo .inputbox .inputfield::after {
+  color: #d1d4dc;
+}
+
+.modal-body .categoryinfo .inputbox .inputfield:focus {
+  border-color: #8b93a7;
+}
+
+.modal-body .categoryinfo .inputbox .selectfield {
+  color: #232d43;
+  border: solid 0.0625rem #d1d4dc;
+  border-radius: 0.25rem;
+  border-radius: 0.25rem;
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: normal;
+  line-height: 1.33333;
+  padding: 0.5rem 1rem;
+  background: white url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16 10L12 14L8 10' stroke='%238A92A6' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A") no-repeat center right 3%;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  cursor: pointer;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.modal-body .categoryinfo .inputbox .selectfield option {
+  color: #232d43;
+}
+
+.modal-body .categoryinfo .inputbox .selectfield:focus {
+  border-color: #8b93a7;
+}
+
+.modal-body .categoryinfo .inputbox .btn-remove {
+  position: absolute;
+  top: 72%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  right: 2.5rem;
+  background: transparent;
+  border: none;
+  z-index: 100;
+}
+
+.modal-body .categoryinfo .inputbox .error-message {
+  display: none;
+  color: #fc5a5a;
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.modal-body .categoryinfo .inputbox.errorfield .inputfield,
+.modal-body .categoryinfo .inputbox.errorfield .selectfield {
+  border-color: #fc5a5a;
+}
+
+.modal-body .categoryinfo .inputbox.errorfield .btn-remove {
+  top: 50%;
+}
+
+.modal-body .categoryinfo .inputbox.errorfield .error-message {
+  display: block;
+}
+
+.modal-body .categoryinfo .uploadbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5rem;
+}
+
+.modal-body .categoryinfo .uploadbox .labelupload {
+  color: #333333;
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: normal;
+  line-height: 1.33333;
+}
+
+.modal-body .categoryinfo .uploadbox .labelupload .required {
+  color: #fc5a5a;
+}
+
+.modal-body .categoryinfo .uploadbox .upload {
+  background: rgba(164, 180, 242, 0.1);
+  border-radius: 0.25rem;
+  border-radius: 0.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.75rem;
+  padding: 0.625rem;
+  border: dashed 0.125rem #a6b5f2;
+  height: 100%;
+  text-align: center;
+  overflow: hidden;
+  min-height: 10rem;
+}
+
+.modal-body .categoryinfo .uploadbox .upload .icon {
+  height: 2.75rem;
+  width: 2.75rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+.modal-body .categoryinfo .uploadbox .upload .icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.modal-body .categoryinfo .uploadbox .upload .uploadinfo .uploadlabel {
+  color: #333333;
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: normal;
+  line-height: 1.33333;
+  cursor: pointer;
+}
+
+.modal-body .categoryinfo .uploadbox .upload .uploadinfo .uploadlabel .text {
+  color: #4a65ed;
+}
+
+.modal-body .categoryinfo .uploadbox .upload.errorfield {
+  border-color: #fc5a5a;
+}
+
+.modal-body .categoryinfo .submitbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-top: 1.5rem;
+}
+
 /**=======================================================**
                     		MODAL END
 **=======================================================**/
