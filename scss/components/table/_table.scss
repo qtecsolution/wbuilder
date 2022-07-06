@@ -118,6 +118,16 @@ table.dataTable {
           color: $categorytext;
         }
 
+        .default {
+          @include square(length(16));
+          @include circle;
+          @include flex-center;
+          
+          @include breakpoint(tab992) {
+            margin-inline: auto;
+          }
+        }
+
         .imgbox {
           @include square(length(48));
           @include flex-center;

@@ -907,11 +907,17 @@ input[type="date"]:valid::before {
   font-size: 0.875rem;
   font-weight: 600;
   line-height: 1.71429;
-  padding: 0.625rem 2rem;
+  padding: 0.5rem 1rem;
   border-radius: 0.25rem;
   border-radius: 0.25rem;
   -webkit-transition: background 250ms ease-in-out;
   transition: background 250ms ease-in-out;
+}
+
+@media screen and (min-width: 36rem) {
+  .btn-add {
+    padding: 0.625rem 2rem;
+  }
 }
 
 .btn-add:not([disabled]):hover {
@@ -3020,6 +3026,27 @@ table.dataTable {
   color: #ff9100;
 }
 
+.table tbody tr td .default {
+  height: 1rem;
+  width: 1rem;
+  border-radius: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media screen and (min-width: 62rem) {
+  .table tbody tr td .default {
+    margin-inline: auto;
+  }
+}
+
 .table tbody tr td .imgbox {
   height: 3rem;
   width: 3rem;
@@ -3905,6 +3932,71 @@ div.dataTables_wrapper div.dataTables_paginate .pagination .page-item.next .page
   outline: none;
   -webkit-box-shadow: none;
           box-shadow: none;
+}
+
+.radiobox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1.25rem;
+}
+
+.radiobox .radioinput:checked ~ .radiolabel::before {
+  border-color: #4a65ed;
+}
+
+.radiobox .radioinput:checked ~ .radiolabel::after {
+  opacity: 1;
+  visibility: visible;
+  background: #4a65ed;
+}
+
+.radiobox .radiolabel {
+  color: #232d43;
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: normal;
+  line-height: 1.33333;
+  position: relative;
+  padding-left: 1.5rem;
+  cursor: pointer;
+}
+
+.radiobox .radiolabel::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  height: 1rem;
+  width: 1rem;
+  background: white;
+  border: solid 0.0625rem #d1d4dc;
+  border-radius: 100%;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.radiobox .radiolabel::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0.25rem;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  height: 0.5rem;
+  width: 0.5rem;
+  background: white;
+  border-radius: 100%;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
 }
 
 /**=======================================================**
@@ -4869,4 +4961,332 @@ div.dataTables_wrapper div.dataTables_paginate .pagination .page-item.next .page
 
 /**=======================================================**
                         PRODUCT-INFO END
+**=======================================================**/
+/**=======================================================**
+                        VARIANT START
+**=======================================================**/
+.variant {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2.5rem;
+}
+
+.variant-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+}
+
+.variant-header .variant-head .variant-title {
+  color: #6a7081;
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.75;
+}
+
+.variant-create {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
+}
+
+.variant-create .infobox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+}
+
+.variant-create .infobox .inputbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5rem;
+  position: relative;
+  width: calc(100% - 1.75rem);
+}
+
+.variant-create .infobox .inputbox .inputlabel {
+  color: #333333;
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: normal;
+  line-height: 1.33333;
+}
+
+.variant-create .infobox .inputbox .inputlabel .required {
+  color: #fc5a5a;
+}
+
+.variant-create .infobox .inputbox .inputfield {
+  color: #232d43;
+  border: solid 0.0625rem #d1d4dc;
+  border-radius: 0.25rem;
+  border-radius: 0.25rem;
+  padding: 0.5rem 1rem;
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: normal;
+  line-height: 1.33333;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.variant-create .infobox .inputbox .inputfield::after {
+  color: #d1d4dc;
+}
+
+.variant-create .infobox .inputbox .inputfield:focus {
+  border-color: #8b93a7;
+}
+
+.variant-create .infobox .inputbox .selectfield {
+  color: #232d43;
+  border: solid 0.0625rem #d1d4dc;
+  border-radius: 0.25rem;
+  border-radius: 0.25rem;
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: normal;
+  line-height: 1.33333;
+  padding: 0.5rem 1rem;
+  background: white url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16 10L12 14L8 10' stroke='%238A92A6' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A") no-repeat center right 3%;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  cursor: pointer;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.variant-create .infobox .inputbox .selectfield option {
+  color: #232d43;
+}
+
+.variant-create .infobox .inputbox .selectfield:focus {
+  border-color: #8b93a7;
+}
+
+.variant-create .infobox .inputbox .btn-remove {
+  position: absolute;
+  top: 72%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  right: 2.5rem;
+  background: transparent;
+  border: none;
+  z-index: 100;
+}
+
+.variant-create .infobox .inputbox .review {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1.25rem;
+  height: 2.12375rem;
+}
+
+.variant-create .infobox .inputbox .review .radiofield:checked ~ .radiolabel::before {
+  border-color: #4a65ed;
+}
+
+.variant-create .infobox .inputbox .review .radiofield:checked ~ .radiolabel::after {
+  opacity: 1;
+  visibility: visible;
+  background: #4a65ed;
+}
+
+.variant-create .infobox .inputbox .review .radiolabel {
+  color: #232d43;
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: normal;
+  line-height: 1.33333;
+  position: relative;
+  padding-left: 1.5rem;
+  cursor: pointer;
+}
+
+.variant-create .infobox .inputbox .review .radiolabel::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  height: 1rem;
+  width: 1rem;
+  background: white;
+  border: solid 0.0625rem #d1d4dc;
+  border-radius: 100%;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.variant-create .infobox .inputbox .review .radiolabel::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0.25rem;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  height: 0.5rem;
+  width: 0.5rem;
+  background: white;
+  border-radius: 100%;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.variant-create .infobox .inputbox .error-message {
+  display: none;
+  color: #fc5a5a;
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.variant-create .infobox .inputbox.errorfield .inputfield,
+.variant-create .infobox .inputbox.errorfield .selectfield {
+  border-color: #fc5a5a;
+}
+
+.variant-create .infobox .inputbox.errorfield .review .radiolabel::before {
+  border-color: #fc5a5a;
+}
+
+.variant-create .infobox .inputbox.errorfield .btn-remove {
+  top: 50%;
+}
+
+.variant-create .infobox .inputbox.errorfield .error-message {
+  display: block;
+}
+
+.variant-create .infobox .closebox {
+  height: 1.75rem;
+  width: 1.75rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.variant-create .infobox .closebox .btn-remove {
+  border-radius: 100%;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  margin-top: -0.375rem;
+}
+
+.variant-create .submitvariant {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  gap: 0.625rem;
+}
+
+.variant-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+}
+
+.variant-body .varianlist-title {
+  color: #6a7081;
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.75;
+}
+
+.variant-body .variantsubmit {
+  margin-top: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  gap: 1rem;
+}
+
+.variant-body .variantsubmit .btn-delete {
+  background: transparent;
+  border: none;
+  color: #fc5a5a;
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.71429;
+  -webkit-transition: color 250ms ease-in-out;
+  transition: color 250ms ease-in-out;
+}
+
+.variant-body .variantsubmit .btn-delete:not([disabled]):hover {
+  color: #c72929;
+}
+
+@media screen and (min-width: 62rem) {
+  .variant-body .variantsubmit {
+    margin-top: 2rem;
+  }
+}
+
+/**=======================================================**
+                        VARIANT END
 **=======================================================**/

@@ -1,0 +1,229 @@
+/**=======================================================**
+                        VARIANT START
+**=======================================================**/
+
+.variant {
+  @include flex-column;
+  gap: length(40);
+
+  &-header {
+    @include flex-column;
+    gap: length(16);
+
+    .variant-head {
+      .variant-title {
+        color: $headingtext;
+        @include font-face($primaryFont, style('normal'), size(20), weight('semibold'), line-height(35, 20));
+      }
+    }
+  }
+
+  &-create {
+    @include flex-column;
+    gap: length(24);
+
+    .infobox {
+      @include flex-center-vert;
+      gap: length(16);
+
+      .inputbox {
+        @include flex-column;
+        gap: length(8);
+        position: relative;
+        width: calc(100% - 1.75rem);
+
+        .inputlabel {
+          color: $textdark;
+          @include font-face($primaryFont, style('normal'), size(12), weight('normal'), line-height(16, 12));
+
+          .required {
+            color: $danger;
+          }
+        }
+        
+        .inputfield {
+          color: $textprimary;
+          @include border(solid, 1, $textlight);
+          @include radius(4);
+          padding: length(8) length(16);
+          @include font-face($primaryFont, style('normal'), size(12), weight('normal'), line-height(16, 12));
+          @include transitionsall;
+
+          &::after {
+            color: $textlight;
+          }
+
+          &:focus {
+            border-color: $secondarytext;
+          }
+        }
+
+        .selectfield {
+          color: $textprimary;
+          @include border(solid, 1, $textlight);
+          @include radius(4);
+          @include font-face($primaryFont, style('normal'), size(12), weight('normal'), line-height(16, 12));
+          padding: length(8) length(16);
+          background: $white url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16 10L12 14L8 10' stroke='%238A92A6' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A") no-repeat center right 3%;
+          appearance: none;
+          cursor: pointer;
+          @include transitionsall;
+
+          option {
+            color: $textprimary;
+          }
+
+          &:focus {
+            border-color: $secondarytext;
+          }
+        }
+
+        .btn-remove {
+          position: absolute;
+          top: 72%;
+          @include transform(translateY(-50%));
+          right: length(40);
+          @include transparent-button;
+          z-index: 100;
+        }
+
+        .review {
+          @include flex-center-vert;
+          gap: length(20);
+          height: length(33.98);
+
+          .radiofield {
+            &:checked ~ .radiolabel {
+              &::before {
+                border-color: $primary;
+              }
+
+              &::after {
+                opacity: 1;
+                visibility: visible;
+                background: $primary;
+              }
+            }
+          }
+
+          .radiolabel {
+            color: $textprimary;
+            @include font-face($primaryFont, style('normal'), size(12), weight('normal'), line-height(16, 12));
+            position: relative;
+            padding-left: length(24);
+            cursor: pointer;
+
+            &::before {
+              content: '';
+              position: absolute;
+              top: 50%;
+              left: 0;
+              @include transform(translateY(-50%));
+              @include square(length(16));
+              background: $white;
+              @include border(solid, 1, $textlight);
+              @include circle;
+              @include transitionsall;
+            }
+
+            &::after {
+              content: '';
+              position: absolute;
+              top: 50%;
+              left: length(4);
+              @include transform(translateY(-50%));
+              @include square(length(8));
+              background: $white;
+              @include circle;
+              opacity: 0;
+              visibility: hidden;
+              @include transitionsall;
+            }
+          }
+        }
+
+        .error-message {
+          display: none;
+          color: $danger;
+          @include font-face($primaryFont, style('normal'), size(12), weight('medium'), line-height(16.8, 12));
+        }
+
+        &.errorfield {
+          .inputfield,
+          .selectfield {
+            border-color: $danger;
+          }
+
+          .review {
+            .radiolabel {
+              &::before {
+                border-color: $danger;
+              }
+            }
+          }
+
+          .btn-remove {
+            top: 50%;
+          }
+
+          .error-message {
+            display: block;
+          }
+        }
+      }
+
+      .closebox {
+        @include square(length(28));
+        @include flex-center;
+        align-self: flex-end;
+
+        .btn-remove {
+          @include circle;
+          @include wh100;
+          @include transparent-button;
+          margin-top: length(-6);
+        }
+      }
+    }
+
+    .submitvariant {
+      @include flex-end;
+      gap: length(10);
+    }
+  }
+
+  &-body {
+    @include flex-column;
+    gap: length(16);
+
+    .varianlist-title {
+      color: $headingtext;
+      @include font-face($primaryFont, style('normal'), size(20), weight('semibold'), line-height(35, 20));
+    }
+
+    .variantsubmit {
+      margin-top: length(16);
+      @include flex-end;
+      gap: length(16);
+
+      .btn-delete {
+        @include transparent-button;
+        color: $danger;
+        @include font-face($primaryFont, style('normal'), size(14), weight('semibold'), line-height(24, 14));
+        @include transitionscolor;
+
+        @include hover {
+          color: $inactivecolor;
+        }
+      }
+      
+      @include breakpoint(tab992) {
+        margin-top: length(32);
+      }
+    }
+  }
+}
+
+/**=======================================================**
+                        VARIANT END
+**=======================================================**/

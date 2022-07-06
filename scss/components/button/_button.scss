@@ -41,9 +41,13 @@
 .btn-add {
 	@include setBgColor($primary, $white);
 	@include font-face($primaryFont, style('normal'), size(14), weight('semibold'), line-height(24, 14));
-	padding: length(10) length(32);
+	padding: length(8) length(16);
 	@include radius(4);
 	@include transitionsbackground;
+
+	@include breakpoint(mobile576) {
+		padding: length(10) length(32);
+	}
 
 	@include hover {
 		@include setBgColor(darken($primary, 15%), $white);

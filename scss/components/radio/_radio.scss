@@ -1,0 +1,53 @@
+.radiobox {
+  @include flex-center-vert;
+  gap: length(20);
+
+  .radioinput {
+    &:checked ~ .radiolabel {
+      &::before {
+        border-color: $primary;
+      }
+
+      &::after {
+        opacity: 1;
+        visibility: visible;
+        background: $primary;
+      }
+    }
+  }
+
+  .radiolabel {
+    color: $textprimary;
+    @include font-face($primaryFont, style('normal'), size(12), weight('normal'), line-height(16, 12));
+    position: relative;
+    padding-left: length(24);
+    cursor: pointer;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      @include transform(translateY(-50%));
+      @include square(length(16));
+      background: $white;
+      @include border(solid, 1, $textlight);
+      @include circle;
+      @include transitionsall;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: length(4);
+      @include transform(translateY(-50%));
+      @include square(length(8));
+      background: $white;
+      @include circle;
+      opacity: 0;
+      visibility: hidden;
+      @include transitionsall;
+    }
+  }
+}
