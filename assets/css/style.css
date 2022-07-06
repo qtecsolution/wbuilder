@@ -1936,10 +1936,11 @@ input[type="date"]:valid::before {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  padding-bottom: 2rem;
 }
 
 .offcanvas-body .mobilemenu .menulink {
-  padding: 0.625rem 0.75rem;
+  padding: 0.5rem 0.75rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2036,7 +2037,7 @@ input[type="date"]:valid::before {
 }
 
 .offcanvas-body .mobilemenu .accordion-item {
-  padding: 0.625rem 0.75rem;
+  padding: 0.5rem 0.75rem;
   position: relative;
 }
 
