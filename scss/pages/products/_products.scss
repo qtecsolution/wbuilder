@@ -142,6 +142,72 @@
         }
       }
     }
+
+    .orderlisthead {
+      @include flex-center-vert;
+      gap: length(32);
+        
+      @include breakpoint(mobile768) {
+        gap: length(48);
+      }
+
+      &-title {
+        color: $headingtext;
+        @include font-face($primaryFont, style('normal'), size(16), weight('semibold'), line-height(24, 16));
+        
+        @include breakpoint(mobile768) {
+          @include font-face($primaryFont, style('normal'), size(20), weight('semibold'), line-height(35, 20));
+        }
+      }
+
+      .orderbuttons {
+        @include flex-center-vert;
+        gap: length(4);
+        
+        @include breakpoint(mobile768) {
+          gap: length(16);
+        }
+
+        .btn-order {
+          @include flex-center;
+          gap: length(4);
+
+          .icon {
+            @include square(length(22));
+            @include flex-center;
+            overflow: hidden;
+
+            svg {
+              @include wh100;
+            }
+          }
+
+          .text {
+            display: none;
+            color: $headingtext;
+            @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(19.6, 14));
+        
+            @include breakpoint(mobile768) {
+              display: inline-block;
+            }
+          }
+
+          @include hover {
+            .icon {
+              svg {
+                path {
+                  fill: $primary;
+                }
+              }
+            }
+
+            .text {
+              color: $primary;
+            }
+          }
+        }
+      }
+    }
   }
 
   &-body {

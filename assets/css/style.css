@@ -3223,14 +3223,119 @@ table.dataTable {
 
 .table tbody tr td .title {
   text-align: left;
+  width: 6.25rem;
 }
 
 .table tbody tr td .text {
   text-align: right;
+  width: calc(100% - 6.25rem);
+}
+
+@media screen and (min-width: 62rem) {
+  .table tbody tr td .text {
+    text-align: center;
+    width: 100%;
+  }
 }
 
 .table tbody tr td .linktext:not([disabled]):hover {
   color: #4a65ed;
+}
+
+.table tbody tr td .link {
+  color: #4a65ed;
+  font: inherit;
+  text-align: right;
+}
+
+@media screen and (min-width: 62rem) {
+  .table tbody tr td .link {
+    text-align: center;
+  }
+}
+
+.table tbody tr td .link:not([disabled]):hover {
+  color: #4a65ed;
+}
+
+.table tbody tr td .selectfield {
+  color: #fbb018;
+  border: solid 0.0625rem #fbb018;
+  border-radius: 0.25rem;
+  border-radius: 0.25rem;
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: normal;
+  line-height: 1.33333;
+  padding: 0.5rem 1rem;
+  background: white url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16 10L12 14L8 10' stroke='%23FCAF15' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A") no-repeat center right 3%;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  cursor: pointer;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.table tbody tr td .selectfield option {
+  color: #232d43;
+}
+
+.table tbody tr td .selectfield:focus {
+  border-color: #fbb018;
+}
+
+.table tbody tr td .priceinfo,
+.table tbody tr td .pricequantity {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: right;
+  width: calc(100% - 6.25rem);
+}
+
+@media screen and (min-width: 62rem) {
+  .table tbody tr td .priceinfo,
+  .table tbody tr td .pricequantity {
+    text-align: center;
+    width: 100%;
+  }
+}
+
+.table tbody tr td .priceinfo {
+  gap: 0.75rem;
+}
+
+.table tbody tr td .priceinfo .productname,
+.table tbody tr td .priceinfo .productprice {
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.4;
+}
+
+.table tbody tr td .priceinfo .productname {
+  color: #232d43;
+}
+
+.table tbody tr td .priceinfo .productprice {
+  color: #0095ff;
+}
+
+.table tbody tr td .pricequantity .price,
+.table tbody tr td .pricequantity .quantity {
+  color: black;
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.4;
 }
 
 .table tbody tr td .checkfield {
@@ -4523,6 +4628,114 @@ div.dataTables_wrapper div.dataTables_paginate .pagination .page-item.next .page
 .productinfo-header .iconlist-link svg {
   width: 100%;
   height: 100%;
+}
+
+.productinfo-header .orderlisthead {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2rem;
+}
+
+@media screen and (min-width: 48rem) {
+  .productinfo-header .orderlisthead {
+    gap: 3rem;
+  }
+}
+
+.productinfo-header .orderlisthead-title {
+  color: #6a7081;
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+@media screen and (min-width: 48rem) {
+  .productinfo-header .orderlisthead-title {
+    font-family: "Inter";
+    font-style: normal;
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.75;
+  }
+}
+
+.productinfo-header .orderlisthead .orderbuttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.25rem;
+}
+
+@media screen and (min-width: 48rem) {
+  .productinfo-header .orderlisthead .orderbuttons {
+    gap: 1rem;
+  }
+}
+
+.productinfo-header .orderlisthead .orderbuttons .btn-order {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 0.25rem;
+}
+
+.productinfo-header .orderlisthead .orderbuttons .btn-order .icon {
+  height: 1.375rem;
+  width: 1.375rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+.productinfo-header .orderlisthead .orderbuttons .btn-order .icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.productinfo-header .orderlisthead .orderbuttons .btn-order .text {
+  display: none;
+  color: #6a7081;
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.4;
+}
+
+@media screen and (min-width: 48rem) {
+  .productinfo-header .orderlisthead .orderbuttons .btn-order .text {
+    display: inline-block;
+  }
+}
+
+.productinfo-header .orderlisthead .orderbuttons .btn-order:not([disabled]):hover .icon svg path {
+  fill: #4a65ed;
+}
+
+.productinfo-header .orderlisthead .orderbuttons .btn-order:not([disabled]):hover .text {
+  color: #4a65ed;
 }
 
 .productinfo-body .productdescription {

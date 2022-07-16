@@ -90,15 +90,93 @@ table.dataTable {
 
         .title {
           text-align: left;
+          width: length(100);
         }
 
         .text {
           text-align: right;
+          width: calc(100% - 6.25rem);
+
+          @include breakpoint(tab992) {
+            text-align: center;
+            @include w100;
+          }
         }
 
         .linktext {
           @include hover {
             color: $primary;
+          }
+        }
+
+        .link {
+          color: $primary;
+          font: inherit;
+          text-align: right;
+
+          @include breakpoint(tab992) {
+            text-align: center;
+          }
+
+          @include hover {
+            color: $primary;
+          }
+        }
+  
+        .selectfield {
+          color: $tertiarytext;
+          @include border(solid, 1, $tertiarytext);
+          @include radius(4);
+          @include font-face($primaryFont, style('normal'), size(12), weight('normal'), line-height(16, 12));
+          padding: length(8) length(16);
+          background: $white url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16 10L12 14L8 10' stroke='%23FCAF15' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A") no-repeat center right 3%;
+          appearance: none;
+          cursor: pointer;
+          @include transitionsall;
+
+          option {
+            color: $textprimary;
+          }
+
+          &:focus {
+            border-color: $tertiarytext;
+          }
+        }
+
+        .priceinfo,
+        .pricequantity {
+          @include flex-column;
+          text-align: right;
+          width: calc(100% - 6.25rem);
+
+          @include breakpoint(tab992) {
+            text-align: center;
+            @include w100;
+          }
+        }
+
+        .priceinfo {
+          gap: length(12);
+
+          .productname,
+          .productprice {
+            @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(19.6, 14));
+          }
+
+          .productname {
+            color: $textprimary;
+          }
+
+          .productprice {
+            color: $textblue;
+          }
+        }
+
+        .pricequantity {
+          .price,
+          .quantity {
+            color: $black;
+            @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(19.6, 14));
           }
         }
 
