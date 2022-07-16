@@ -24,6 +24,7 @@
 
     .infobox {
       @include flex-center-vert;
+      align-items: flex-end;
       gap: length(16);
 
       .inputbox {
@@ -142,6 +143,48 @@
           }
         }
 
+        .tagswrapper {
+          @include border(solid, 1, $textlight);
+          @include radius(4);
+          padding: length(8) length(16);
+          @include flex-center-vert;
+          gap: length(4);
+          flex-wrap: wrap;
+          @include transitionsall;
+          
+          .tag {
+            @include flex-center;
+            gap: length(4);
+            @include radius(5);
+            @include setBgColor($textprimary, $white);
+            @include font-face($primaryFont, style('normal'), size(12), weight('normal'), line-height(16, 12));
+            padding: length(3) length(6);
+
+            button {
+              @include transparent-button;
+              @include square(length(12));
+              @include flex-center;
+              color: inherit;
+            }
+          }
+
+          input {
+            @include font-face($primaryFont, style('normal'), size(12), weight('normal'), line-height(16, 12));
+
+            &::placeholder {
+              color: $textlight;
+            }
+
+            @include hover {
+              cursor: text;
+            }
+          }
+
+          &:focus-within {
+            border-color: $secondarytext;
+          }
+        }
+
         .error-message {
           display: none;
           color: $danger;
@@ -169,19 +212,26 @@
           .error-message {
             display: block;
           }
+
+          .tagswrapper {
+            border-color: $danger;
+          }
         }
       }
 
       .closebox {
         @include square(length(28));
         @include flex-center;
-        align-self: flex-end;
+        overflow: hidden;
 
         .btn-remove {
           @include circle;
           @include wh100;
           @include transparent-button;
-          margin-top: length(-6);
+
+          svg {
+            @include wh100;
+          }
         }
       }
     }
