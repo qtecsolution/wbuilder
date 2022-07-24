@@ -1,0 +1,170 @@
+/**=======================================================**
+                          FORMS START
+**=======================================================**/
+
+.forms {
+  background: $white;
+  padding: length(12);
+  @include flex-column;
+  gap: length(24);
+  // overflow: hidden;
+
+  @include breakpoint(tab992) {
+    padding: length(12) length(20);
+    gap: length(48);
+  }
+
+  .formbox {
+    @include flex-column;
+    gap: length(24);
+
+    &-header {
+      .formtitle {
+        color: $textdark;
+        @include font-face($primaryFont, style('normal'), size(20), weight('semibold'), line-height(35, 20));
+      }
+    }
+
+    &-body {
+      @include flex-column;
+      gap: length(16);
+
+      @include breakpoint(tab992) {
+        gap: length(24);
+      }
+
+      .submit-buttons {
+        @include flex-end;
+
+      }
+    }
+  }
+}
+
+
+.select-dropdown {
+  display: inline-block;
+  position: relative;
+  background: $white;
+  @include w100;
+
+  * {
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+  }
+
+  &.is-active {
+    .selected-item,
+    ul {
+      border-color: $secondarytext;
+    }
+
+    input[type="text"] {
+      border-color: $textlight;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    .toggleicon {
+      @include transform(rotate(180deg) translateY(50%));
+    }
+
+    ul {
+      display: block;
+    }
+
+    .selected-item {
+      border-bottom-left-radius: length(0);
+      border-bottom-right-radius: length(0);
+    }
+  }
+
+  .selected-item {
+    position: relative;
+    z-index: 1;
+    text-overflow: ellipsis;
+    background: transparent;
+    cursor: pointer;
+    @include flex-center-vert;
+    gap: length(16);
+    padding: length(10) length(16);
+    @include border(solid, 1, $textlight);
+    @include radius(4);
+    color: $black;
+    @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(20, 14));
+    @include transitionsall;
+  }
+
+  .toggleicon {
+    position: absolute;
+    top: 50%;
+    @include transform(translateY(-50%));
+    right: length(16);
+  }
+
+  ul {
+    display: none;
+    position: absolute;
+    z-index: 999;
+    background: $white;
+    @include w100;
+    list-style-type: none;
+    @include border(solid, 1, $textlight);
+    border-top: 0;
+    border-bottom-left-radius: length(4);
+    border-bottom-right-radius: length(4);
+    padding: 0;
+    margin: 0;
+    max-height: length(360);
+    overflow-x: hidden;
+    overflow-y: scroll;
+    @include transitionsall;
+
+		&::-webkit-scrollbar {
+			background: transparent;
+			width: length(6);
+		}
+
+		&::-webkit-scrollbar-thumb {
+			@include radius(8);
+			background: $textlight;
+		}
+
+
+    li {
+      background: $white;
+      padding: length(12) length(16);
+      cursor: pointer;
+      transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+      @include border-single(bottom, solid, 1, $textlight);
+      color: $black;
+      @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(20, 14));
+
+      @include hover {
+        background: lighten($textlight, 12%);
+      }
+
+      * {
+        pointer-events: none;
+      }
+
+      &:last-child {
+        border-bottom: 0;
+      }
+    }
+  }
+}
+
+
+/**=======================================================**
+                          FORMS END
+**=======================================================**/

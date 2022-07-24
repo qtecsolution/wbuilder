@@ -1,0 +1,101 @@
+/**=====================================================
+                        FORM START
+=====================================================**/
+
+.inputbox {
+  @include flex-column;
+  gap: length(8);
+  position: relative;
+  
+  .inputlabel {
+    color: $secondarytext;
+    @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(20, 14));
+  }
+
+  .inputfield {
+    padding: length(10) length(32) length(10) length(16);
+    @include border(solid, 1, $textlight);
+    @include radius(4);
+    color: $black;
+    @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(20, 14));
+    @include transitionsall;
+  
+    &:focus {
+      border-color: $secondarytext;
+    }
+  }
+
+  .erroricon {
+    position: absolute;
+    top: 50%;
+    @include transform(translateY(-40%));
+    right: length(10);
+    opacity: 0;
+    visibility: none;
+    @include transitionsall;
+  }
+
+  .iconinput {
+    @include border(solid, 1, $textlight);
+    @include radius(4);
+    @include flex-center-vert;
+    @include transitionsall;
+
+    .icon {
+      width: length(40);
+      @include h100;
+      @include flex-center;
+    }
+
+    .inputfield {
+      width: calc(100% - 2.5rem);
+      padding: length(10) length(32) length(10) length(0);
+      border: 0;
+      color: $black;
+      @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(20, 14));
+    }
+  
+    &:focus-within {
+      border-color: $secondarytext;
+    }
+  }
+
+  .errormessage {
+    display: none;
+    color: $danger;
+    @include font-face($primaryFont, style('normal'), size(12), weight('medium'), line-height(16, 12));
+  }
+
+  &.errorfield {
+    .inputfield {
+      border-color: $danger;
+    }
+
+    .errormessage {
+      display: block;
+    }
+
+    .select-dropdown {
+      .selected-item {
+        border-color: $danger;
+      }
+      
+      .toggleicon {
+        display: none;
+      }
+    }
+
+    .erroricon {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .iconinput {
+      border-color: $danger;
+    }
+  }
+}
+
+/**=====================================================
+                        FORM END
+=====================================================**/
