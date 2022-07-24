@@ -883,6 +883,27 @@ button {
   color: white;
 }
 
+.btn-reset {
+  background: white;
+  color: #8b93a7;
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.71429;
+  padding: 0.75rem 2.5rem;
+  border: solid 0.0625rem #8b93a7;
+  border-radius: 0.25rem;
+  border-radius: 0.25rem;
+  -webkit-transition: background 250ms ease-in-out;
+  transition: background 250ms ease-in-out;
+}
+
+.btn-reset:not([disabled]):hover {
+  background: #8b93a7;
+  color: white;
+}
+
 .btn-back {
   border: solid 0.0625rem #4a65ed;
   padding: 0.3125rem 1rem;
@@ -4373,6 +4394,18 @@ div.dataTables_wrapper div.dataTables_paginate .pagination .page-item.next .page
   border-color: #8b93a7;
 }
 
+.inputbox .checkboxes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
 .inputbox .erroricon {
   position: absolute;
   top: 50%;
@@ -5039,72 +5072,6 @@ div.dataTables_wrapper div.dataTables_paginate .pagination .page-item.next .page
   z-index: 100;
 }
 
-.productinfo-body .productdescription .info .inputbox .review {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 1.25rem;
-  height: 2.12375rem;
-}
-
-.productinfo-body .productdescription .info .inputbox .review .radiofield:checked ~ .radiolabel::before {
-  border-color: #4a65ed;
-}
-
-.productinfo-body .productdescription .info .inputbox .review .radiofield:checked ~ .radiolabel::after {
-  opacity: 1;
-  visibility: visible;
-  background: #4a65ed;
-}
-
-.productinfo-body .productdescription .info .inputbox .review .radiolabel {
-  color: #232d43;
-  font-family: "Inter";
-  font-style: normal;
-  font-size: 0.75rem;
-  font-weight: normal;
-  line-height: 1.33333;
-  position: relative;
-  padding-left: 1.5rem;
-  cursor: pointer;
-}
-
-.productinfo-body .productdescription .info .inputbox .review .radiolabel::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 0;
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
-  height: 1rem;
-  width: 1rem;
-  background: white;
-  border: solid 0.0625rem #d1d4dc;
-  border-radius: 100%;
-  -webkit-transition: all 250ms ease-in-out;
-  transition: all 250ms ease-in-out;
-}
-
-.productinfo-body .productdescription .info .inputbox .review .radiolabel::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 0.25rem;
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
-  height: 0.5rem;
-  width: 0.5rem;
-  background: white;
-  border-radius: 100%;
-  opacity: 0;
-  visibility: hidden;
-  -webkit-transition: all 250ms ease-in-out;
-  transition: all 250ms ease-in-out;
-}
-
 .productinfo-body .productdescription .info .inputbox .error-message {
   display: none;
   color: #fc5a5a;
@@ -5533,6 +5500,99 @@ div.dataTables_wrapper div.dataTables_paginate .pagination .page-item.next .page
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+}
+
+.inputbox .review {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1.25rem;
+  height: 2.12375rem;
+}
+
+.inputbox .review .radiofield:checked ~ .radiolabel::before {
+  border-color: #4a65ed;
+}
+
+.inputbox .review .radiofield:checked ~ .radiolabel::after {
+  opacity: 1;
+  visibility: visible;
+  background: #4a65ed;
+}
+
+.inputbox .review .radiolabel {
+  color: #232d43;
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: normal;
+  line-height: 1.33333;
+  position: relative;
+  padding-left: 1.5rem;
+  cursor: pointer;
+}
+
+.inputbox .review .radiolabel::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  height: 1rem;
+  width: 1rem;
+  background: white;
+  border: solid 0.0625rem #d1d4dc;
+  border-radius: 100%;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.inputbox .review .radiolabel::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0.25rem;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  height: 0.5rem;
+  width: 0.5rem;
+  background: white;
+  border-radius: 100%;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.inputbox .error-message {
+  display: none;
+  color: #fc5a5a;
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.inputbox.errorfield .inputfield,
+.inputbox.errorfield .selectfield {
+  border-color: #fc5a5a;
+}
+
+.inputbox.errorfield .review .radiolabel::before {
+  border-color: #fc5a5a;
+}
+
+.inputbox.errorfield .btn-remove {
+  top: 50%;
+}
+
+.inputbox.errorfield .error-message {
+  display: block;
 }
 
 /**=======================================================**
@@ -6033,6 +6093,7 @@ div.dataTables_wrapper div.dataTables_paginate .pagination .page-item.next .page
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  gap: 0.875rem;
 }
 
 .select-dropdown {

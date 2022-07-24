@@ -35,7 +35,7 @@
 
       .submit-buttons {
         @include flex-end;
-
+        gap: length(14);
       }
     }
   }

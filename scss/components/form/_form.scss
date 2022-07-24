@@ -25,6 +25,12 @@
     }
   }
 
+  .checkboxes {
+    @include flex-center-vert;
+    gap: length(8);
+    flex-wrap: wrap;
+  }
+
   .erroricon {
     position: absolute;
     top: 50%;

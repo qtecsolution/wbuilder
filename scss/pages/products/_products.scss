@@ -308,61 +308,6 @@
             z-index: 100;
           }
   
-          .review {
-            @include flex-center-vert;
-            gap: length(20);
-            height: length(33.98);
-  
-            .radiofield {
-              &:checked ~ .radiolabel {
-                &::before {
-                  border-color: $primary;
-                }
-  
-                &::after {
-                  opacity: 1;
-                  visibility: visible;
-                  background: $primary;
-                }
-              }
-            }
-  
-            .radiolabel {
-              color: $textprimary;
-              @include font-face($primaryFont, style('normal'), size(12), weight('normal'), line-height(16, 12));
-              position: relative;
-              padding-left: length(24);
-              cursor: pointer;
-  
-              &::before {
-                content: '';
-                position: absolute;
-                top: 50%;
-                left: 0;
-                @include transform(translateY(-50%));
-                @include square(length(16));
-                background: $white;
-                @include border(solid, 1, $textlight);
-                @include circle;
-                @include transitionsall;
-              }
-  
-              &::after {
-                content: '';
-                position: absolute;
-                top: 50%;
-                left: length(4);
-                @include transform(translateY(-50%));
-                @include square(length(8));
-                background: $white;
-                @include circle;
-                opacity: 0;
-                visibility: hidden;
-                @include transitionsall;
-              }
-            }
-          }
-  
           .error-message {
             display: none;
             color: $danger;
@@ -657,6 +602,92 @@
       .submitbox {
         @include flex-end;
       }
+    }
+  }
+}
+
+.inputbox {
+  .review {
+    @include flex-center-vert;
+    gap: length(20);
+    height: length(33.98);
+  
+    .radiofield {
+      &:checked ~ .radiolabel {
+        &::before {
+          border-color: $primary;
+        }
+  
+        &::after {
+          opacity: 1;
+          visibility: visible;
+          background: $primary;
+        }
+      }
+    }
+  
+    .radiolabel {
+      color: $textprimary;
+      @include font-face($primaryFont, style('normal'), size(12), weight('normal'), line-height(16, 12));
+      position: relative;
+      padding-left: length(24);
+      cursor: pointer;
+  
+      &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        @include transform(translateY(-50%));
+        @include square(length(16));
+        background: $white;
+        @include border(solid, 1, $textlight);
+        @include circle;
+        @include transitionsall;
+      }
+  
+      &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: length(4);
+        @include transform(translateY(-50%));
+        @include square(length(8));
+        background: $white;
+        @include circle;
+        opacity: 0;
+        visibility: hidden;
+        @include transitionsall;
+      }
+    }
+  }
+    
+  .error-message {
+    display: none;
+    color: $danger;
+    @include font-face($primaryFont, style('normal'), size(12), weight('medium'), line-height(16.8, 12));
+  }
+
+  &.errorfield {
+    .inputfield,
+    .selectfield {
+      border-color: $danger;
+    }
+
+    .review {
+      .radiolabel {
+        &::before {
+          border-color: $danger;
+        }
+      }
+    }
+
+    .btn-remove {
+      top: 50%;
+    }
+
+    .error-message {
+      display: block;
     }
   }
 }

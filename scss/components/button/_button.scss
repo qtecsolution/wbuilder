@@ -24,6 +24,19 @@
 	}
 }
 
+.btn-reset {
+	@include setBgColor($white, $secondarytext);
+	@include font-face($primaryFont, style('normal'), size(14), weight('semibold'), line-height(24, 14));
+	padding: length(12) length(40);
+	@include border(solid, 1, $secondarytext);
+	@include radius(4);
+	@include transitionsbackground;
+
+	@include hover {
+		@include setBgColor($secondarytext, $white);
+	}
+}
+
 .btn-back {
 	@include border(solid, 1, $primary);
 	padding: length(5) length(16);
