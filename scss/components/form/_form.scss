@@ -81,6 +81,18 @@
       display: block;
     }
 
+    .checkfield {
+      .checklabel {
+        &::before {
+          border-color: $danger;
+        }
+
+        &::after {
+          background: transparent;
+        }
+      }
+    }
+
     .select-dropdown {
       .selected-item {
         border-color: $danger;

@@ -15,7 +15,7 @@
 .btn-submit {
 	@include setBgColor($primary, $white);
 	@include font-face($primaryFont, style('normal'), size(14), weight('semibold'), line-height(24, 14));
-	padding: length(12) length(40);
+	padding: length(5) length(20);
 	@include radius(4);
 	@include transitionsbackground;
 
@@ -27,7 +27,7 @@
 .btn-reset {
 	@include setBgColor($white, $secondarytext);
 	@include font-face($primaryFont, style('normal'), size(14), weight('semibold'), line-height(24, 14));
-	padding: length(12) length(40);
+	padding: length(5) length(20);
 	@include border(solid, 1, $secondarytext);
 	@include radius(4);
 	@include transitionsbackground;

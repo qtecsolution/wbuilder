@@ -20,7 +20,7 @@
     color: $textprimary;
     @include font-face($primaryFont, style('normal'), size(12), weight('normal'), line-height(16, 12));
     position: relative;
-    padding-left: length(24);
+    padding-left: length(26);
     cursor: pointer;
 
     &::before {
@@ -29,7 +29,7 @@
       top: 50%;
       left: 0;
       @include transform(translateY(-50%));
-      @include square(length(16));
+      @include square(length(18));
       background: $white;
       @include border(solid, 1, $textlight);
       @include circle;
@@ -42,7 +42,7 @@
       top: 50%;
       left: length(4);
       @include transform(translateY(-50%));
-      @include square(length(8));
+      @include square(length(10));
       background: $white;
       @include circle;
       opacity: 0;

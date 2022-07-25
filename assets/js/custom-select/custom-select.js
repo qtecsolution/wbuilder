@@ -35,6 +35,24 @@ selectTwo.addEventListener('click', function(e) {
 	selectTwo.classList.toggle("is-active");
 });
 
+// selector for select-dropdown list
+const selectThree = document.querySelector('#selectdropdown-3'); 
+
+document.addEventListener( 'click', function(e) {
+	if (e.target.matches('.option-item')) {
+		selectThree.querySelector('#selected-item-3').innerHTML = e.target.innerHTML;
+	}
+});
+
+// remove all active classes on the other select-dropdowns
+selectThree.addEventListener('click', function(e) {
+	if (selectThree !== e.target) {
+		e.target.classList.remove("is-active");
+	}
+	
+	selectThree.classList.toggle("is-active");
+});
+
 // this event is to close all open select-options when the user clicks off.
 document.body.addEventListener('click', function(e) {
 	if(!e.target.closest('.select-dropdown')) {
@@ -43,5 +61,9 @@ document.body.addEventListener('click', function(e) {
 
 	if(!e.target.closest('.select-dropdown')) {
 		selectTwo.classList.remove("is-active");
+	}
+
+	if(!e.target.closest('.select-dropdown')) {
+		selectThree.classList.remove("is-active");
 	}
 });
