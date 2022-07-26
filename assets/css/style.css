@@ -3190,6 +3190,7 @@ table.dataTable {
 .table thead tr th .checkfield {
   height: 1.125rem;
   width: 1.125rem;
+  margin-inline: auto;
 }
 
 .table tbody {

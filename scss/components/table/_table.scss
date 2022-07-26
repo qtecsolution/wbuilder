@@ -40,6 +40,7 @@ table.dataTable {
 
         .checkfield {
           @include square(length(18));
+          margin-inline: auto;
         }
 
         &:first-child {
