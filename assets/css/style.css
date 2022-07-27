@@ -697,6 +697,10 @@ input[type="date"]:valid::before {
   display: none;
 }
 
+input:-internal-autofill-selected {
+  background: white !important;
+}
+
 button {
   background: transparent;
   border: none;
@@ -992,6 +996,41 @@ button {
 .status.inactivestatus {
   background: #ffcccc;
   color: #c72929;
+}
+
+.btn-modal {
+  background: transparent;
+  border: none;
+  border-radius: 0.25rem;
+  border-radius: 0.25rem;
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1.33333;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.btn-cancel {
+  background: transparent;
+  color: #8b93a7;
+}
+
+.btn-cancel:not([disabled]):hover {
+  color: #232d43;
+}
+
+.btn-delete {
+  background: #fc5a5a;
+  color: white;
+}
+
+.btn-delete:not([disabled]):hover {
+  background: #c72929;
+  color: white;
 }
 
 /**=======================================================**
@@ -1578,6 +1617,8 @@ button {
 .modal-content {
   overflow: hidden;
   border: none;
+  border-radius: 0.625rem;
+  border-radius: 0.625rem;
 }
 
 .modal-header {
@@ -1840,6 +1881,100 @@ button {
       -ms-flex-pack: end;
           justify-content: flex-end;
   margin-top: 1.5rem;
+}
+
+.modal-body .deleteinfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
+}
+
+.modal-body .deleteinfo-header {
+  border-bottom: solid 0.0625rem #ededed;
+  padding: 1.25rem 1rem;
+}
+
+.modal-body .deleteinfo-header .delete-title {
+  color: #232d43;
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.4;
+}
+
+.modal-body .deleteinfo-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  gap: 1rem;
+  padding: 0rem 1.5rem 1.25rem;
+}
+
+.modal-body .deleteconfirmed {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+}
+
+.modal-body .deleteconfirmed-header {
+  border-bottom: solid 0.0625rem #ededed;
+  padding: 1.25rem 1rem;
+}
+
+.modal-body .deleteconfirmed-header .deleteconfirmed-title {
+  color: #232d43;
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.4;
+}
+
+.modal-body .deleteconfirmed-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0rem 1.5rem 1.25rem;
+}
+
+.modal-body .deleteconfirmed-body .icon {
+  height: 3rem;
+  width: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+.modal-body .deleteconfirmed-body .icon svg {
+  width: 100%;
+  height: 100%;
 }
 
 /**=======================================================**
@@ -3238,6 +3373,41 @@ table.dataTable {
   content: attr(data);
 }
 
+.table tbody tr td .actionbuttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 0.625rem;
+}
+
+.table tbody tr td .actionbuttons .btn-action {
+  background: transparent;
+  border: none;
+  height: 1.5rem;
+  width: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+.table tbody tr td .actionbuttons .btn-action svg {
+  width: 100%;
+  height: 100%;
+}
+
 .table tbody tr td .title, .table tbody tr td .text, .table tbody tr td .linktext {
   color: inherit;
   font: inherit;
@@ -3618,6 +3788,82 @@ div.dataTables_wrapper div.dataTables_paginate .pagination .page-item.next .page
 
 div.dataTables_wrapper div.dataTables_paginate .pagination .page-item.next .page-link:not([disabled]):hover::before {
   content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23ffffff' class='bi bi-chevron-right' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
+}
+
+.emptydata {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  gap: 0.25rem;
+}
+
+.emptydata-title {
+  color: #4a65ed;
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.4;
+}
+
+@media screen and (min-width: 48rem) {
+  .emptydata-title {
+    font-family: "Inter";
+    font-style: normal;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5;
+  }
+}
+
+@media screen and (min-width: 62rem) {
+  .emptydata-title {
+    font-family: "Inter";
+    font-style: normal;
+    font-size: 1.125rem;
+    font-weight: 500;
+    line-height: 1.66667;
+  }
+}
+
+.emptydata-text {
+  color: #8b93a7;
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: normal;
+  line-height: 1.5;
+}
+
+@media screen and (min-width: 48rem) {
+  .emptydata-text {
+    font-family: "Inter";
+    font-style: normal;
+    font-size: 0.875rem;
+    font-weight: normal;
+    line-height: 1.4;
+  }
+}
+
+@media screen and (min-width: 62rem) {
+  .emptydata-text {
+    font-family: "Inter";
+    font-style: normal;
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 1.5;
+  }
 }
 
 .auth {
@@ -5665,281 +5911,6 @@ div.dataTables_wrapper div.dataTables_paginate .pagination .page-item.next .page
   gap: 1rem;
 }
 
-.variant-create .infobox .inputbox {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  gap: 0.5rem;
-  position: relative;
-  width: calc(100% - 1.75rem);
-}
-
-.variant-create .infobox .inputbox .inputlabel {
-  color: #333333;
-  font-family: "Inter";
-  font-style: normal;
-  font-size: 0.75rem;
-  font-weight: normal;
-  line-height: 1.33333;
-}
-
-.variant-create .infobox .inputbox .inputlabel .required {
-  color: #fc5a5a;
-}
-
-.variant-create .infobox .inputbox .inputfield {
-  color: #232d43;
-  border: solid 0.0625rem #d1d4dc;
-  border-radius: 0.25rem;
-  border-radius: 0.25rem;
-  padding: 0.5rem 1rem;
-  font-family: "Inter";
-  font-style: normal;
-  font-size: 0.75rem;
-  font-weight: normal;
-  line-height: 1.33333;
-  -webkit-transition: all 250ms ease-in-out;
-  transition: all 250ms ease-in-out;
-}
-
-.variant-create .infobox .inputbox .inputfield::after {
-  color: #d1d4dc;
-}
-
-.variant-create .infobox .inputbox .inputfield:focus {
-  border-color: #8b93a7;
-}
-
-.variant-create .infobox .inputbox .selectfield {
-  color: #232d43;
-  border: solid 0.0625rem #d1d4dc;
-  border-radius: 0.25rem;
-  border-radius: 0.25rem;
-  font-family: "Inter";
-  font-style: normal;
-  font-size: 0.75rem;
-  font-weight: normal;
-  line-height: 1.33333;
-  padding: 0.5rem 1rem;
-  background: white url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16 10L12 14L8 10' stroke='%238A92A6' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A") no-repeat center right 3%;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  cursor: pointer;
-  -webkit-transition: all 250ms ease-in-out;
-  transition: all 250ms ease-in-out;
-}
-
-.variant-create .infobox .inputbox .selectfield option {
-  color: #232d43;
-}
-
-.variant-create .infobox .inputbox .selectfield:focus {
-  border-color: #8b93a7;
-}
-
-.variant-create .infobox .inputbox .btn-remove {
-  position: absolute;
-  top: 72%;
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
-  right: 2.5rem;
-  background: transparent;
-  border: none;
-  z-index: 100;
-}
-
-.variant-create .infobox .inputbox .review {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 1.25rem;
-  height: 2.12375rem;
-}
-
-.variant-create .infobox .inputbox .review .radiofield:checked ~ .radiolabel::before {
-  border-color: #4a65ed;
-}
-
-.variant-create .infobox .inputbox .review .radiofield:checked ~ .radiolabel::after {
-  opacity: 1;
-  visibility: visible;
-  background: #4a65ed;
-}
-
-.variant-create .infobox .inputbox .review .radiolabel {
-  color: #232d43;
-  font-family: "Inter";
-  font-style: normal;
-  font-size: 0.75rem;
-  font-weight: normal;
-  line-height: 1.33333;
-  position: relative;
-  padding-left: 1.5rem;
-  cursor: pointer;
-}
-
-.variant-create .infobox .inputbox .review .radiolabel::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 0;
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
-  height: 1rem;
-  width: 1rem;
-  background: white;
-  border: solid 0.0625rem #d1d4dc;
-  border-radius: 100%;
-  -webkit-transition: all 250ms ease-in-out;
-  transition: all 250ms ease-in-out;
-}
-
-.variant-create .infobox .inputbox .review .radiolabel::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 0.25rem;
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
-  height: 0.5rem;
-  width: 0.5rem;
-  background: white;
-  border-radius: 100%;
-  opacity: 0;
-  visibility: hidden;
-  -webkit-transition: all 250ms ease-in-out;
-  transition: all 250ms ease-in-out;
-}
-
-.variant-create .infobox .inputbox .tagswrapper {
-  border: solid 0.0625rem #d1d4dc;
-  border-radius: 0.25rem;
-  border-radius: 0.25rem;
-  padding: 0.5rem 1rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 0.25rem;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-transition: all 250ms ease-in-out;
-  transition: all 250ms ease-in-out;
-}
-
-.variant-create .infobox .inputbox .tagswrapper .tag {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  gap: 0.25rem;
-  border-radius: 0.3125rem;
-  border-radius: 0.3125rem;
-  background: #232d43;
-  color: white;
-  font-family: "Inter";
-  font-style: normal;
-  font-size: 0.75rem;
-  font-weight: normal;
-  line-height: 1.33333;
-  padding: 0.1875rem 0.375rem;
-}
-
-.variant-create .infobox .inputbox .tagswrapper .tag button {
-  background: transparent;
-  border: none;
-  height: 0.75rem;
-  width: 0.75rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  color: inherit;
-}
-
-.variant-create .infobox .inputbox .tagswrapper input {
-  font-family: "Inter";
-  font-style: normal;
-  font-size: 0.75rem;
-  font-weight: normal;
-  line-height: 1.33333;
-}
-
-.variant-create .infobox .inputbox .tagswrapper input::-webkit-input-placeholder {
-  color: #d1d4dc;
-}
-
-.variant-create .infobox .inputbox .tagswrapper input:-ms-input-placeholder {
-  color: #d1d4dc;
-}
-
-.variant-create .infobox .inputbox .tagswrapper input::-ms-input-placeholder {
-  color: #d1d4dc;
-}
-
-.variant-create .infobox .inputbox .tagswrapper input::placeholder {
-  color: #d1d4dc;
-}
-
-.variant-create .infobox .inputbox .tagswrapper input:not([disabled]):hover {
-  cursor: text;
-}
-
-.variant-create .infobox .inputbox .tagswrapper:focus-within {
-  border-color: #8b93a7;
-}
-
-.variant-create .infobox .inputbox .error-message {
-  display: none;
-  color: #fc5a5a;
-  font-family: "Inter";
-  font-style: normal;
-  font-size: 0.75rem;
-  font-weight: 500;
-  line-height: 1.4;
-}
-
-.variant-create .infobox .inputbox.errorfield .inputfield,
-.variant-create .infobox .inputbox.errorfield .selectfield {
-  border-color: #fc5a5a;
-}
-
-.variant-create .infobox .inputbox.errorfield .review .radiolabel::before {
-  border-color: #fc5a5a;
-}
-
-.variant-create .infobox .inputbox.errorfield .btn-remove {
-  top: 50%;
-}
-
-.variant-create .infobox .inputbox.errorfield .error-message {
-  display: block;
-}
-
-.variant-create .infobox .inputbox.errorfield .tagswrapper {
-  border-color: #fc5a5a;
-}
-
 .variant-create .infobox .closebox {
   height: 1.75rem;
   width: 1.75rem;
@@ -6030,6 +6001,281 @@ div.dataTables_wrapper div.dataTables_paginate .pagination .page-item.next .page
   .variant-body .variantsubmit {
     margin-top: 2rem;
   }
+}
+
+.inputbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5rem;
+  position: relative;
+  width: calc(100% - 1.75rem);
+}
+
+.inputbox .inputlabel {
+  color: #333333;
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: normal;
+  line-height: 1.33333;
+}
+
+.inputbox .inputlabel .required {
+  color: #fc5a5a;
+}
+
+.inputbox .inputfield {
+  color: #232d43;
+  border: solid 0.0625rem #d1d4dc;
+  border-radius: 0.25rem;
+  border-radius: 0.25rem;
+  padding: 0.5rem 1rem;
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: normal;
+  line-height: 1.33333;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.inputbox .inputfield::after {
+  color: #d1d4dc;
+}
+
+.inputbox .inputfield:focus {
+  border-color: #8b93a7;
+}
+
+.inputbox .selectfield {
+  color: #232d43;
+  border: solid 0.0625rem #d1d4dc;
+  border-radius: 0.25rem;
+  border-radius: 0.25rem;
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: normal;
+  line-height: 1.33333;
+  padding: 0.5rem 1rem;
+  background: white url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16 10L12 14L8 10' stroke='%238A92A6' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A") no-repeat center right 3%;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  cursor: pointer;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.inputbox .selectfield option {
+  color: #232d43;
+}
+
+.inputbox .selectfield:focus {
+  border-color: #8b93a7;
+}
+
+.inputbox .btn-remove {
+  position: absolute;
+  top: 72%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  right: 2.5rem;
+  background: transparent;
+  border: none;
+  z-index: 100;
+}
+
+.inputbox .review {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1.25rem;
+  height: 2.12375rem;
+}
+
+.inputbox .review .radiofield:checked ~ .radiolabel::before {
+  border-color: #4a65ed;
+}
+
+.inputbox .review .radiofield:checked ~ .radiolabel::after {
+  opacity: 1;
+  visibility: visible;
+  background: #4a65ed;
+}
+
+.inputbox .review .radiolabel {
+  color: #232d43;
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: normal;
+  line-height: 1.33333;
+  position: relative;
+  padding-left: 1.5rem;
+  cursor: pointer;
+}
+
+.inputbox .review .radiolabel::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  height: 1rem;
+  width: 1rem;
+  background: white;
+  border: solid 0.0625rem #d1d4dc;
+  border-radius: 100%;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.inputbox .review .radiolabel::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0.25rem;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  height: 0.5rem;
+  width: 0.5rem;
+  background: white;
+  border-radius: 100%;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.inputbox .tagswrapper {
+  border: solid 0.0625rem #d1d4dc;
+  border-radius: 0.25rem;
+  border-radius: 0.25rem;
+  padding: 0.5rem 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.25rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.inputbox .tagswrapper .tag {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 0.25rem;
+  border-radius: 0.3125rem;
+  border-radius: 0.3125rem;
+  background: #232d43;
+  color: white;
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: normal;
+  line-height: 1.33333;
+  padding: 0.1875rem 0.375rem;
+}
+
+.inputbox .tagswrapper .tag button {
+  background: transparent;
+  border: none;
+  height: 0.75rem;
+  width: 0.75rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: inherit;
+}
+
+.inputbox .tagswrapper input {
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: normal;
+  line-height: 1.33333;
+}
+
+.inputbox .tagswrapper input::-webkit-input-placeholder {
+  color: #d1d4dc;
+}
+
+.inputbox .tagswrapper input:-ms-input-placeholder {
+  color: #d1d4dc;
+}
+
+.inputbox .tagswrapper input::-ms-input-placeholder {
+  color: #d1d4dc;
+}
+
+.inputbox .tagswrapper input::placeholder {
+  color: #d1d4dc;
+}
+
+.inputbox .tagswrapper input:not([disabled]):hover {
+  cursor: text;
+}
+
+.inputbox .tagswrapper:focus-within {
+  border-color: #8b93a7;
+}
+
+.inputbox .error-message {
+  display: none;
+  color: #fc5a5a;
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.inputbox.errorfield .inputfield,
+.inputbox.errorfield .selectfield {
+  border-color: #fc5a5a;
+}
+
+.inputbox.errorfield .review .radiolabel::before {
+  border-color: #fc5a5a;
+}
+
+.inputbox.errorfield .btn-remove {
+  top: 50%;
+}
+
+.inputbox.errorfield .error-message {
+  display: block;
+}
+
+.inputbox.errorfield .tagswrapper {
+  border-color: #fc5a5a;
 }
 
 /**=======================================================**
@@ -6295,4 +6541,22 @@ div.dataTables_wrapper div.dataTables_paginate .pagination .page-item.next .page
 
 /**=======================================================**
                           FORMS END
+**=======================================================**/
+/**=======================================================**
+                        FILTER START
+**=======================================================**/
+.createfilter {
+  padding: 1.25rem 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+}
+
+/**=======================================================**
+                        FILTER END
 **=======================================================**/

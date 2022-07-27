@@ -84,6 +84,22 @@ table.dataTable {
           content: attr(data);
         }
 
+        .actionbuttons {
+          @include flex-center;
+          gap: length(10);
+
+          .btn-action {
+            @include transparent-button;
+            @include square(length(24));
+            @include flex-center;
+            overflow: hidden;
+
+            svg {
+              @include wh100;
+            }
+          }
+        }
+
         .title, .text, .linktext {
           color: inherit;
           font: inherit;
@@ -367,6 +383,38 @@ div.dataTables_wrapper div.dataTables_paginate {
           }
         }
       }
+    }
+  }
+}
+
+.emptydata {
+  @include flex-center-column;
+  text-align: center;
+  gap: length(4);
+
+  &-title {
+    color: $primary;
+    @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(19.6, 14));
+
+    @include breakpoint(mobile768) {
+      @include font-face($primaryFont, style('normal'), size(16), weight('medium'), line-height(24, 16));
+    }
+
+    @include breakpoint(tab992) {
+      @include font-face($primaryFont, style('normal'), size(18), weight('medium'), line-height(30, 18));
+    }
+  }
+
+  &-text {
+    color: $secondarytext;
+    @include font-face($primaryFont, style('normal'), size(12), weight('normal'), line-height(18, 12));
+
+    @include breakpoint(mobile768) {
+      @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(19.6, 14));
+    }
+
+    @include breakpoint(tab992) {
+      @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(24, 16));
     }
   }
 }

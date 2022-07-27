@@ -6,6 +6,7 @@
 	&-content {
 		overflow: hidden;
 		border: none;
+		@include radius(10);
 	}
 
 	&-header {
@@ -175,6 +176,57 @@
 			.submitbox {
 				@include flex-end;
 				margin-top: length(24);
+			}
+		}
+
+		.deleteinfo {
+			@include flex-column;
+			gap: length(24);
+
+			&-header {
+				@include border-single(bottom, solid, 1, $notificationborder);
+				padding: length(20) length(16);
+
+				.delete-title {
+					color: $textprimary;
+					@include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(22.4, 16));
+				}
+			}
+
+			&-body {
+				@include flex-end;
+				gap: length(16);
+				padding: length(0) length(24) length(20);
+			}
+		}
+
+		.deleteconfirmed {
+			@include flex-column;
+			gap: length(16);
+
+			&-header {
+				@include border-single(bottom, solid, 1, $notificationborder);
+				padding: length(20) length(16);
+
+				.deleteconfirmed-title {
+					color: $textprimary;
+					@include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(22.4, 16));
+				}
+			}
+
+			&-body {
+				@include flex-center;
+				padding: length(0) length(24) length(20);
+
+				.icon {
+					@include square(length(48));
+					@include flex-center;
+					overflow: hidden;
+
+					svg {
+						@include wh100;
+					}
+				}
 			}
 		}
 	}

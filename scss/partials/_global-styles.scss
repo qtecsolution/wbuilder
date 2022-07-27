@@ -214,6 +214,10 @@ input[type="date"]:valid {
 	}
 }
 
+input:-internal-autofill-selected {
+	background: $white !important;
+}
+
 button {
 	@include transparent-button;
 }

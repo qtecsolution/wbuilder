@@ -27,198 +27,6 @@
       align-items: flex-end;
       gap: length(16);
 
-      .inputbox {
-        @include flex-column;
-        gap: length(8);
-        position: relative;
-        width: calc(100% - 1.75rem);
-
-        .inputlabel {
-          color: $textdark;
-          @include font-face($primaryFont, style('normal'), size(12), weight('normal'), line-height(16, 12));
-
-          .required {
-            color: $danger;
-          }
-        }
-        
-        .inputfield {
-          color: $textprimary;
-          @include border(solid, 1, $textlight);
-          @include radius(4);
-          padding: length(8) length(16);
-          @include font-face($primaryFont, style('normal'), size(12), weight('normal'), line-height(16, 12));
-          @include transitionsall;
-
-          &::after {
-            color: $textlight;
-          }
-
-          &:focus {
-            border-color: $secondarytext;
-          }
-        }
-
-        .selectfield {
-          color: $textprimary;
-          @include border(solid, 1, $textlight);
-          @include radius(4);
-          @include font-face($primaryFont, style('normal'), size(12), weight('normal'), line-height(16, 12));
-          padding: length(8) length(16);
-          background: $white url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16 10L12 14L8 10' stroke='%238A92A6' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A") no-repeat center right 3%;
-          appearance: none;
-          cursor: pointer;
-          @include transitionsall;
-
-          option {
-            color: $textprimary;
-          }
-
-          &:focus {
-            border-color: $secondarytext;
-          }
-        }
-
-        .btn-remove {
-          position: absolute;
-          top: 72%;
-          @include transform(translateY(-50%));
-          right: length(40);
-          @include transparent-button;
-          z-index: 100;
-        }
-
-        .review {
-          @include flex-center-vert;
-          gap: length(20);
-          height: length(33.98);
-
-          .radiofield {
-            &:checked ~ .radiolabel {
-              &::before {
-                border-color: $primary;
-              }
-
-              &::after {
-                opacity: 1;
-                visibility: visible;
-                background: $primary;
-              }
-            }
-          }
-
-          .radiolabel {
-            color: $textprimary;
-            @include font-face($primaryFont, style('normal'), size(12), weight('normal'), line-height(16, 12));
-            position: relative;
-            padding-left: length(24);
-            cursor: pointer;
-
-            &::before {
-              content: '';
-              position: absolute;
-              top: 50%;
-              left: 0;
-              @include transform(translateY(-50%));
-              @include square(length(16));
-              background: $white;
-              @include border(solid, 1, $textlight);
-              @include circle;
-              @include transitionsall;
-            }
-
-            &::after {
-              content: '';
-              position: absolute;
-              top: 50%;
-              left: length(4);
-              @include transform(translateY(-50%));
-              @include square(length(8));
-              background: $white;
-              @include circle;
-              opacity: 0;
-              visibility: hidden;
-              @include transitionsall;
-            }
-          }
-        }
-
-        .tagswrapper {
-          @include border(solid, 1, $textlight);
-          @include radius(4);
-          padding: length(8) length(16);
-          @include flex-center-vert;
-          gap: length(4);
-          flex-wrap: wrap;
-          @include transitionsall;
-          
-          .tag {
-            @include flex-center;
-            gap: length(4);
-            @include radius(5);
-            @include setBgColor($textprimary, $white);
-            @include font-face($primaryFont, style('normal'), size(12), weight('normal'), line-height(16, 12));
-            padding: length(3) length(6);
-
-            button {
-              @include transparent-button;
-              @include square(length(12));
-              @include flex-center;
-              color: inherit;
-            }
-          }
-
-          input {
-            @include font-face($primaryFont, style('normal'), size(12), weight('normal'), line-height(16, 12));
-
-            &::placeholder {
-              color: $textlight;
-            }
-
-            @include hover {
-              cursor: text;
-            }
-          }
-
-          &:focus-within {
-            border-color: $secondarytext;
-          }
-        }
-
-        .error-message {
-          display: none;
-          color: $danger;
-          @include font-face($primaryFont, style('normal'), size(12), weight('medium'), line-height(16.8, 12));
-        }
-
-        &.errorfield {
-          .inputfield,
-          .selectfield {
-            border-color: $danger;
-          }
-
-          .review {
-            .radiolabel {
-              &::before {
-                border-color: $danger;
-              }
-            }
-          }
-
-          .btn-remove {
-            top: 50%;
-          }
-
-          .error-message {
-            display: block;
-          }
-
-          .tagswrapper {
-            border-color: $danger;
-          }
-        }
-      }
-
       .closebox {
         @include square(length(28));
         @include flex-center;
@@ -270,6 +78,198 @@
       @include breakpoint(tab992) {
         margin-top: length(32);
       }
+    }
+  }
+}
+
+.inputbox {
+  @include flex-column;
+  gap: length(8);
+  position: relative;
+  width: calc(100% - 1.75rem);
+
+  .inputlabel {
+    color: $textdark;
+    @include font-face($primaryFont, style('normal'), size(12), weight('normal'), line-height(16, 12));
+
+    .required {
+      color: $danger;
+    }
+  }
+  
+  .inputfield {
+    color: $textprimary;
+    @include border(solid, 1, $textlight);
+    @include radius(4);
+    padding: length(8) length(16);
+    @include font-face($primaryFont, style('normal'), size(12), weight('normal'), line-height(16, 12));
+    @include transitionsall;
+
+    &::after {
+      color: $textlight;
+    }
+
+    &:focus {
+      border-color: $secondarytext;
+    }
+  }
+
+  .selectfield {
+    color: $textprimary;
+    @include border(solid, 1, $textlight);
+    @include radius(4);
+    @include font-face($primaryFont, style('normal'), size(12), weight('normal'), line-height(16, 12));
+    padding: length(8) length(16);
+    background: $white url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16 10L12 14L8 10' stroke='%238A92A6' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A") no-repeat center right 3%;
+    appearance: none;
+    cursor: pointer;
+    @include transitionsall;
+
+    option {
+      color: $textprimary;
+    }
+
+    &:focus {
+      border-color: $secondarytext;
+    }
+  }
+
+  .btn-remove {
+    position: absolute;
+    top: 72%;
+    @include transform(translateY(-50%));
+    right: length(40);
+    @include transparent-button;
+    z-index: 100;
+  }
+
+  .review {
+    @include flex-center-vert;
+    gap: length(20);
+    height: length(33.98);
+
+    .radiofield {
+      &:checked ~ .radiolabel {
+        &::before {
+          border-color: $primary;
+        }
+
+        &::after {
+          opacity: 1;
+          visibility: visible;
+          background: $primary;
+        }
+      }
+    }
+
+    .radiolabel {
+      color: $textprimary;
+      @include font-face($primaryFont, style('normal'), size(12), weight('normal'), line-height(16, 12));
+      position: relative;
+      padding-left: length(24);
+      cursor: pointer;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        @include transform(translateY(-50%));
+        @include square(length(16));
+        background: $white;
+        @include border(solid, 1, $textlight);
+        @include circle;
+        @include transitionsall;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: length(4);
+        @include transform(translateY(-50%));
+        @include square(length(8));
+        background: $white;
+        @include circle;
+        opacity: 0;
+        visibility: hidden;
+        @include transitionsall;
+      }
+    }
+  }
+
+  .tagswrapper {
+    @include border(solid, 1, $textlight);
+    @include radius(4);
+    padding: length(8) length(16);
+    @include flex-center-vert;
+    gap: length(4);
+    flex-wrap: wrap;
+    @include transitionsall;
+    
+    .tag {
+      @include flex-center;
+      gap: length(4);
+      @include radius(5);
+      @include setBgColor($textprimary, $white);
+      @include font-face($primaryFont, style('normal'), size(12), weight('normal'), line-height(16, 12));
+      padding: length(3) length(6);
+
+      button {
+        @include transparent-button;
+        @include square(length(12));
+        @include flex-center;
+        color: inherit;
+      }
+    }
+
+    input {
+      @include font-face($primaryFont, style('normal'), size(12), weight('normal'), line-height(16, 12));
+
+      &::placeholder {
+        color: $textlight;
+      }
+
+      @include hover {
+        cursor: text;
+      }
+    }
+
+    &:focus-within {
+      border-color: $secondarytext;
+    }
+  }
+
+  .error-message {
+    display: none;
+    color: $danger;
+    @include font-face($primaryFont, style('normal'), size(12), weight('medium'), line-height(16.8, 12));
+  }
+
+  &.errorfield {
+    .inputfield,
+    .selectfield {
+      border-color: $danger;
+    }
+
+    .review {
+      .radiolabel {
+        &::before {
+          border-color: $danger;
+        }
+      }
+    }
+
+    .btn-remove {
+      top: 50%;
+    }
+
+    .error-message {
+      display: block;
+    }
+
+    .tagswrapper {
+      border-color: $danger;
     }
   }
 }

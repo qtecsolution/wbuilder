@@ -96,6 +96,31 @@
 	}
 }
 
+.btn-modal {
+	@include transparent-button;
+	@include radius(4);
+	@include font-face($primaryFont, style('normal'), size(12), weight('semibold'), line-height(16, 12));
+	padding: length(8) length(16);
+	text-align: center;
+	@include transitionsall;
+}
+
+.btn-cancel {
+	@include setBgColor(transparent, $secondarytext);
+
+	@include hover {
+		color: $textprimary;
+	}
+}
+
+.btn-delete {
+	@include setBgColor($danger, $white);
+
+	@include hover {
+		@include setBgColor($inactivecolor, $white);	
+	}
+}
+
 /**=======================================================**
                         BUTTONS END
 **=======================================================**/

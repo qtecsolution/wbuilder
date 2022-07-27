@@ -1266,6 +1266,17 @@
             </thead>
   
             <tbody>
+              <!-- EMPTY DATA START -->
+              <tr>
+                <td colspan="5">
+                  <div class="emptydata">
+                    <h5 class="emptydata-title">No records has been added yet.</h5>
+                    <p class="emptydata-text">Add a new record by simpley clicking the button on top right side.</p>
+                  </div>
+                </td>
+              </tr>
+              <!-- EMPTY DATA END -->
+
               <tr>
                 <td>
                   <div class="checkfield">
@@ -1317,8 +1328,8 @@
               <tr>
                 <td>
                   <div class="checkfield">
-                    <input type="checkbox" id="allcheck-mob-1" class="checkinput" hidden>
-                    <label for="allcheck-mob-1" class="checklabel"></label>
+                    <input type="checkbox" id="allcheck-mob-2" class="checkinput" hidden>
+                    <label for="allcheck-mob-2" class="checklabel"></label>
                   </div>
                 </td>
                 <td>
@@ -1365,8 +1376,8 @@
               <tr>
                 <td>
                   <div class="checkfield">
-                    <input type="checkbox" id="allcheck-mob-1" class="checkinput" hidden>
-                    <label for="allcheck-mob-1" class="checklabel"></label>
+                    <input type="checkbox" id="allcheck-mob-3" class="checkinput" hidden>
+                    <label for="allcheck-mob-3" class="checklabel"></label>
                   </div>
                 </td>
                 <td>
@@ -1413,8 +1424,8 @@
               <tr>
                 <td>
                   <div class="checkfield">
-                    <input type="checkbox" id="allcheck-mob-1" class="checkinput" hidden>
-                    <label for="allcheck-mob-1" class="checklabel"></label>
+                    <input type="checkbox" id="allcheck-mob-4" class="checkinput" hidden>
+                    <label for="allcheck-mob-4" class="checklabel"></label>
                   </div>
                 </td>
                 <td>
@@ -1461,8 +1472,8 @@
               <tr>
                 <td>
                   <div class="checkfield">
-                    <input type="checkbox" id="allcheck-mob-1" class="checkinput" hidden>
-                    <label for="allcheck-mob-1" class="checklabel"></label>
+                    <input type="checkbox" id="allcheck-mob-5" class="checkinput" hidden>
+                    <label for="allcheck-mob-5" class="checklabel"></label>
                   </div>
                 </td>
                 <td>
@@ -1509,8 +1520,8 @@
               <tr>
                 <td>
                   <div class="checkfield">
-                    <input type="checkbox" id="allcheck-mob-1" class="checkinput" hidden>
-                    <label for="allcheck-mob-1" class="checklabel"></label>
+                    <input type="checkbox" id="allcheck-mob-6" class="checkinput" hidden>
+                    <label for="allcheck-mob-6" class="checklabel"></label>
                   </div>
                 </td>
                 <td>
@@ -1557,8 +1568,8 @@
               <tr>
                 <td>
                   <div class="checkfield">
-                    <input type="checkbox" id="allcheck-mob-1" class="checkinput" hidden>
-                    <label for="allcheck-mob-1" class="checklabel"></label>
+                    <input type="checkbox" id="allcheck-mob-7" class="checkinput" hidden>
+                    <label for="allcheck-mob-7" class="checklabel"></label>
                   </div>
                 </td>
                 <td>
@@ -1605,8 +1616,8 @@
               <tr>
                 <td>
                   <div class="checkfield">
-                    <input type="checkbox" id="allcheck-mob-1" class="checkinput" hidden>
-                    <label for="allcheck-mob-1" class="checklabel"></label>
+                    <input type="checkbox" id="allcheck-mob-8" class="checkinput" hidden>
+                    <label for="allcheck-mob-8" class="checklabel"></label>
                   </div>
                 </td>
                 <td>
@@ -1653,8 +1664,8 @@
               <tr>
                 <td>
                   <div class="checkfield">
-                    <input type="checkbox" id="allcheck-mob-1" class="checkinput" hidden>
-                    <label for="allcheck-mob-1" class="checklabel"></label>
+                    <input type="checkbox" id="allcheck-mob-9" class="checkinput" hidden>
+                    <label for="allcheck-mob-9" class="checklabel"></label>
                   </div>
                 </td>
                 <td>
@@ -1701,8 +1712,8 @@
               <tr>
                 <td>
                   <div class="checkfield">
-                    <input type="checkbox" id="allcheck-mob-1" class="checkinput" hidden>
-                    <label for="allcheck-mob-1" class="checklabel"></label>
+                    <input type="checkbox" id="allcheck-mob-10" class="checkinput" hidden>
+                    <label for="allcheck-mob-10" class="checklabel"></label>
                   </div>
                 </td>
                 <td>
@@ -1746,7 +1757,6 @@
                   </div>
                 </td>
               </tr>
-              
             </tbody>
           </table>
         </div>
@@ -1778,7 +1788,7 @@
   <div class="modal fade" id="createModal" tabindex="-1" aria-labelledby="createModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
-        <div class="modal-header">
+        <div class="modal-header pb-0">
           <h5 class="modal-title" id="createModalLabel">Create Filter</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
             <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1787,8 +1797,26 @@
             </svg>
           </button>
         </div>
-        <div class="modal-body">
-          CREATE Modal
+        <div class="modal-body p-0">
+          <form class="createfilter">
+            <div class="inputbox errorfield w-100">
+              <label for="addfiltername" class="inputlabel">Filter Name</label>
+              <input type="text" id="addfiltername" class="inputfield" placeholder="Filter Name">
+
+              <p class="error-message">This field is required!!</p>
+            </div>
+
+            <div class="inputbox errorfield w-100">
+              <label for="addfiltervalue" class="inputlabel">Values</label>
+              <input type="text" id="addfiltervalue" class="inputfield" placeholder="Filter Value">
+
+              <p class="error-message">This field is required!!</p>
+            </div>
+
+            <div class="d-flex justify-content-end">
+              <button type="button" class="btn-add">Create</button>
+            </div>
+          </form>
         </div>
       </div>
     </div>
@@ -1799,7 +1827,7 @@
   <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
-        <div class="modal-header">
+        <div class="modal-header pb-0">
           <h5 class="modal-title" id="editModalLabel">Edit Filter</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
             <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1808,8 +1836,26 @@
             </svg>
           </button>
         </div>
-        <div class="modal-body">
-          Edit Modal
+        <div class="modal-body p-0">
+          <form class="createfilter">
+            <div class="inputbox errorfield w-100">
+              <label for="editfiltername" class="inputlabel">Filter Name</label>
+              <input type="text" id="editfiltername" class="inputfield" placeholder="Filter Name">
+
+              <p class="error-message">This field is required!!</p>
+            </div>
+
+            <div class="inputbox errorfield w-100">
+              <label for="editfiltervalue" class="inputlabel">Values</label>
+              <input type="text" id="editfiltervalue" class="inputfield" placeholder="Filter Value">
+
+              <p class="error-message">This field is required!!</p>
+            </div>
+
+            <div class="d-flex justify-content-end">
+              <button type="button" class="btn-add">Update</button>
+            </div>
+          </form>
         </div>
       </div>
     </div>
@@ -1820,8 +1866,8 @@
   <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="deleteModalLabel">Modal title</h5>
+        <div class="modal-header pb-0">
+          <h5 class="modal-title" id="deleteModalLabel">Are You Sure to delete?</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
             <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect width="27" height="27" rx="6" fill="#FC5A5A" fill-opacity="0.2"/>
@@ -1830,8 +1876,17 @@
           </button>
         </div>
 
-        <div class="modal-body">
-          Delete Modal
+        <div class="modal-body p-0">
+          <div class="deleteinfo">
+            <div class="deleteinfo-header">
+              <h5 class="delete-title">You are going to delete filter</h5>
+            </div>
+
+            <div class="deleteinfo-body">
+              <button class="btn-modal btn-cancel" type="button">Cancel</button>
+              <button id="btn-delete" class="btn-modal btn-delete" type="button">Delete</button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -1842,8 +1897,8 @@
   <div class="modal fade" id="confirmedDeleteModal" tabindex="-1" aria-labelledby="confirmedDeleteModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="confirmedDeleteModalLabel">Modal title</h5>
+        <div class="modal-header pb-0">
+          <h5 class="modal-title" id="confirmedDeleteModalLabel">Successfully Deleted</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
             <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect width="27" height="27" rx="6" fill="#FC5A5A" fill-opacity="0.2"/>
@@ -1852,8 +1907,20 @@
           </button>
         </div>
 
-        <div class="modal-body">
-          Confirmed Delete modal
+        <div class="modal-body p-0">
+          <div class="deleteconfirmed">
+            <div class="deleteconfirmed-header">
+              <h5 class="deleteconfirmed-title">Filter name dash is successfully deleted</h5>
+            </div>
+
+            <div class="deleteconfirmed-body">
+              <span class="icon">
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12.0004 40.0001C11.4337 40.0001 10.9584 39.8081 10.5744 39.4241C10.1917 39.0414 10.0004 38.5668 10.0004 38.0001C10.0004 37.4334 10.1917 36.9588 10.5744 36.5761C10.9584 36.1921 11.4337 36.0001 12.0004 36.0001H36.0004C36.5671 36.0001 37.0417 36.1921 37.4244 36.5761C37.8084 36.9588 38.0004 37.4334 38.0004 38.0001C38.0004 38.5668 37.8084 39.0414 37.4244 39.4241C37.0417 39.8081 36.5671 40.0001 36.0004 40.0001H12.0004ZM19.1004 31.1501C18.8337 31.1501 18.5837 31.1081 18.3504 31.0241C18.1171 30.9414 17.9004 30.8001 17.7004 30.6001L9.20039 22.1001C8.83372 21.7334 8.65039 21.2501 8.65039 20.6501C8.65039 20.0501 8.83372 19.5668 9.20039 19.2001C9.56706 18.8334 10.0337 18.6501 10.6004 18.6501C11.1671 18.6501 11.6337 18.8334 12.0004 19.2001L19.1004 26.3001L36.0004 9.4001C36.3671 9.03343 36.8424 8.8501 37.4264 8.8501C38.0091 8.8501 38.4837 9.03343 38.8504 9.4001C39.2171 9.76676 39.4004 10.2414 39.4004 10.8241C39.4004 11.4081 39.2171 11.8834 38.8504 12.2501L20.5004 30.6001C20.3004 30.8001 20.0837 30.9414 19.8504 31.0241C19.6171 31.1081 19.3671 31.1501 19.1004 31.1501Z" fill="#34A853"/>
+                </svg>
+              </span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -1878,5 +1945,8 @@
   <script src="https://cdn.datatables.net/v/bs5/dt-1.12.1/datatables.min.js"></script>
   <!--========== TABLE JS ============-->
   <script src="assets/js/table/table.js"></script>
+  <!--========== MODAL JS ============-->
+  <script src="assets/js/bootstrap/modal/modal.js"></script>
+  <script src="assets/js/filter/filter.js"></script>
 </body>
 </html>
